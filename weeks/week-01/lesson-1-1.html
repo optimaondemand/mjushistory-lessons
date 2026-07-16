@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 1.1: Europe Reaches West</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot">&#129417;</div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 1 &middot; Module 1 &middot; Lesson 1.1</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 1.1</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">Europe Reaches West</div></div>
+  <div class="meta-cell"><div class="meta-label">Week</div><div class="meta-value">Week 1 of 18</div></div>
+  <div class="meta-cell"><div class="meta-label">Benchmarks</div><div class="meta-value" style="font-size:14px;">SS.8.A.1.2, SS.8.A.2.5</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip">
+  <div class="kicker">Lesson 1.1</div>
+  <div class="title">Europe Reaches West</div>
+  <div class="subtitle">Lesson &middot; ~750 words</div>
+</div>
+
+<div class="card card-gold-top">
+  <div class="card-kicker">&#128214; Today's Focus</div>
+  <div style="font-size:18px; color:#0e1c42; font-style:italic; margin-bottom:10px;">Columbus did not prove the world was round. He won an argument about how big it was, and he won it by being wrong in a lucky way.</div>
+  <p>By January of 1492, the Spanish crown had just finished a seven-hundred-year project: the conquest of Granada, the last Muslim kingdom in Spain, completed on January 2. Nine months later, the same crown funded a Genoese sailor's plan to sail west into open ocean until he reached Asia. Neither of those two facts caused the other in any simple way. But without the first, it is hard to imagine the second happening when it did. That kind of hinge, where one contingent event opens a door for another, is something you should watch for all semester.</p>
+</div>
+
+<div class="card card-gold-top">
+  <h3>Why Anyone Was Looking West at All</h3>
+  <p>Educated Europeans in 1492 already knew the earth was a sphere; that had been common knowledge among scholars since antiquity. What they argued about was <i>how big</i> that sphere was, and therefore how far a ship would have to sail west to reach Asia. For over a century before Columbus, European interest in reaching Asia by sea had been building for a concrete reason: the overland spice and silk trade ran through the eastern Mediterranean, and after the Ottoman Empire captured Constantinople in 1453, that route grew more expensive and less certain for European merchants. A sea route around the problem became worth a great deal of money to whoever found it first.</p>
+  <p>Portugal had been chasing that sea route for decades, sending ship after ship down the coast of Africa under the sponsorship of Prince Henry, known to later writers as "the Navigator." That patient, government-funded program paid off in 1488, when the Portuguese captain Bartolomeu Dias rounded the southern tip of Africa, proving a sea route to the Indian Ocean, and therefore to Asia, was possible. New tools made voyages like this survivable: the <span class="term" title="A small, fast, highly maneuverable ship developed by the Portuguese, able to sail closer to the wind than older ship designs.">caravel</span>, the magnetic compass, and the astrolabe, an instrument for measuring a ship's position by the stars.</p>
+</div>
+
+<div class="callout-help">
+  <div class="callout-kicker-help">&#128161; Helpful to Know</div>
+  <div class="card-body">Dias's 1488 voyage matters for a reason you might not expect: it gave Portugal's King John II a good reason to say no to Columbus. Portugal already had a working plan to reach Asia around Africa. Why would the king gamble money on an unproven route across open ocean when a proven one was already in hand? Columbus was rejected by the one court most likely to be interested, for the most reasonable of reasons.</div>
+</div>
+
+<div class="card card-gold-top">
+  <h3>An Argument Won by Being Wrong</h3>
+  <p>Columbus's own plan rested on a serious miscalculation. Using an old, small estimate of the earth's circumference (going back to the ancient geographer Marinus of Tyre) rather than the more accurate figure that other scholars of his own day preferred, Columbus concluded that Asia lay only about 2,400 miles west of the Canary Islands. The true distance is closer to 12,000 miles. Experts who reviewed his proposal, first for Portugal, later for Spain, rejected it again and again, and on the math, they were right to.</p>
+  <p>Here is the contingent twist: had Columbus been correct about the distance, his plan would never have been funded, because the true 12,000-mile distance was known by better-informed geographers to be impossibly far for a fifteenth-century ship carrying only a few months of food and water. And had he been wrong about the distance <i>and</i> there been no land in between, his crew would have starved in open ocean long before sighting Asia. Columbus's voyage worked only because two separate errors happened to cancel each other out: he underestimated the size of the earth, and he did not know an entire pair of continents sat in the ocean he intended to cross. Neither he nor anyone in Europe had any way of knowing that second fact in 1492.</p>
+  <p>After years of lobbying and repeated rejection at the Portuguese and then the Spanish court, Columbus finally secured backing from Isabella of Castile and Ferdinand of Aragon in April 1492: monarchs who, having just completed the conquest of Granada, had a treasury and a court newly free to consider his request. Persistence had put him in front of the right people at the right moment; it took the Reconquista's completion to make that moment arrive when it did.</p>
+</div>
+
+<div class="card card-gold-top">
+  <h3>The Crossing</h3>
+  <p>Columbus's three ships, the <i>Ni&ntilde;a</i>, the <i>Pinta</i>, and the <i>Santa Mar&iacute;a</i>, departed the Spanish port of Palos on August 3, 1492, and stopped at the Canary Islands to resupply and pick up the reliable westward trade winds. From there they sailed into open ocean for five weeks, far longer than any of the crew had ever been out of sight of land, and unease turned to something closer to mutiny by early October. On October 12, a lookout aboard the <i>Pinta</i> sighted land: an island in the Bahamas that its Lucayan inhabitants called Guanahan&iacute;, which Columbus renamed San Salvador.</p>
+  <p>Columbus never accepted that he had found something other than the outer edge of Asia. He called the people he met "Indians," a name that stuck for the next several centuries, and on his later voyages he continued to interpret every new discovery as further confirmation of a theory his own crew had begun to doubt. That stubborn self-confidence is worth sitting with as a character trait, not just a mistake: the same refusal to accept "no" that carried a rejected proposal through a decade of European courts to a funded voyage also blinded its author to the plain evidence in front of him once he arrived. Virtue and vice, in the classical sense this course uses those words, are often the same disposition pointed in different directions depending on the circumstances.</p>
+
+  <div class="optima-widget">
+    <div class="widget-kicker">Explore the Routes</div>
+    <div class="widget-question">Columbus made four voyages across the Atlantic between 1492 and 1504. Click a voyage below (or a marker on the map) to see what happened.</div>
+
+    <div class="map-wrap">
+      <svg class="map-svg" viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="600" height="260" fill="#0E1C42" />
+        <path d="M40,180 Q120,150 180,140 Q260,130 320,150 Q380,175 420,150" stroke="#55C8E8" stroke-width="1.5" fill="none" opacity="0.5" stroke-dasharray="4,4" />
+        <path d="M60,190 Q140,120 250,110 Q330,100 380,90" stroke="#C7922C" stroke-width="1.5" fill="none" opacity="0.35" stroke-dasharray="4,4" />
+        <path d="M60,190 Q160,200 240,190 Q320,175 380,110" stroke="#8A6216" stroke-width="1.5" fill="none" opacity="0.35" stroke-dasharray="4,4" />
+        <path d="M60,190 Q180,230 300,225 Q400,220 460,180" stroke="#2A9D5C" stroke-width="1.5" fill="none" opacity="0.35" stroke-dasharray="4,4" />
+        <text x="55" y="205" fill="#55C8E8" font-size="11">Palos, Spain</text>
+        <g class="marker" data-id="1"><circle cx="420" cy="150" r="9" fill="#55C8E8" /><text x="420" y="135" fill="#fff" font-size="11" text-anchor="middle">1st</text></g>
+        <g class="marker" data-id="2"><circle cx="380" cy="90" r="9" fill="#C7922C" /><text x="380" y="76" fill="#fff" font-size="11" text-anchor="middle">2nd</text></g>
+        <g class="marker" data-id="3"><circle cx="380" cy="110" r="9" fill="#E0A93C" /><text x="380" y="128" fill="#fff" font-size="11" text-anchor="middle">3rd</text></g>
+        <g class="marker" data-id="4"><circle cx="460" cy="180" r="9" fill="#2A9D5C" /><text x="460" y="200" fill="#fff" font-size="11" text-anchor="middle">4th</text></g>
+      </svg>
+    </div>
+
+    <div class="legend">
+      <button data-id="1" class="active">1st Voyage (1492&ndash;93)</button>
+      <button data-id="2">2nd Voyage (1493&ndash;96)</button>
+      <button data-id="3">3rd Voyage (1498&ndash;1500)</button>
+      <button data-id="4">4th Voyage (1502&ndash;04)</button>
+    </div>
+
+    <div class="detail-card" id="detail"></div>
+    <button class="widget-reset" id="reset">Reset</button>
+  </div>
+</div>
+
+<div class="card card-navy-top">
+  <div class="card-kicker">&#10145;&#65039; What You'll Do Next</div>
+  <div class="num-row"><div class="num-circle navy">1</div><div class="num-text"><b>Reading Quiz: Europe Reaches West.</b> Six questions on this lesson, in Canvas.</div></div>
+  <div class="num-row"><div class="num-circle navy">2</div><div class="num-text"><b>Primary Source 1: Letters of Columbus.</b> Read Columbus's own account of what he found, written on the return voyage, in Canvas.</div></div>
+</div>
+
+<div class="card">
+  <div class="card-kicker">&#128170; Before You Move On</div>
+  <p>Columbus's letter, which you'll read next in Canvas, is the first announcement Europe ever received of what he had found. Read it watching for the gap between what he says he found and what you now know was actually there.</p>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Week 1 of 18 &middot; European Exploration and the Discovery of America</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+(function () {
+  var data = {
+    "1": { title: "1st Voyage (1492&ndash;1493)", body: "Palos &rarr; Canary Islands &rarr; San Salvador &rarr; Cuba &rarr; Hispaniola. First landfall in the Bahamas. Columbus establishes a small fort, La Navidad, on Hispaniola before returning to Spain to report his discovery." },
+    "2": { title: "2nd Voyage (1493&ndash;1496)", body: "Cadiz &rarr; Lesser Antilles &rarr; Hispaniola. A much larger colonizing fleet of 17 ships. Columbus finds La Navidad destroyed and its garrison killed, and begins more forceful colonization of Hispaniola." },
+    "3": { title: "3rd Voyage (1498&ndash;1500)", body: "Sanlucar &rarr; Trinidad &rarr; the South American mainland. First European sighting of the mainland. Colonial disputes on Hispaniola lead to Columbus's arrest and return to Spain in chains." },
+    "4": { title: "4th Voyage (1502&ndash;1504)", body: "Cadiz &rarr; the Central American coast. Columbus searches for a strait through to Asia, still believing he is near its outer edge. His ships are wrecked and his crew is stranded in Jamaica for a year." }
+  };
+
+  var detail = document.getElementById('detail');
+  var buttons = document.querySelectorAll('.legend button');
+  var markers = document.querySelectorAll('.marker');
+
+  function show(id) {
+    var d = data[id];
+    detail.innerHTML = '<div class="voyage-title">' + d.title + '</div><div class="voyage-body">' + d.body + '</div>';
+    buttons.forEach(function (b) { b.classList.toggle('active', b.dataset.id === id); });
+    markers.forEach(function (m) { m.classList.toggle('active', m.dataset.id === id); });
+  }
+
+  buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.id); }); });
+  markers.forEach(function (m) { m.addEventListener('click', function () { show(m.dataset.id); }); });
+  document.getElementById('reset').addEventListener('click', function () { show('1'); });
+
+  show('1');
+})();
+</script>
+
+</body>
+</html>
