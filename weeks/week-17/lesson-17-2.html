@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 17.2: Philadelphia, 1787</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-warn { background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-warn { font-size: 11px; color: #8A1F16; margin-bottom: 8px; text-transform: uppercase; }
+
+/* ===== embedded widget (byte-consistent widgets/convention-compromise-builder.html) ===== */
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.positions { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin-bottom: 14px; }
+.pos-btn { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 12px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: center; }
+.pos-btn:hover { border-color: #55C8E8; }
+.pos-btn.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.step { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 16px; margin-bottom: 10px; }
+.step h4 { font-size: 12px; color: #C7922C; margin: 0 0 6px 0; text-transform: uppercase; }
+.step p { font-size: 14px; color: #1a2340; line-height: 1.55; margin: 0; }
+.reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 6px; padding: 8px 14px; font-size: 13px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.reveal-btn:hover { background: #1a2a5c; }
+.compromise { background: #D8F0DD; border-left: 4px solid #2A9D5C; color: #1A6B3D; padding: 10px 14px; border-radius: 6px; margin-top: 8px; font-size: 14px; display: none; }
+.compromise.show { display: block; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 8px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot">&#129417;</div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 2 &middot; Module 17 &middot; Lesson 17.2</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 17.2</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">Philadelphia, 1787</div></div>
+  <div class="meta-cell"><div class="meta-label">Week</div><div class="meta-value">Week 17 of 18</div></div>
+  <div class="meta-cell"><div class="meta-label">Benchmarks</div><div class="meta-value" style="font-size:14px;">SS.8.A.3.10, SS.68.AA.2.1</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip">
+  <div class="kicker">Lesson 17.2</div>
+  <div class="title">Philadelphia, 1787</div>
+  <div class="subtitle">Lesson &middot; ~780 words</div>
+</div>
+
+<div class="card card-gold-top">
+  <div class="card-kicker">&#128214; Today's Focus</div>
+  <div style="font-size:18px; color:#0e1c42; font-style:italic; margin-bottom:10px;">Delegates arrived in Philadelphia authorized only to revise the Articles. Within weeks, they were writing an entirely new government from scratch.</div>
+  <p>Fifty-five delegates convened in Philadelphia in May 1787, and James Madison of Virginia arrived having done more preparation than almost anyone else present, having studied the history of failed confederacies specifically to design something more durable. His Virginia Plan proposed a strong national government with representation in both houses of a legislature based on state population, a structure that obviously favored large states like Virginia. Smaller states countered with the New Jersey Plan, preserving the Articles' equal representation regardless of population.</p>
+</div>
+
+<div class="card card-gold-top">
+  <h3>The Great Compromise</h3>
+  <p>The Connecticut Compromise (often called the Great Compromise) resolved this specific deadlock by creating a bicameral legislature: a House of Representatives apportioned by state population, satisfying large states, and a Senate with equal representation for every state regardless of size, satisfying small states. This structural compromise, more than any single argument, is what actually allowed the convention to keep functioning once the large-state/small-state conflict threatened to break it apart entirely.</p>
+  <h3>The Three-Fifths Compromise</h3>
+  <p>A separate, morally weightier conflict concerned how slaves would count toward a state's population for purposes of representation and taxation. Southern states, with large slave populations, wanted slaves counted fully for representation (increasing Southern political power) but not for taxation; some Northern states wanted the reverse. The delegates settled on the Three-Fifths Compromise: slaves would count as three-fifths of a person for both representation and direct taxation purposes. This compromise was not a side issue or a footnote to the Convention's real business: it directly shaped how much political power slaveholding states held in the new government for decades afterward, and it is impossible to honestly separate the practical political bargain that made ratification possible from the moral fact that it treated slaves as fractional persons under the nation's founding law.</p>
+
+  <div class="optima-widget">
+    <div class="widget-kicker">Convention Compromise Builder</div>
+    <div class="widget-question">Choose a delegate position, read the opposing side's own argument, then reveal the compromise that resolved the conflict.</div>
+
+    <div class="positions">
+      <button class="pos-btn active" data-id="small">Small state delegate</button>
+      <button class="pos-btn" data-id="slave">Slave-state delegate</button>
+      <button class="pos-btn" data-id="vote">Direct-election advocate</button>
+    </div>
+
+    <div class="step" id="yourpos"></div>
+    <div class="step" id="opposing">
+      <button class="reveal-btn" id="revealOpp">Show the opposing argument</button>
+      <p id="oppText" style="display:none; margin-top:8px;"></p>
+    </div>
+    <div class="step">
+      <button class="reveal-btn" id="revealComp">Reveal the Compromise</button>
+      <div class="compromise" id="compText"></div>
+    </div>
+
+    <button class="widget-reset" id="reset">Reset</button>
+  </div>
+</div>
+
+<div class="callout-warn">
+  <div class="callout-kicker-warn">&#9888;&#65039; Watch Out</div>
+  <div class="card-body">Do not let the Great Compromise's relatively tidy structural resolution (large states versus small states) lead you to expect an equally tidy resolution to the Three-Fifths Compromise. The Convention also protected the international slave trade from federal prohibition until at least 1808, a further concession to secure Southern states' participation in the new union. These were not abstract debates; they were concrete political trades with real, lasting human consequences that this course will keep tracking into the sectional crisis and Civil War later in your study of U.S. History.</div>
+</div>
+
+<div class="card card-navy-top">
+  <div class="card-kicker">&#10145;&#65039; What You'll Do Next</div>
+  <div class="num-row"><div class="num-circle navy">1</div><div class="num-text"><b>Primary Source 2: The U.S. Constitution.</b> In Canvas.</div></div>
+  <div class="num-row"><div class="num-circle navy">2</div><div class="num-text"><b>Primary Source Report</b> (Tier 3, M365 Word document), in Canvas.</div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Week 17 of 18 &middot; The Articles of Confederation and the Constitutional Convention</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+(function () {
+  var data = {
+    small: {
+      yours: "Small states feared that representation based purely on population (the Virginia Plan) would let Virginia, Pennsylvania, and other large states dominate every vote in Congress.",
+      opp: "Large-state delegates argued: a state with ten times the population of its neighbor deserves ten times the voice in the national legislature: anything less denies most Americans fair representation.",
+      compromise: "The Great (Connecticut) Compromise: a bicameral legislature. The House of Representatives is apportioned by population (satisfying large states); the Senate gives every state equal representation regardless of size (satisfying small states)."
+    },
+    slave: {
+      yours: "Southern delegates, representing states with large slave populations, wanted slaves counted fully toward representation in Congress (increasing Southern political power) but not toward direct taxation.",
+      opp: "Some Northern delegates argued: if slaves are property under state law, they should not count toward political representation at all, only toward taxation, since they cannot vote or hold office.",
+      compromise: "The Three-Fifths Compromise: slaves would count as three-fifths of a person for both representation and direct taxation. A practical political trade that also embedded slavery's political power into the new government for decades."
+    },
+    vote: {
+      yours: "Some delegates wanted the president elected directly by popular vote, trusting ordinary citizens to choose the nation's chief executive themselves.",
+      opp: "Other delegates argued: distances and communication in 1787 made an informed national popular vote impractical, and some also distrusted placing that much direct power in an unfiltered popular vote.",
+      compromise: "The Electoral College: state-appointed electors, in numbers tied to each state's congressional representation, formally choose the president: a compromise between direct popular election and selection by Congress alone."
+    }
+  };
+
+  var current = 'small';
+  var positions = document.querySelectorAll('.pos-btn');
+  var yourpos = document.getElementById('yourpos');
+  var oppText = document.getElementById('oppText');
+  var compText = document.getElementById('compText');
+
+  function render() {
+    var d = data[current];
+    yourpos.innerHTML = '<h4>Your Position</h4><p>' + d.yours + '</p>';
+    oppText.textContent = d.opp;
+    oppText.style.display = 'none';
+    compText.textContent = d.compromise;
+    compText.classList.remove('show');
+    positions.forEach(function (b) { b.classList.toggle('active', b.dataset.id === current); });
+  }
+
+  positions.forEach(function (b) {
+    b.addEventListener('click', function () { current = b.dataset.id; render(); });
+  });
+
+  document.getElementById('revealOpp').addEventListener('click', function () {
+    oppText.style.display = 'block';
+  });
+  document.getElementById('revealComp').addEventListener('click', function () {
+    compText.classList.add('show');
+  });
+  document.getElementById('reset').addEventListener('click', function () {
+    current = 'small';
+    render();
+  });
+
+  render();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 14.2: Jefferson, Adams, and Drafting Independence</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+
+/* ===== embedded widget (byte-consistent widgets/natural-rights-matcher.html) ===== */
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.clauses { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+.clause { background: #FDF3E3; border: 1.5px solid #C7922C; border-radius: 6px; padding: 10px 12px; font-size: 13px; color: #0E1C42; cursor: grab; font-style: italic; }
+.clause.placed { display: none; }
+.concepts { display: flex; flex-wrap: wrap; gap: 12px; }
+.concept { flex: 1; min-width: 200px; background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 10px; min-height: 90px; }
+.concept h4 { font-size: 13px; color: #0E1C42; margin: 0 0 8px 0; text-align: center; }
+.concept.dragover { background: #EEF1F8; }
+.concept .match { background: #D8F0DD; border: 1px solid #2A9D5C; color: #1A6B3D; border-radius: 6px; padding: 8px 10px; font-size: 12px; margin-top: 6px; font-style: italic; }
+.hint { font-size: 12px; color: #8A1F16; margin-top: 4px; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot">&#129417;</div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 2 &middot; Module 14 &middot; Lesson 14.2</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 14.2</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">Jefferson, Adams, and Drafting Independence</div></div>
+  <div class="meta-cell"><div class="meta-label">Week</div><div class="meta-value">Week 14 of 18</div></div>
+  <div class="meta-cell"><div class="meta-label">Benchmarks</div><div class="meta-value" style="font-size:14px;">SS.8.A.3.7, SS.8.CG.3.1</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip">
+  <div class="kicker">Lesson 14.2</div>
+  <div class="title">Jefferson, Adams, and Drafting Independence</div>
+  <div class="subtitle">Lesson &middot; ~750 words</div>
+</div>
+
+<div class="card card-gold-top">
+  <div class="card-kicker">&#128214; Today's Focus</div>
+  <div style="font-size:18px; color:#0e1c42; font-style:italic; margin-bottom:10px;">John Adams later recalled arguing that Thomas Jefferson, not himself, should write the document that would define the new nation's founding principles, and gave two specific, practical reasons why.</div>
+  <p>Richard Henry Lee's resolution, proposed to Congress in June 1776, formally called for the colonies to declare independence. Congress appointed a Committee of Five (Thomas Jefferson, John Adams, Benjamin Franklin, Robert Livingston, and Roger Sherman) to draft a formal declaration justifying that resolution. According to Adams's later account, he persuaded the committee that Jefferson, rather than himself, should write the first draft, reasoning that Jefferson was the better writer and that Adams's own reputation was too "obnoxious" (Adams's own word) and politically divisive to lead the drafting of a document meant to unite colonial opinion.</p>
+</div>
+
+<div class="card card-gold-top">
+  <h3>A Different Kind of Argument</h3>
+  <p>The Declaration's structure does specific, deliberate work. Its opening asserts a general theory of government's purpose and legitimate authority, drawing directly on the Natural Law tradition of John Locke's <i>Second Treatise of Government</i>, which argues that governments exist to secure people's natural rights and derive their legitimate authority only from the people's consent, forfeitable when government becomes destructive of those rights. The document then pivots to a long, specific list of grievances, framed entirely as personal charges against King George III himself, deliberately continuing the shift <i>Common Sense</i> had already begun, away from blaming Parliament and toward making the King personally, individually responsible for the colonies' complaints. This targeting of the King specifically, rather than Parliament or "the British government" abstractly, served the document's argument: a government that had "forfeited" its legitimate authority needed an identifiable party who had done the forfeiting.</p>
+
+  <div class="optima-widget">
+    <div class="widget-kicker">Natural Rights Matcher</div>
+    <div class="widget-question">Drag each Declaration clause to the Lockean concept it expresses.</div>
+
+    <div class="clauses" id="clauses"></div>
+
+    <div class="concepts">
+      <div class="concept" data-concept="rights"><h4>Natural Rights</h4></div>
+      <div class="concept" data-concept="consent"><h4>Government by Consent</h4></div>
+      <div class="concept" data-concept="revolution"><h4>Right of Revolution</h4></div>
+    </div>
+
+    <button class="widget-reset" id="reset">Reset</button>
+  </div>
+</div>
+
+<div class="callout-help">
+  <div class="callout-kicker-help">&#128161; Helpful to Know</div>
+  <div class="card-body">Congress voted for independence on July 2, 1776, and formally adopted the Declaration's final text on July 4, the date now celebrated, though most delegates did not actually sign the engrossed copy until August. The document's purpose was not to create independence (Congress's vote had already done that) but to justify it, to Americans, to the world, and to history.</div>
+</div>
+
+<div class="card card-navy-top">
+  <div class="card-kicker">&#10145;&#65039; What You'll Do Next</div>
+  <div class="num-row"><div class="num-circle navy">1</div><div class="num-text"><b>Primary Source 2: The Declaration of Independence.</b> In Canvas.</div></div>
+  <div class="num-row"><div class="num-circle navy">2</div><div class="num-text"><b>Primary Source Report</b> (Tier 3, M365 Word document), in Canvas.</div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Week 14 of 18 &middot; The Declaration of Independence</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+(function () {
+  var clauses = [
+    { id: 1, text: '"...endowed by their Creator with certain unalienable Rights..."', concept: "rights" },
+    { id: 2, text: '"...deriving their just powers from the consent of the governed..."', concept: "consent" },
+    { id: 3, text: '"...it is the Right of the People to alter or abolish it..."', concept: "revolution" }
+  ];
+
+  var placed = {};
+  var container = document.getElementById('clauses');
+  var concepts = document.querySelectorAll('.concept');
+
+  function makeClause(c) {
+    var el = document.createElement('div');
+    el.className = 'clause';
+    el.draggable = true;
+    el.dataset.id = c.id;
+    el.textContent = c.text;
+    el.addEventListener('dragstart', function (e) { e.dataTransfer.setData('text/plain', c.id); });
+    return el;
+  }
+
+  function render() {
+    container.innerHTML = '';
+    clauses.forEach(function (c) { if (!placed[c.id]) container.appendChild(makeClause(c)); });
+  }
+
+  concepts.forEach(function (col) {
+    col.addEventListener('dragover', function (e) { e.preventDefault(); col.classList.add('dragover'); });
+    col.addEventListener('dragleave', function () { col.classList.remove('dragover'); });
+    col.addEventListener('drop', function (e) {
+      e.preventDefault();
+      col.classList.remove('dragover');
+      col.querySelectorAll('.hint').forEach(function (h) { h.remove(); });
+      var id = parseInt(e.dataTransfer.getData('text/plain'), 10);
+      var clause = clauses.find(function (c) { return c.id === id; });
+      if (!clause) return;
+      if (clause.concept === col.dataset.concept) {
+        placed[id] = true;
+        var match = document.createElement('div');
+        match.className = 'match';
+        match.textContent = clause.text;
+        col.appendChild(match);
+        render();
+      } else {
+        var hint = document.createElement('div');
+        hint.className = 'hint';
+        hint.textContent = 'Not this concept. Look at the specific word doing the work in the clause.';
+        col.appendChild(hint);
+        setTimeout(function () { hint.remove(); }, 2200);
+      }
+    });
+  });
+
+  document.getElementById('reset').addEventListener('click', function () {
+    placed = {};
+    concepts.forEach(function (col) { col.querySelectorAll('.match, .hint').forEach(function (n) { n.remove(); }); });
+    render();
+  });
+
+  render();
+})();
+</script>
+
+</body>
+</html>

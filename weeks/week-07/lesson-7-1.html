@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 7.1: Slavery Before the Atlantic</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+
+/* ===== embedded widget (byte-consistent widgets/triangular-trade-map.html) ===== */
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.map-wrap { background: #0E1C42; border-radius: 8px; padding: 16px; margin-bottom: 14px; }
+.leg-btn { display: block; width: 100%; text-align: left; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.leg-btn.done { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.leg-btn:disabled { cursor: not-allowed; opacity: 0.6; }
+.leg-detail { font-size: 13px; color: #444; margin-top: 4px; display: none; }
+.leg-detail.show { display: block; }
+.step-label { font-size: 11px; color: #C7922C; margin-right: 8px; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 8px; }
+.widget-reset:hover { background: #FDF3E3; }
+.optima-widget svg text { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot">&#129417;</div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 1 &middot; Module 7 &middot; Lesson 7.1</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 7.1</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">Slavery Before the Atlantic</div></div>
+  <div class="meta-cell"><div class="meta-label">Week</div><div class="meta-value">Week 7 of 18</div></div>
+  <div class="meta-cell"><div class="meta-label">Benchmarks</div><div class="meta-value" style="font-size:14px;">SS.68.AA.1.1, SS.68.AA.1.2</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip">
+  <div class="kicker">Lesson 7.1</div>
+  <div class="title">Slavery Before the Atlantic</div>
+  <div class="subtitle">Lesson &middot; ~780 words</div>
+</div>
+
+<div class="card card-gold-top">
+  <div class="card-kicker">&#128214; Today's Focus</div>
+  <div style="font-size:18px; color:#0e1c42; font-style:italic; margin-bottom:10px;">To understand what was genuinely new about the Atlantic slave trade, you first have to understand what was not new about slavery.</div>
+  <p>Slavery is one of the oldest and most widespread human institutions, practiced across Asia, Europe, and Africa for thousands of years before Columbus's voyage. Long-distance trade routes connecting sub-Saharan Africa to the Mediterranean and the Middle East, especially the trans-Saharan caravan routes across the desert and Indian Ocean sea routes along Africa's eastern coast, had carried slaves alongside gold, salt, ivory, and textiles for centuries before any European ship reached West Africa's coast. Arab and Ottoman traders, along with the Barbary corsairs of North Africa (pirates who raided European coastal towns and shipping for captives, including thousands of Europeans taken as slaves in North Africa between the 1500s and 1700s), operated substantial slave-trading networks that had nothing to do with the Americas at all.</p>
+</div>
+
+<div class="card card-gold-top">
+  <h3>Slavery and Serfdom: Related, Not Identical</h3>
+  <p>Medieval European serfdom, which you may have encountered in earlier history study, shared some features with slavery: serfs owed compulsory labor and could not freely leave their lord's land, but differed in important ways. Serfs typically could not be bought and sold as individual property separate from the land they worked, generally retained certain customary rights, and their status, while inherited, was tied to a place rather than to their person the way chattel slavery treated a slave as property that could be sold, moved, and inherited independent of any land. Across many African societies before extensive European contact, forms of slavery existed too, but frequently functioned differently from either serfdom or the system that would develop in the Americas: slave status in some African societies could be temporary, tied to debt or captivity in war, and did not always pass automatically and permanently to a person's children the way chattel slavery in the Americas would come to require by law.</p>
+</div>
+
+<div class="callout-help">
+  <div class="callout-kicker-help">&#128161; Helpful to Know</div>
+  <div class="card-body">This comparison matters for a specific reason: it lets you ask a sharper historical question than simply "did slavery exist before Europeans arrived?" (yes, widely) and instead ask "what specifically changed when European traders entered existing African trade networks, and at what scale?" That is the question this week's lessons are built around.</div>
+</div>
+
+<div class="card card-gold-top">
+  <h3>Where European Traders Entered an Existing System</h3>
+  <p>When Portuguese ships began reaching the West African coast in the fifteenth century, they did not invent slave trading in Africa; they made contact with existing African kingdoms and trading networks, including powerful states like Benin, Dahomey, and the Kongo, that already practiced various forms of slavery and were willing, for their own reasons of profit and political advantage, to trade captives to Europeans in exchange for goods, particularly firearms and textiles. European traders rarely captured people themselves in large numbers; they overwhelmingly purchased captives who had already been taken in wars, raids, or judicial punishment within African societies, then organized and financed the transport of those captives across the Atlantic at a scale and with a permanence no prior trade network had approached. That distinction, contact with an existing system versus the invention of an entirely new one, is essential to getting this history right, and it does not make what followed any less consequential.</p>
+
+  <div class="optima-widget">
+    <div class="widget-kicker">Triangular Trade Map</div>
+    <div class="widget-question">Click each leg of the Atlantic triangular trade in order to trace the ship's route and reveal its cargo.</div>
+
+    <div class="map-wrap">
+      <svg viewBox="0 0 500 260" width="100%" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="120" cy="60" r="6" fill="#55C8E8" /><text x="120" y="45" fill="#fff" font-size="12" text-anchor="middle">Europe</text>
+        <circle cx="240" cy="140" r="6" fill="#C7922C" /><text x="240" y="165" fill="#fff" font-size="12" text-anchor="middle">West Africa</text>
+        <circle cx="90" cy="180" r="6" fill="#2A9D5C" /><text x="90" y="205" fill="#fff" font-size="12" text-anchor="middle">The Americas</text>
+        <path id="leg1path" d="M120,60 Q180,90 240,140" stroke="#55C8E8" stroke-width="3" fill="none" opacity="0.25" />
+        <path id="leg2path" d="M240,140 Q160,165 90,180" stroke="#C7922C" stroke-width="3" fill="none" opacity="0.25" />
+        <path id="leg3path" d="M90,180 Q90,110 120,60" stroke="#2A9D5C" stroke-width="3" fill="none" opacity="0.25" />
+      </svg>
+    </div>
+
+    <button class="leg-btn" data-leg="1"><span class="step-label">LEG 1</span>Europe &rarr; West Africa
+      <div class="leg-detail">Cargo: manufactured goods, textiles, and firearms, traded to African merchants and rulers for captives.</div>
+    </button>
+    <button class="leg-btn" data-leg="2" disabled><span class="step-label">LEG 2</span>West Africa &rarr; the Americas (the Middle Passage)
+      <div class="leg-detail">Cargo: slaves, transported under brutal conditions. Historians estimate roughly 1.8 million of the 12.5 million forced aboard did not survive the crossing.</div>
+    </button>
+    <button class="leg-btn" data-leg="3" disabled><span class="step-label">LEG 3</span>The Americas &rarr; Europe
+      <div class="leg-detail">Cargo: sugar, tobacco, cotton, and rum, produced largely by slave labor, completing the triangle back to European ports.</div>
+    </button>
+
+    <button class="widget-reset" id="reset">Reset</button>
+  </div>
+</div>
+
+<div class="card card-navy-top">
+  <div class="card-kicker">&#10145;&#65039; What You'll Do Next</div>
+  <div class="num-row"><div class="num-circle navy">1</div><div class="num-text"><b>Reading Quiz: Slavery Before the Atlantic.</b> In Canvas.</div></div>
+  <div class="num-row"><div class="num-circle navy">2</div><div class="num-text"><b>Primary Source: Thomas Clarkson, <i>Is It Lawful to Make Others Slaves?</i></b> In Canvas.</div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Week 7 of 18 &middot; Atlantic Trade Routes and the Slave Trade</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+(function () {
+  var order = ['1', '2', '3'];
+  var progress = 0;
+
+  var buttons = document.querySelectorAll('.leg-btn');
+
+  function render() {
+    buttons.forEach(function (b) {
+      var leg = b.dataset.leg;
+      var idx = order.indexOf(leg);
+      var detail = b.querySelector('.leg-detail');
+      if (idx < progress) {
+        b.classList.add('done');
+        detail.classList.add('show');
+        b.disabled = false;
+      } else if (idx === progress) {
+        b.disabled = false;
+      } else {
+        b.disabled = true;
+        b.classList.remove('done');
+        detail.classList.remove('show');
+      }
+      var path = document.getElementById('leg' + leg + 'path');
+      if (path) path.style.opacity = idx < progress ? '1' : '0.25';
+    });
+  }
+
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var idx = order.indexOf(b.dataset.leg);
+      if (idx === progress && !b.disabled) {
+        progress++;
+        render();
+      }
+    });
+  });
+
+  document.getElementById('reset').addEventListener('click', function () {
+    progress = 0;
+    render();
+  });
+
+  render();
+})();
+</script>
+
+</body>
+</html>

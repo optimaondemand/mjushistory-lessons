@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 12.2: Parliament's Response: The Intolerable Acts</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+
+/* ===== embedded widget (byte-consistent widgets/road-to-revolution-sequencer.html); .card scoped under .optima-widget to avoid colliding with the page's own .card ===== */
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.optima-widget .pool, .optima-widget .sequence { background: #FFFFFF; border: 1px dashed #B9C4D9; border-radius: 8px; padding: 10px; min-height: 56px; margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+.optima-widget .sequence { border-style: solid; flex-direction: column; }
+.optima-widget .sequence .slot { border: 1px dashed #D0D9E8; border-radius: 6px; min-height: 44px; padding: 6px 10px; font-size: 13px; color: #999; display: flex; align-items: center; }
+.optima-widget .sequence .slot.filled { border-style: solid; color: #0E1C42; background: #F4F6FA; }
+.optima-widget .card { background: #FDF3E3; border: 1.5px solid #C7922C; border-radius: 6px; padding: 8px 12px; font-size: 13px; color: #0E1C42; cursor: grab; user-select: none; margin-bottom: 0; }
+.optima-widget .card.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.optima-widget .feedback { font-size: 12px; margin-top: 4px; }
+.optima-widget .feedback.incorrect { color: #8A1F16; }
+.optima-widget .feedback.correct { color: #1A6B3D; }
+.optima-widget .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 8px; }
+.optima-widget .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot">&#129417;</div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 2 &middot; Module 12 &middot; Lesson 12.2</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 12.2</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">Parliament's Response: The Intolerable Acts</div></div>
+  <div class="meta-cell"><div class="meta-label">Week</div><div class="meta-value">Week 12 of 18</div></div>
+  <div class="meta-cell"><div class="meta-label">Benchmarks</div><div class="meta-value" style="font-size:14px;">SS.8.A.3.2, SS.8.A.1.6</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip">
+  <div class="kicker">Lesson 12.2</div>
+  <div class="title">Parliament's Response: The Intolerable Acts</div>
+  <div class="subtitle">Lesson &middot; ~740 words</div>
+</div>
+
+<div class="card card-gold-top">
+  <div class="card-kicker">&#128214; Today's Focus</div>
+  <div style="font-size:18px; color:#0e1c42; font-style:italic; margin-bottom:10px;">Parliament decided to make an example of Massachusetts. The other colonies decided Massachusetts's punishment was their own problem too.</div>
+  <p>Parliament responded to the Tea Party in 1774 with a set of punitive laws colonists soon nicknamed the "Intolerable Acts" (Parliament itself called them the Coercive Acts). The Boston Port Act closed Boston's harbor to trade entirely until the destroyed tea was paid for, devastating the city's economy. The Massachusetts Government Act stripped much of the colony's traditional self-government, converting the elected council into a crown-appointed body and sharply restricting town meetings, striking directly at the same New England town-meeting tradition you studied in Week 10. The Administration of Justice Act allowed royal officials accused of crimes committed in the course of duty to be tried outside Massachusetts, beyond the reach of local juries widely seen as biased against them. The Quartering Act authorized housing British troops in private buildings, not just existing barracks.</p>
+</div>
+
+<div class="card card-gold-top">
+  <h3>The Backfire</h3>
+  <p>Consider a counterfactual directly: suppose Parliament had imposed the Quartering Act, or these punitive measures generally, only on Massachusetts, expecting the other twelve colonies to stay quiet and let Massachusetts absorb the punishment alone in exchange for being spared themselves. That is roughly what Parliament actually hoped would happen. It is not what happened. Other colonies, recognizing that a Parliament willing to gut one colony's charter and self-government could do the same to any of them next, sent food, supplies, and formal declarations of solidarity to Massachusetts at real cost and risk to themselves. Fellow-feeling among colonists, cultivated over decades of shared grievance (as you've traced across this whole quarter), proved strong enough that isolating any single colony had become, by 1774, a strategy that could no longer work.</p>
+</div>
+
+<div class="callout-help">
+  <div class="callout-kicker-help">&#128161; Helpful to Know</div>
+  <div class="card-body">This response drove the calling of the First Continental Congress in Philadelphia, September 1774, bringing delegates from twelve colonies together to coordinate a unified response, including a colony-wide boycott agreement, the Continental Association. You'll trace this Congress's escalating actions in the weeks ahead, right through to Lexington and Concord and the Declaration of Independence.</div>
+</div>
+
+<div class="card card-gold-top">
+  <h3>Trace the Whole Chain</h3>
+  <p>Five events, four years, one escalating chain: the Boston Massacre, the Tea Act, the Boston Tea Party, the Intolerable Acts, and the First Continental Congress. Sequence them below to check how the chain actually ran.</p>
+
+  <div class="optima-widget">
+    <div class="widget-kicker">Road to Revolution Sequencer</div>
+    <div class="widget-question">Drag these five events from the pool into the timeline, in the correct chronological order.</div>
+
+    <div class="pool" id="pool"></div>
+
+    <div class="sequence" id="sequence"></div>
+    <div class="feedback" id="feedback"></div>
+    <button class="widget-reset" id="reset">Reset</button>
+  </div>
+</div>
+
+<div class="card card-navy-top">
+  <div class="card-kicker">&#10145;&#65039; What You'll Do Next</div>
+  <div class="num-row"><div class="num-circle navy">1</div><div class="num-text"><b>Primary Source 2: An "Impartial Observer's" account of the Tea Party.</b> In Canvas.</div></div>
+  <div class="num-row"><div class="num-circle navy">2</div><div class="num-text"><b>Primary Source Report</b> (Tier 3, M365 Word document), in Canvas.</div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Week 12 of 18 &middot; British Policy and Colonial Grievances, Part II</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+(function () {
+  var events = [
+    { id: 1, text: "Boston Massacre (1770)", order: 1 },
+    { id: 2, text: "Tea Act passed (1773)", order: 2 },
+    { id: 3, text: "Boston Tea Party (1773)", order: 3 },
+    { id: 4, text: "Intolerable (Coercive) Acts (1774)", order: 4 },
+    { id: 5, text: "First Continental Congress (1774)", order: 5 }
+  ];
+
+  var shuffled = events.slice().sort(function () { return Math.random() - 0.5; });
+  var slots = new Array(5).fill(null);
+
+  var pool = document.getElementById('pool');
+  var sequence = document.getElementById('sequence');
+  var feedback = document.getElementById('feedback');
+
+  function makeCard(ev) {
+    var el = document.createElement('div');
+    el.className = 'card';
+    el.draggable = true;
+    el.dataset.id = ev.id;
+    el.textContent = ev.text;
+    el.addEventListener('dragstart', function (e) { e.dataTransfer.setData('text/plain', ev.id); });
+    return el;
+  }
+
+  function renderPool() {
+    pool.innerHTML = '';
+    shuffled.forEach(function (ev) {
+      var placedSomewhere = slots.some(function (s) { return s && s.id === ev.id; });
+      if (!placedSomewhere) pool.appendChild(makeCard(ev));
+    });
+  }
+
+  function renderSlots() {
+    sequence.innerHTML = '';
+    for (var i = 0; i < 5; i++) {
+      var slot = document.createElement('div');
+      slot.className = 'slot' + (slots[i] ? ' filled' : '');
+      slot.dataset.index = i;
+      slot.textContent = slots[i] ? (i + 1) + '. ' + slots[i].text : 'Position ' + (i + 1);
+      slot.addEventListener('dragover', function (e) { e.preventDefault(); });
+      slot.addEventListener('drop', function (e) {
+        e.preventDefault();
+        var idx = parseInt(this.dataset.index, 10);
+        if (slots[idx]) return;
+        var id = parseInt(e.dataTransfer.getData('text/plain'), 10);
+        var ev = events.find(function (x) { return x.id === id; });
+        slots[idx] = ev;
+        renderPool();
+        renderSlots();
+        checkComplete();
+      });
+      sequence.appendChild(slot);
+    }
+  }
+
+  function checkComplete() {
+    if (slots.every(function (s) { return s; })) {
+      var allCorrect = slots.every(function (s, i) { return s.order === i + 1; });
+      if (allCorrect) {
+        feedback.className = 'feedback correct';
+        feedback.textContent = 'Correct order! You have traced the road to revolution.';
+        document.querySelectorAll('.slot').forEach(function (s) { s.style.background = '#D8F0DD'; s.style.borderColor = '#2A9D5C'; });
+      } else {
+        feedback.className = 'feedback incorrect';
+        feedback.textContent = 'Not quite the right order yet. Check your dates and try rearranging with Reset.';
+      }
+    } else {
+      feedback.textContent = '';
+    }
+  }
+
+  document.getElementById('reset').addEventListener('click', function () {
+    slots = new Array(5).fill(null);
+    shuffled = events.slice().sort(function () { return Math.random() - 0.5; });
+    feedback.textContent = '';
+    renderPool();
+    renderSlots();
+  });
+
+  renderPool();
+  renderSlots();
+})();
+</script>
+
+</body>
+</html>

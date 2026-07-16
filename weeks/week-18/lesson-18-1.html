@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 18.1: The Ratification Debate</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+
+/* ===== embedded widget (byte-consistent widgets/federalist-antifederalist-positions.html) ===== */
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.objections { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+.obj-btn { text-align: left; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 10px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.obj-btn:hover { border-color: #55C8E8; }
+.obj-btn.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.step { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 16px; margin-bottom: 10px; }
+.step h4 { font-size: 12px; color: #C7922C; margin: 0 0 6px 0; text-transform: uppercase; }
+.step p { font-size: 14px; color: #1a2340; line-height: 1.55; margin: 0; }
+.reveal-btn { background: #0E1C42; color: #fff; border: none; border-radius: 6px; padding: 8px 14px; font-size: 13px; cursor: pointer; font-family: inherit; }
+.reveal-btn:hover { background: #1a2a5c; }
+.response { background: #D8F0DD; border-left: 4px solid #2A9D5C; color: #1A6B3D; padding: 10px 14px; border-radius: 6px; margin-top: 8px; font-size: 14px; display: none; }
+.response.show { display: block; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 8px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot">&#129417;</div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 2 &middot; Module 18 &middot; Lesson 18.1</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 18.1</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">The Ratification Debate</div></div>
+  <div class="meta-cell"><div class="meta-label">Week</div><div class="meta-value">Week 18 of 18</div></div>
+  <div class="meta-cell"><div class="meta-label">Benchmarks</div><div class="meta-value" style="font-size:14px;">SS.8.A.3.11, SS.8.CG.2.5</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip">
+  <div class="kicker">Lesson 18.1</div>
+  <div class="title">The Ratification Debate</div>
+  <div class="subtitle">Lesson &middot; ~770 words</div>
+</div>
+
+<div class="card card-gold-top">
+  <div class="card-kicker">&#128214; Today's Focus</div>
+  <div style="font-size:18px; color:#0e1c42; font-style:italic; margin-bottom:10px;">The Constitution needed nine of thirteen state conventions to say yes. Several of the largest states nearly said no.</div>
+  <p>Ratification required approval from conventions in nine of the thirteen states, and the debate split Americans into two camps. Federalists, including James Madison, Alexander Hamilton, and John Jay, defended the new Constitution's stronger national government, publishing dozens of essays (collected as <i>The Federalist</i>) in New York newspapers to persuade skeptical voters. Anti-Federalists, including Patrick Henry and George Mason, argued the new government concentrated dangerous, unchecked power reminiscent of the very monarchy the Revolution had fought to escape, and objected specifically that the Constitution, unlike many state constitutions already in force, contained no bill of rights explicitly protecting individual liberties from federal overreach.</p>
+</div>
+
+<div class="card card-gold-top">
+  <h3>A Compromise That Secured Ratification</h3>
+  <p>Ratification remained genuinely uncertain in several pivotal states, including Massachusetts, Virginia, and New York. The decisive compromise that secured their approval was a promise: Federalist leaders in these states pledged to support a series of amendments protecting individual rights once the new government convened, addressing the Anti-Federalists' central objection without requiring an entirely new convention. Congress proposed twelve such amendments in 1789; ten were ratified by the states in 1791 as the Bill of Rights. The debate did not simply end when the Constitution took effect: it produced a durable, additional layer of the founding document that exists specifically because Anti-Federalist objections were taken seriously rather than simply outvoted.</p>
+
+  <div class="optima-widget">
+    <div class="widget-kicker">Federalist vs. Anti-Federalist Positions</div>
+    <div class="widget-question">Select an Anti-Federalist objection to see its strongest form, then reveal how Federalist writers actually responded.</div>
+
+    <div class="objections">
+      <button class="obj-btn active" data-id="rights">"There is no bill of rights."</button>
+      <button class="obj-btn" data-id="power">"The federal government will swallow the states."</button>
+      <button class="obj-btn" data-id="national">"This creates a national government, not a federal one."</button>
+    </div>
+
+    <div class="step" id="objdetail"></div>
+    <div class="step">
+      <button class="reveal-btn" id="revealResp">Show the Federalist Response</button>
+      <div class="response" id="respText"></div>
+    </div>
+
+    <button class="widget-reset" id="reset">Reset</button>
+  </div>
+</div>
+
+<div class="callout-help">
+  <div class="callout-kicker-help">&#128161; Helpful to Know</div>
+  <div class="card-body">The Bill of Rights, in the form we know it, exists because the Constitution's opponents raised an objection serious enough that its supporters had to accommodate it to win. This is worth remembering whenever a historical outcome looks, in hindsight, like the obviously "correct" or inevitable one: the Bill of Rights was a contingent political compromise, not a feature the Constitution's authors originally planned to include.</div>
+</div>
+
+<div class="card card-navy-top">
+  <div class="card-kicker">&#10145;&#65039; What You'll Do Next</div>
+  <div class="num-row"><div class="num-circle navy">1</div><div class="num-text"><b>Reading Quiz: The Ratification Debate.</b> In Canvas.</div></div>
+  <div class="num-row"><div class="num-circle navy">2</div><div class="num-text"><b>Primary Source 1: Federalist No. 39.</b> In Canvas.</div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Week 18 of 18 &middot; Ratification, the Bill of Rights, and the Presidency of George Washington</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+(function () {
+  var data = {
+    rights: {
+      obj: "Anti-Federalists like Patrick Henry and George Mason argued the Constitution left individual liberties dangerously unprotected against a newly powerful federal government, unlike many existing state constitutions.",
+      resp: "Federalists eventually conceded this specific point rather than argue it away: Federalist leaders in pivotal states pledged to support a bill of rights once the new government convened, producing the ten ratified amendments of 1791."
+    },
+    power: {
+      obj: "Anti-Federalists feared a federal government with the power to tax, raise armies, and override state law would eventually reduce the states to powerless administrative units.",
+      resp: "Federalist No. 45 (Madison) answered directly: federal powers are \"few and defined,\" concerning mainly foreign affairs and defense, while state powers remain \"numerous and indefinite,\" governing the ordinary business of daily life."
+    },
+    national: {
+      obj: "Anti-Federalists charged that the Constitution abandoned a true federal union of sovereign states in favor of a \"national\" government that would consolidate and absorb the states.",
+      resp: "Federalist No. 39 (Madison) answered that the Constitution is deliberately a composition of both: federal in its foundation (ratified state by state) and national in how its powers actually operate and extend."
+    }
+  };
+
+  var current = 'rights';
+  var buttons = document.querySelectorAll('.obj-btn');
+  var objdetail = document.getElementById('objdetail');
+  var respText = document.getElementById('respText');
+
+  function render() {
+    var d = data[current];
+    objdetail.innerHTML = '<h4>The Objection, in Its Strongest Form</h4><p>' + d.obj + '</p>';
+    respText.textContent = d.resp;
+    respText.classList.remove('show');
+    buttons.forEach(function (b) { b.classList.toggle('active', b.dataset.id === current); });
+  }
+
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () { current = b.dataset.id; render(); });
+  });
+
+  document.getElementById('revealResp').addEventListener('click', function () {
+    respText.classList.add('show');
+  });
+  document.getElementById('reset').addEventListener('click', function () {
+    current = 'rights';
+    render();
+  });
+
+  render();
+})();
+</script>
+
+</body>
+</html>

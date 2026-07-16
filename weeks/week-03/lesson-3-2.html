@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 3.2: France, Furs, and Alliance</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+
+/* ===== embedded widget (byte-consistent widgets/great-powers-map.html) ===== */
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.regions { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 14px; }
+.region-btn { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 14px 10px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: center; }
+.region-btn:hover { border-color: #55C8E8; }
+.region-btn.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.region-btn .flag { font-size: 22px; display: block; margin-bottom: 4px; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; min-height: 100px; }
+.detail-card .r-title { font-size: 16px; color: #0E1C42; font-weight: bold; margin-bottom: 4px; }
+.detail-card .r-power { font-size: 13px; color: #C7922C; margin-bottom: 8px; text-transform: uppercase; }
+.detail-card .r-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot">&#129417;</div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 1 &middot; Module 3 &middot; Lesson 3.2</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 3.2</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">France, Furs, and Alliance</div></div>
+  <div class="meta-cell"><div class="meta-label">Week</div><div class="meta-value">Week 3 of 18</div></div>
+  <div class="meta-cell"><div class="meta-label">Benchmarks</div><div class="meta-value" style="font-size:14px;">SS.8.A.2.1, SS.8.A.1.2</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip">
+  <div class="kicker">Lesson 3.2</div>
+  <div class="title">France, Furs, and Alliance</div>
+  <div class="subtitle">Lesson &middot; ~700 words</div>
+</div>
+
+<div class="card card-gold-top">
+  <div class="card-kicker">&#128214; Today's Focus</div>
+  <div style="font-size:18px; color:#0e1c42; font-style:italic; margin-bottom:10px;">The beaver hat was, for a time, one of the most geopolitically important objects in the world.</div>
+  <p>European fashion demand for felt hats made from beaver fur created a trade network stretching from Paris to the heart of the Great Lakes. Beaver pelts, particularly ones already worn and softened by Native use, produced the best felt, and the animals were being trapped out of parts of the Northeast within decades of trade beginning. This gave the fur trade a built-in expiration date in any single region, pushing French traders (and the Native nations who depended on the trade for European goods, especially metal tools and firearms) to keep extending the network further west and further into the interior.</p>
+</div>
+
+<div class="card card-gold-top">
+  <h3>The Huron-Iroquois Rivalry and the Beaver Wars</h3>
+  <p>The Iroquois Confederacy (the Five Nations: Mohawk, Oneida, Onondaga, Cayuga, and Seneca) and the Huron Confederacy were already rival powers before Europeans arrived, but the fur trade sharpened that rivalry into something historians call the Beaver Wars: a decades-long struggle, extending through most of the seventeenth century, over access to fur-trapping territory and to the European trade goods that access brought. France's alliance with the Huron, sealed partly through episodes like Champlain's 1609 battle, meant that from the Iroquois' perspective, France was an enemy's enemy, a dynamic that would later push the Iroquois toward alliance with France's colonial rivals, the Dutch and then the English, setting patterns of alignment that mattered for another century of conflict, including the French and Indian War you'll study later this quarter.</p>
+</div>
+
+<div class="card card-gold-top">
+  <h3>Missionaries Follow the Trade</h3>
+  <p>French religious orders, especially the Jesuits, followed the fur trade routes westward, seeking to convert Native peoples to Catholicism. Jesuit missionaries lived for extended periods among Huron and other Native communities, learning their languages and, in many cases, developing complicated relationships combining genuine friendship, cultural misunderstanding, and religious conviction on both sides. Their detailed annual reports back to France, known collectively as <i>The Jesuit Relations</i>, are one of the richest surviving sources for both Native life in this period and French colonial attitudes toward it, written, like every source you've studied so far, for a specific audience and a specific purpose: to justify continued funding for the mission and to inform (and edify) readers back in France.</p>
+
+  <div class="optima-widget">
+    <div class="widget-kicker">Great Powers Map</div>
+    <div class="widget-question">Click a region of 1650s North America to see which power claimed it and why.</div>
+
+    <div class="regions">
+      <button class="region-btn active" data-id="stlawrence"><span class="flag">&#9875;&#65039;</span>St. Lawrence Valley</button>
+      <button class="region-btn" data-id="mexico"><span class="flag">&#9875;&#65039;</span>Central Mexico</button>
+      <button class="region-btn" data-id="chesapeake"><span class="flag">&#9875;&#65039;</span>Chesapeake Bay</button>
+      <button class="region-btn" data-id="hudson"><span class="flag">&#9875;&#65039;</span>Hudson River</button>
+      <button class="region-btn" data-id="iroquois"><span class="flag">&#9875;&#65039;</span>Iroquois Homeland</button>
+    </div>
+
+    <div class="detail-card" id="detail"></div>
+    <button class="widget-reset" id="reset">Reset</button>
+  </div>
+</div>
+
+<div class="card card-navy-top">
+  <div class="card-kicker">&#10145;&#65039; What You'll Do Next</div>
+  <div class="num-row"><div class="num-circle navy">1</div><div class="num-text"><b>Primary Source 2: <i>The Jesuit Relations.</i></b> In Canvas.</div></div>
+  <div class="num-row"><div class="num-circle navy">2</div><div class="num-text"><b>Primary Source Exercise</b> on <i>The Jesuit Relations</i>, in Canvas.</div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Week 3 of 18 &middot; Great Powers Competition in the New World</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+(function () {
+  var data = {
+    stlawrence: { title: "St. Lawrence Valley", power: "France", body: "French traders built alliance-based fur trade relationships with the Huron and Algonquin nations. A small colonizing population made conquest impractical; the fur trade required Native cooperation." },
+    mexico: { title: "Central Mexico", power: "Spain", body: "Spain conquered and administered the Aztec Empire's core territory through the encomienda system, extracting silver and other wealth through direct rule over a dense, previously urbanized population." },
+    chesapeake: { title: "Chesapeake Bay", power: "England", body: "English colonists sought land for permanent agricultural settlement, first at Jamestown, eventually expanding into tobacco plantations that required ever more land, and put them in growing conflict with the Powhatan Confederacy." },
+    hudson: { title: "Hudson River", power: "The Dutch", body: "The Dutch West India Company ran commercial trading posts (Fort Orange, New Amsterdam) organized purely around profit, resembling France's alliance-based trade but without a crown's territorial ambitions." },
+    iroquois: { title: "Iroquois Homeland (Contested)", power: "Contested by all four", body: "The Iroquois Confederacy's own rivalry with the Huron, sharpened by the fur trade into the Beaver Wars, drew French, Dutch, and eventually English alliance interests into direct competition over the same territory." }
+  };
+
+  var detail = document.getElementById('detail');
+  var buttons = document.querySelectorAll('.region-btn');
+
+  function show(id) {
+    var d = data[id];
+    detail.innerHTML = '<div class="r-title">' + d.title + '</div><div class="r-power">' + d.power + '</div><div class="r-body">' + d.body + '</div>';
+    buttons.forEach(function (b) { b.classList.toggle('active', b.dataset.id === id); });
+  }
+
+  buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.id); }); });
+  document.getElementById('reset').addEventListener('click', function () { show('stlawrence'); });
+
+  show('stlawrence');
+})();
+</script>
+
+</body>
+</html>
