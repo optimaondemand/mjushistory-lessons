@@ -51,6 +51,12 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
 .callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
 
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
 /* ===== embedded widget (byte-consistent widgets/road-to-revolution-sequencer.html); .card scoped under .optima-widget to avoid colliding with the page's own .card ===== */
 .optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
 .widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
@@ -90,15 +96,25 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
   <div class="subtitle">Lesson &middot; ~740 words</div>
 </div>
 
+<div class="callout-glossary">
+  <div class="callout-kicker-glossary">&#128214; Glossary of Subject Vocabulary</div>
+  <div class="card-body">Two new words below, plus two carried over from yesterday.
+  <p><b>counterfactual</b> <i>(kown-ter-FAK-choo-ul)</i> <button class="term-audio" onclick="oaPronounce('counterfactual')" aria-label="Hear pronunciation">&#128266;</button> &mdash; a &ldquo;what if&rdquo; question that imagines how history might have gone differently if one specific event had happened another way.</p>
+  <p><b>monopoly</b> <i>(muh-NAH-puh-lee)</i> <button class="term-audio" onclick="oaPronounce('monopoly')" aria-label="Hear pronunciation">&#128266;</button> &mdash; complete control over the sale of a good or service by one seller, with no real competition.</p>
+  <p><b>punitive</b> <i>(PYOO-nuh-tiv)</i> <button class="term-audio" onclick="oaPronounce('punitive')" aria-label="Hear pronunciation">&#128266;</button> &mdash; meant to punish.</p>
+  <p><b>tacitly</b> <i>(TASS-it-lee)</i> <button class="term-audio" onclick="oaPronounce('tacitly')" aria-label="Hear pronunciation">&#128266;</button> &mdash; without saying so directly; by silent agreement or implication.</p>
+  </div>
+</div>
+
 <div class="card card-gold-top">
   <div class="card-kicker">&#128214; Today's Focus</div>
   <div style="font-size:18px; color:#0e1c42; font-style:italic; margin-bottom:10px;">Parliament decided to make an example of Massachusetts. The other colonies decided Massachusetts's punishment was their own problem too.</div>
-  <p>Parliament responded to the Tea Party in 1774 with a set of punitive laws colonists soon nicknamed the "Intolerable Acts" (Parliament itself called them the Coercive Acts). The Boston Port Act closed Boston's harbor to trade entirely until the destroyed tea was paid for, devastating the city's economy. The Massachusetts Government Act stripped much of the colony's traditional self-government, converting the elected council into a crown-appointed body and sharply restricting town meetings, striking directly at the same New England town-meeting tradition you studied in Week 10. The Administration of Justice Act allowed royal officials accused of crimes committed in the course of duty to be tried outside Massachusetts, beyond the reach of local juries widely seen as biased against them. The Quartering Act authorized housing British troops in private buildings, not just existing barracks.</p>
+  <p>Parliament responded to the Tea Party in 1774 with a set of <span class="term" title="Meant to punish.">punitive</span> laws colonists soon nicknamed the "Intolerable Acts" (Parliament itself called them the Coercive Acts). The Boston Port Act closed Boston's harbor to trade entirely until the destroyed tea was paid for, devastating the city's economy. The Massachusetts Government Act stripped much of the colony's traditional self-government, converting the elected council into a crown-appointed body and sharply restricting town meetings, striking directly at the same New England town-meeting tradition you studied in Module 10. The Administration of Justice Act allowed royal officials accused of crimes committed in the course of duty to be tried outside Massachusetts, beyond the reach of local juries widely seen as biased against them. The Quartering Act authorized housing British troops in private buildings, not just existing barracks.</p>
 </div>
 
 <div class="card card-gold-top">
   <h3>The Backfire</h3>
-  <p>Consider a counterfactual directly: suppose Parliament had imposed the Quartering Act, or these punitive measures generally, only on Massachusetts, expecting the other twelve colonies to stay quiet and let Massachusetts absorb the punishment alone in exchange for being spared themselves. That is roughly what Parliament actually hoped would happen. It is not what happened. Other colonies, recognizing that a Parliament willing to gut one colony's charter and self-government could do the same to any of them next, sent food, supplies, and formal declarations of solidarity to Massachusetts at real cost and risk to themselves. Fellow-feeling among colonists, cultivated over decades of shared grievance (as you've traced across this whole quarter), proved strong enough that isolating any single colony had become, by 1774, a strategy that could no longer work.</p>
+  <p>Consider a <span class="term" title="A &quot;what if&quot; question that imagines how history might have gone differently if one specific event had happened another way.">counterfactual</span> directly: suppose Parliament had imposed the Quartering Act, or these punitive measures generally, only on Massachusetts, expecting the other twelve colonies to stay quiet and let Massachusetts absorb the punishment alone in exchange for being spared themselves. That is roughly what Parliament actually hoped would happen. It is not what happened. Other colonies, recognizing that a Parliament willing to gut one colony's charter and self-government could do the same to any of them next, sent food, supplies, and formal declarations of solidarity to Massachusetts at real cost and risk to themselves. Fellow-feeling among colonists, cultivated over decades of shared grievance (as you've traced across this whole quarter), proved strong enough that isolating any single colony had become, by 1774, a strategy that could no longer work.</p>
 </div>
 
 <div class="callout-help">
@@ -137,6 +153,13 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 </div>
 
 <script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+
 (function () {
   var events = [
     { id: 1, text: "Boston Massacre (1770)", order: 1 },

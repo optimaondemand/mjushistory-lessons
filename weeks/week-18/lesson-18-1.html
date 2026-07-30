@@ -51,6 +51,12 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
 .callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
 
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
 /* ===== embedded widget (byte-consistent widgets/federalist-antifederalist-positions.html) ===== */
 .optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
 .widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
@@ -92,10 +98,20 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
   <div class="subtitle">Lesson &middot; ~770 words</div>
 </div>
 
+<div class="callout-glossary">
+  <div class="callout-kicker-glossary">&#128214; Glossary of Subject Vocabulary (two words continued from Lesson 17.2)</div>
+  <div class="card-body">
+  <p><b>Anti-Federalist</b> <i>(AN-ty-FED-er-uh-list)</i> <button class="term-audio" onclick="oaPronounce('Anti-Federalist')" aria-label="Hear pronunciation">&#128266;</button> &mdash; an opponent of the Constitution who feared it gave the federal government too much power.</p>
+  <p><b>bicameral</b> <i>(by-KAM-er-ul)</i> <button class="term-audio" onclick="oaPronounce('bicameral')" aria-label="Hear pronunciation">&#128266;</button> &mdash; having two separate lawmaking chambers, or houses, such as the House of Representatives and the Senate.</p>
+  <p><b>delegate</b> <i>(DEL-uh-git)</i> <button class="term-audio" onclick="oaPronounce('delegate')" aria-label="Hear pronunciation">&#128266;</button> &mdash; a person chosen to represent and act on behalf of a larger group at a meeting.</p>
+  <p><b>Federalist</b> <i>(FED-er-uh-list)</i> <button class="term-audio" onclick="oaPronounce('Federalist')" aria-label="Hear pronunciation">&#128266;</button> &mdash; a supporter of the new Constitution who wanted a stronger national government.</p>
+  </div>
+</div>
+
 <div class="card card-gold-top">
   <div class="card-kicker">&#128214; Today's Focus</div>
   <div style="font-size:18px; color:#0e1c42; font-style:italic; margin-bottom:10px;">The Constitution needed nine of thirteen state conventions to say yes. Several of the largest states nearly said no.</div>
-  <p>Ratification required approval from conventions in nine of the thirteen states, and the debate split Americans into two camps. Federalists, including James Madison, Alexander Hamilton, and John Jay, defended the new Constitution's stronger national government, publishing dozens of essays (collected as <i>The Federalist</i>) in New York newspapers to persuade skeptical voters. Anti-Federalists, including Patrick Henry and George Mason, argued the new government concentrated dangerous, unchecked power reminiscent of the very monarchy the Revolution had fought to escape, and objected specifically that the Constitution, unlike many state constitutions already in force, contained no bill of rights explicitly protecting individual liberties from federal overreach.</p>
+  <p>Ratification required approval from conventions in nine of the thirteen states, and the debate split Americans into two camps. <span class="term" title="A supporter of the new Constitution who wanted a stronger national government.">Federalists</span>, including James Madison, Alexander Hamilton, and John Jay, defended the new Constitution's stronger national government, publishing dozens of essays (collected as <i>The Federalist</i>) in New York newspapers to persuade skeptical voters. <span class="term" title="An opponent of the Constitution who feared it gave the federal government too much power.">Anti-Federalists</span>, including Patrick Henry and George Mason, argued the new government concentrated dangerous, unchecked power reminiscent of the very monarchy the Revolution had fought to escape, and objected specifically that the Constitution, unlike many state constitutions already in force, contained no bill of rights explicitly protecting individual liberties from federal overreach.</p>
 </div>
 
 <div class="card card-gold-top">
@@ -142,6 +158,13 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 </div>
 
 <script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+
 (function () {
   var data = {
     rights: {

@@ -51,6 +51,12 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .callout-warn { background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
 .callout-kicker-warn { font-size: 11px; color: #8A1F16; margin-bottom: 8px; text-transform: uppercase; }
 
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
 /* ===== embedded widget (byte-consistent widgets/convention-compromise-builder.html) ===== */
 .optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
 .widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
@@ -92,15 +98,25 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
   <div class="subtitle">Lesson &middot; ~780 words</div>
 </div>
 
+<div class="callout-glossary">
+  <div class="callout-kicker-glossary">&#128214; Glossary of Subject Vocabulary</div>
+  <div class="card-body">Two new words below, plus two carried over from yesterday.
+  <p><b>bicameral</b> <i>(by-KAM-er-ul)</i> <button class="term-audio" onclick="oaPronounce('bicameral')" aria-label="Hear pronunciation">&#128266;</button> &mdash; having two separate lawmaking chambers, or houses, such as the House of Representatives and the Senate.</p>
+  <p><b>delegate</b> <i>(DEL-uh-git)</i> <button class="term-audio" onclick="oaPronounce('delegate')" aria-label="Hear pronunciation">&#128266;</button> &mdash; a person chosen to represent and act on behalf of a larger group at a meeting.</p>
+  <p><b>foreclosure</b> <i>(for-KLOH-zher)</i> <button class="term-audio" onclick="oaPronounce('foreclosure')" aria-label="Hear pronunciation">&#128266;</button> &mdash; when a lender takes away a property because the owner failed to pay what they owed.</p>
+  <p><b>ratify</b> <i>(RAT-uh-fy)</i> <button class="term-audio" onclick="oaPronounce('ratify')" aria-label="Hear pronunciation">&#128266;</button> &mdash; to officially approve a formal document, making it legally valid.</p>
+  </div>
+</div>
+
 <div class="card card-gold-top">
   <div class="card-kicker">&#128214; Today's Focus</div>
   <div style="font-size:18px; color:#0e1c42; font-style:italic; margin-bottom:10px;">Delegates arrived in Philadelphia authorized only to revise the Articles. Within weeks, they were writing an entirely new government from scratch.</div>
-  <p>Fifty-five delegates convened in Philadelphia in May 1787, and James Madison of Virginia arrived having done more preparation than almost anyone else present, having studied the history of failed confederacies specifically to design something more durable. His Virginia Plan proposed a strong national government with representation in both houses of a legislature based on state population, a structure that obviously favored large states like Virginia. Smaller states countered with the New Jersey Plan, preserving the Articles' equal representation regardless of population.</p>
+  <p>Fifty-five <span class="term" title="A person chosen to represent and act on behalf of a larger group at a meeting.">delegates</span> convened in Philadelphia in May 1787, and James Madison of Virginia arrived having done more preparation than almost anyone else present, having studied the history of failed confederacies specifically to design something more durable. His Virginia Plan proposed a strong national government with representation in both houses of a legislature based on state population, a structure that obviously favored large states like Virginia. Smaller states countered with the New Jersey Plan, preserving the Articles' equal representation regardless of population.</p>
 </div>
 
 <div class="card card-gold-top">
   <h3>The Great Compromise</h3>
-  <p>The Connecticut Compromise (often called the Great Compromise) resolved this specific deadlock by creating a bicameral legislature: a House of Representatives apportioned by state population, satisfying large states, and a Senate with equal representation for every state regardless of size, satisfying small states. This structural compromise, more than any single argument, is what actually allowed the convention to keep functioning once the large-state/small-state conflict threatened to break it apart entirely.</p>
+  <p>The Connecticut Compromise (often called the Great Compromise) resolved this specific deadlock by creating a <span class="term" title="Having two separate lawmaking chambers, or houses, such as the House of Representatives and the Senate.">bicameral</span> legislature: a House of Representatives apportioned by state population, satisfying large states, and a Senate with equal representation for every state regardless of size, satisfying small states. This structural compromise, more than any single argument, is what actually allowed the convention to keep functioning once the large-state/small-state conflict threatened to break it apart entirely.</p>
   <h3>The Three-Fifths Compromise</h3>
   <p>A separate, morally weightier conflict concerned how slaves would count toward a state's population for purposes of representation and taxation. Southern states, with large slave populations, wanted slaves counted fully for representation (increasing Southern political power) but not for taxation; some Northern states wanted the reverse. The delegates settled on the Three-Fifths Compromise: slaves would count as three-fifths of a person for both representation and direct taxation purposes. This compromise was not a side issue or a footnote to the Convention's real business: it directly shaped how much political power slaveholding states held in the new government for decades afterward, and it is impossible to honestly separate the practical political bargain that made ratification possible from the moral fact that it treated slaves as fractional persons under the nation's founding law.</p>
 
@@ -148,6 +164,13 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 </div>
 
 <script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+
 (function () {
   var data = {
     small: {
