@@ -50,6 +50,11 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 
 .callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
 .callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
 
 /* ===== embedded widget (byte-consistent widgets/great-powers-map.html) ===== */
 .optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
@@ -87,23 +92,39 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <div class="title-strip">
   <div class="kicker">Lesson 3.2</div>
   <div class="title">France, Furs, and Alliance</div>
-  <div class="subtitle">Lesson &middot; ~700 words</div>
+  <div class="subtitle">Lesson &middot; ~870 words</div>
+</div>
+
+<div class="callout-glossary">
+  <div class="callout-kicker-glossary">&#128214; Glossary of Subject Vocabulary</div>
+  <div class="card-body">Two new words below, plus one carried over from yesterday. Look them over before you read. Tap the speaker to hear each word.
+  <p><b>confederacy</b> <i>(kun-FED-er-uh-see)</i> <button class="term-audio" onclick="oaPronounce('confederacy')" aria-label="Hear pronunciation">&#128266;</button> &mdash; a group of separate nations or states that join together for shared purposes, such as defense or trade, while each keeps its own leaders.</p>
+  <p><b>missionary</b> <i>(MISH-un-air-ee)</i> <button class="term-audio" onclick="oaPronounce('missionary')" aria-label="Hear pronunciation">&#128266;</button> &mdash; a person sent by a church to teach its religion to people who do not already hold it.</p>
+  <p><b>pelt</b> <i>(PELT)</i> <button class="term-audio" onclick="oaPronounce('pelt')" aria-label="Hear pronunciation">&#128266;</button> &mdash; an animal skin with the fur still attached, traded as a raw material.</p>
+  </div>
 </div>
 
 <div class="card card-gold-top">
   <div class="card-kicker">&#128214; Today's Focus</div>
-  <div style="font-size:18px; color:#0e1c42; font-style:italic; margin-bottom:10px;">The beaver hat was, for a time, one of the most geopolitically important objects in the world.</div>
-  <p>European fashion demand for felt hats made from beaver fur created a trade network stretching from Paris to the heart of the Great Lakes. Beaver pelts, particularly ones already worn and softened by Native use, produced the best felt, and the animals were being trapped out of parts of the Northeast within decades of trade beginning. This gave the fur trade a built-in expiration date in any single region, pushing French traders (and the Native nations who depended on the trade for European goods, especially metal tools and firearms) to keep extending the network further west and further into the interior.</p>
+  <div style="font-size:18px; color:#0e1c42; font-style:italic; margin-bottom:10px;">The beaver hat was, for a time, one of the most politically important objects in the world.</div>
+  <p>In Europe, felt hats made from beaver fur stayed in high demand for well over a century. That demand built a trade network reaching from Paris all the way to the Great Lakes.</p>
+  <p>Beaver fur made unusually good felt. Oddly enough, <span class="term" title="An animal skin with the fur still attached, traded as a raw material.">pelts</span> that had already been worn and softened by Native use made the best felt of all. Demand stayed high and steady for decades. But beaver do not breed fast enough to survive that kind of pressure. Within a few decades of the trade beginning, whole regions of the Northeast had been trapped nearly empty of beaver.</p>
+  <p>That gave the fur trade a built-in clock. Once a region ran out, the trade had to move. French traders pushed further west and deeper into the interior. So did the Native nations who now depended on the trade, because it was their source of European goods: metal knives and kettles, cloth, and firearms. Nobody sat down and planned this expansion. The animals ran out, and everyone involved followed the beaver that were left.</p>
 </div>
 
 <div class="card card-gold-top">
-  <h3>The Huron-Iroquois Rivalry and the Beaver Wars</h3>
-  <p>The Iroquois Confederacy (the Five Nations: Mohawk, Oneida, Onondaga, Cayuga, and Seneca) and the Huron Confederacy were already rival powers before Europeans arrived, but the fur trade sharpened that rivalry into something historians call the Beaver Wars: a decades-long struggle, extending through most of the seventeenth century, over access to fur-trapping territory and to the European trade goods that access brought. France's alliance with the Huron, sealed partly through episodes like Champlain's 1609 battle, meant that from the Iroquois' perspective, France was an enemy's enemy, a dynamic that would later push the Iroquois toward alliance with France's colonial rivals, the Dutch and then the English, setting patterns of alignment that mattered for another century of conflict, including the French and Indian War you'll study later this quarter.</p>
+  <h3>The Huron, the Iroquois, and the Beaver Wars</h3>
+  <p>The Iroquois <span class="term" title="A group of separate nations or states that join together for shared purposes, such as defense or trade, while each keeps its own leaders.">Confederacy</span> and the Huron Confederacy were rival powers long before any European arrived. The Iroquois Confederacy joined five nations: the Mohawk, Oneida, Onondaga, Cayuga, and Seneca. The Huron were a confederacy as well. Their rivalry was already old.</p>
+  <p>The fur trade did not create that rivalry. It sharpened it into something far more destructive. Historians call the result the Beaver Wars: a struggle running through most of the 1600s over who would control fur-trapping territory, and therefore who would receive European goods. Firearms raised what each side stood to win and to lose.</p>
+  <p>The results were severe. In 1649, Iroquois war parties broke the Huron Confederacy apart. Huron survivors scattered west and north, some joining other nations, some fleeing to the French settlements for shelter. A confederacy that had been one of the strongest powers in the region a generation earlier effectively ceased to exist as an independent people. France lost its most important ally in a single season. Notice what this means: the nation France had bet on was destroyed, and destroyed by other Native people using weapons that European trade had put into their hands.</p>
+  <p>France's decision to ally with the Huron carried a consequence France may not have thought all the way through. Champlain's 1609 battle, which you read about this week, helped seal that alliance by helping the Huron kill Iroquois chiefs. From the Iroquois point of view, that made France an enemy. And an enemy's enemy is a possible friend. Over the following decades the Iroquois moved toward France's rivals, first the Dutch and then the English. Those alignments outlasted every person who made them. They still mattered a century later in the French and Indian War, which you will study later this quarter. One fight beside one lake in 1609 helped set the sides for a war in the 1750s. That is worth sitting with for a moment.</p>
 </div>
 
 <div class="card card-gold-top">
   <h3>Missionaries Follow the Trade</h3>
-  <p>French religious orders, especially the Jesuits, followed the fur trade routes westward, seeking to convert Native peoples to Catholicism. Jesuit missionaries lived for extended periods among Huron and other Native communities, learning their languages and, in many cases, developing complicated relationships combining genuine friendship, cultural misunderstanding, and religious conviction on both sides. Their detailed annual reports back to France, known collectively as <i>The Jesuit Relations</i>, are one of the richest surviving sources for both Native life in this period and French colonial attitudes toward it, written, like every source you've studied so far, for a specific audience and a specific purpose: to justify continued funding for the mission and to inform (and edify) readers back in France.</p>
+  <p>French religious orders followed the fur routes west, above all the Jesuits. Jesuit <span class="term" title="A person sent by a church to teach its religion to people who do not already hold it.">missionaries</span> came to convert Native peoples to Catholicism, and they came to stay. Many lived for years among the Huron and other nations. They learned the languages. They ate the food, traveled by canoe, and endured winters they had not been raised for.</p>
+  <p>What grew out of that was complicated on both sides: real friendship in some cases, deep misunderstanding in others, and sincere religious conviction held by Huron and Jesuit alike, pointing in opposite directions.</p>
+  <p>Every year the missionaries sent long reports back to their superiors in France. Published together, these are known as <i>The Jesuit Relations</i>. They are among the richest surviving records we have of Native life in this period, and of French attitudes toward it. But read them the way you have learned to read every source in this course. They were written for a particular audience and a particular purpose: the mission needed money from readers in France, and a report showing no progress would not bring it in. That does not make the <i>Relations</i> worthless. It makes them evidence that has to be handled with care, which is true of all evidence.</p>
 
   <div class="optima-widget">
     <div class="widget-kicker">Great Powers Map</div>
@@ -122,6 +143,11 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
   </div>
 </div>
 
+<div class="card">
+  <div class="card-kicker">Narration (written, one paragraph)</div>
+  <div class="card-body">Without looking back at the lesson, write one paragraph in your own words explaining how a fashion for beaver hats in Europe helped set off decades of warfare in North America. Trace the chain of causes from the hat to the war. Write from memory; do not reread the lesson first.</div>
+</div>
+
 <div class="card card-navy-top">
   <div class="card-kicker">&#10145;&#65039; What You'll Do Next</div>
   <div class="num-row"><div class="num-circle navy">1</div><div class="num-text"><b>Primary Source 2: <i>The Jesuit Relations.</i></b> In Canvas.</div></div>
@@ -137,6 +163,13 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 </div>
 
 <script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+
 (function () {
   var data = {
     stlawrence: { title: "St. Lawrence Valley", power: "France", body: "French traders built alliance-based fur trade relationships with the Huron and Algonquin nations. A small colonizing population made conquest impractical; the fur trade required Native cooperation." },

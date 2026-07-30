@@ -50,6 +50,11 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 
 .callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
 .callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
 
 /* ===== embedded widget (byte-consistent widgets/colonial-regions-sorter.html); .card scoped under .optima-widget to avoid colliding with the page's own .card ===== */
 .optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
@@ -88,25 +93,47 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <div class="title-strip">
   <div class="kicker">Lesson 6.1</div>
   <div class="title">Three Colonial Economies</div>
-  <div class="subtitle">Lesson &middot; ~750 words</div>
+  <div class="subtitle">Lesson &middot; ~890 words</div>
+</div>
+
+<div class="callout-glossary">
+  <div class="callout-kicker-glossary">&#128214; Glossary of Subject Vocabulary</div>
+  <div class="card-body">A few words below may be new to you. Look them over before you read; they'll also show up, underlined, in tomorrow's lesson. Tap the speaker to hear each word.
+  <p><b>cash crop</b> <i>(KASH KROP)</i> <button class="term-audio" onclick="oaPronounce('cash crop')" aria-label="Hear pronunciation">&#128266;</button> &mdash; a crop grown mainly to be sold for money, often shipped far away, rather than eaten by the family that grew it.</p>
+  <p><b>indentured servant</b> <i>(in-DEN-cherd SUR-vunt)</i> <button class="term-audio" onclick="oaPronounce('indentured servant')" aria-label="Hear pronunciation">&#128266;</button> &mdash; a person who agreed to work without wages for a set number of years, often in exchange for passage across the Atlantic, and who was legally free at the end of that term.</p>
+  <p><b>subsistence</b> <i>(sub-SIS-tents)</i> <button class="term-audio" onclick="oaPronounce('subsistence')" aria-label="Hear pronunciation">&#128266;</button> &mdash; farming or working to produce just enough for your own household to live on, with little or nothing left over to sell.</p>
+  </div>
 </div>
 
 <div class="card card-gold-top">
   <div class="card-kicker">&#128214; Today's Focus</div>
   <div style="font-size:18px; color:#0e1c42; font-style:italic; margin-bottom:10px;">By 1700, an English colonist's daily life depended enormously on which of three regions he happened to live in.</div>
-  <p>New England's rocky soil and short growing season never supported large-scale cash-crop agriculture the way the South's climate did. Instead, New England towns built economies around small family farms for subsistence, supplemented heavily by fishing, shipbuilding, and, increasingly, trade, carried on close-knit, church-centered towns where land was granted to groups of settlers together, producing the dense village pattern you saw forming at Plymouth and Massachusetts Bay.</p>
+  <p>All three regions flew the same flag and answered to the same king. They did not resemble each other much otherwise.</p>
+  <p>Start with New England. Its soil is rocky and its growing season is short, so it never supported large <span class="term" title="A crop grown mainly to be sold for money, often shipped far away, rather than eaten by the family that grew it.">cash crop</span> farming the way the Southern climate did. What New England built instead were small family farms raising enough to live on, which is called <span class="term" title="Farming or working to produce just enough for your own household to live on, with little or nothing left over to sell.">subsistence</span> farming, and then real money came from somewhere else: fishing, shipbuilding, and trade.</p>
+  <p>New England also settled differently. Land there was granted to whole groups of settlers at once rather than to individuals, which produced tight, church-centered towns where neighbors lived within sight of each other. That is the village pattern you watched begin at Plymouth and Massachusetts Bay. Keep it in mind, because the South did nearly the opposite.</p>
 </div>
 
 <div class="card card-gold-top">
   <h3>The Middle Colonies: A Different Mix Entirely</h3>
-  <p>Pennsylvania, New York, New Jersey, and Delaware occupied a climate and soil good for growing wheat and other grains at real commercial scale, earning the region a reputation as a "breadbasket" that exported grain throughout the Atlantic world. These colonies also developed unusually diverse populations by the standards of English America: New York had been a Dutch colony (New Netherland) before England seized it in 1664 and inherited its mix of Dutch, English, and other European settlers; Pennsylvania's founder William Penn actively recruited settlers of many religious backgrounds, including his own Quakers, alongside German and Scots-Irish immigrants. Port cities like Philadelphia and New York grew as commercial hubs, giving the Middle Colonies an economy built on both large-scale farming and urban trade.</p>
+  <p>Pennsylvania, New York, New Jersey, and Delaware had soil and weather well suited to wheat and other grains, grown at genuine commercial scale. The region earned the nickname "breadbasket" for shipping grain across the Atlantic world.</p>
+  <p>These colonies also became unusually mixed for English America, for two separate reasons. First, New York had not started out English at all. It was the Dutch colony of New Netherland until England seized it in 1664, and England inherited its Dutch, English, and other European settlers along with the territory. Second, Pennsylvania's founder William Penn deliberately recruited settlers of many faiths, including his own Quakers, alongside German and Scots-Irish immigrants.</p>
+  <p>Port cities grew up to move all that grain and trade. Philadelphia and New York became commercial hubs, which gave the Middle Colonies something neither neighbor had in the same measure: a serious farming economy and a serious urban one at the same time.</p>
   <h3>The South: Land, Labor, and Cash Crops</h3>
-  <p>Virginia, Maryland, and the Carolinas developed around cash crops grown for export, tobacco in the Chesapeake, and increasingly rice and indigo further south, on large landholdings spread across the countryside rather than clustered into towns. This dispersed settlement pattern, combined with a crop that demanded intensive, sustained labor, drove Southern planters' growing dependence first on indentured servants and, over the course of the seventeenth century, increasingly on African slaves, a transition you'll examine in detail over the next two weeks.</p>
+  <p>Virginia, Maryland, and the Carolinas built their economies on crops grown for export: tobacco in the Chesapeake, and further south, increasingly rice and indigo. These grew on large landholdings scattered across the countryside instead of gathered into towns.</p>
+  <p>Now put two facts side by side. Those crops demanded heavy, sustained labor, season after season. And the plantations were spread far apart, so no nearby town could supply a shared workforce the way a New England village could. Southern planters answered that labor problem first by importing <span class="term" title="A person who agreed to work without wages for a set number of years, often in exchange for passage across the Atlantic, and who was legally free at the end of that term.">indentured servants</span> from England, and then, across the course of the 1600s, increasingly by enslaving Africans. That shift from one labor system to the other is one of the most consequential changes in American history, and you will examine it closely over the next two modules.</p>
+  <h3>Maryland: A Refuge That Had to Be Written Down</h3>
+  <p>Maryland deserves a note of its own. It was founded in 1634 by the Calvert family, who were English Catholics, as a place where Catholics could worship without the penalties they faced in Protestant England. That was the plan. What actually happened is that Protestant settlers arrived in large numbers and soon outnumbered the Catholics the colony had been built for.</p>
+  <p>So in 1649 Maryland's assembly passed the Act Concerning Religion, promising that no Christian in the colony would be troubled for how he worshipped. Read that carefully, because it cuts two ways. It is one of the earliest written guarantees of religious liberty in English America. It also protected only Christians, and it was passed by a Catholic minority that could see it was about to lose control. Liberty written down by people who need it is still liberty written down, and the writing outlasted the reason for it.</p>
 </div>
 
 <div class="callout-help">
   <div class="callout-kicker-help">&#128161; Helpful to Know</div>
-  <div class="card-body">Notice that none of these three regional economies was simply chosen. Each grew out of the specific combination of soil, climate, and available labor that settlers actually found, the same material-conditions logic you saw shape the difference between Spanish, French, English, and Dutch strategies in Week 3, now operating <i>within</i> a single colonizing power's own territory.</div>
+  <div class="card-body">Notice that no one sat down and chose these three economies. Each grew out of the particular soil, climate, and available labor that settlers actually found where they landed. This is the same reasoning you used in Module 3 to explain why Spain, France, England, and the Dutch pursued different strategies. The difference is the scale. There it explained differences between empires. Here it explains differences <i>inside</i> a single empire, among colonists who shared a language, a king, and a church.</div>
+</div>
+
+<div class="card">
+  <div class="card-kicker">Narration (written, one paragraph)</div>
+  <div class="card-body">Without looking back at the lesson, write one paragraph in your own words describing the three colonial regions and what each one's economy rested on. For at least one region, explain how the land itself helps account for the economy that grew there. Write from memory; do not reread the lesson first.</div>
 </div>
 
 <div class="card card-navy-top">
@@ -140,6 +167,13 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 </div>
 
 <script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+
 (function () {
   var cards = [
     { id: 1, text: "Town-centered settlement, granted to groups together", region: "ne" },
