@@ -52,8 +52,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
 
 /* ===== embedded widget (byte-consistent widgets/natural-rights-matcher.html) ===== */
-.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
-.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
 .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
 .clauses { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
 .clause { background: #FDF3E3; border: 1.5px solid #C7922C; border-radius: 6px; padding: 10px 12px; font-size: 13px; color: #0E1C42; cursor: grab; font-style: italic; }
@@ -71,14 +71,14 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <body>
 
 <div class="oa-header">
-  <div class="brand"><div class="brand-dot">&#129417;</div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
   <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
   <div class="breadcrumb">Quarter 2 &middot; Module 14 &middot; Lesson 14.2</div>
 </div>
 <div class="meta-strip">
   <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 14.2</div></div>
   <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">Jefferson, Adams, and Drafting Independence</div></div>
-  <div class="meta-cell"><div class="meta-label">Week</div><div class="meta-value">Week 14 of 18</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 14 of 18</div></div>
   <div class="meta-cell"><div class="meta-label">Benchmarks</div><div class="meta-value" style="font-size:14px;">SS.8.A.3.7, SS.8.CG.3.1</div></div>
 </div>
 
@@ -131,7 +131,7 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 
 <div class="oa-footer">
   <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
-  <div class="line2">Week 14 of 18 &middot; The Declaration of Independence</div>
+  <div class="line2">Module 14 of 18 &middot; The Declaration of Independence</div>
   <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
 
@@ -142,6 +142,29 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
     { id: 2, text: '"...deriving their just powers from the consent of the governed..."', concept: "consent" },
     { id: 3, text: '"...it is the Right of the People to alter or abolish it..."', concept: "revolution" }
   ];
+
+  var mismatchHints = {
+    1: {
+      consent: "That clause names an unalienable Right, not the people's consent granting government its power.",
+      revolution: "That clause names an unalienable Right, not the people's power to alter or abolish government."
+    },
+    2: {
+      rights: "That clause is about where government's power comes from, not a right people are born with.",
+      revolution: "That clause is about consent granting government its power, not the people's right to overthrow it."
+    },
+    3: {
+      rights: "That clause is about the people's power to alter or abolish government, not a right people are born with.",
+      consent: "That clause is about the people's power to alter or abolish government, not where government's power comes from."
+    }
+  };
+
+  function shuffleArray(arr) {
+    for (var i = arr.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+    }
+    return arr;
+  }
 
   var placed = {};
   var container = document.getElementById('clauses');
@@ -182,9 +205,10 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
       } else {
         var hint = document.createElement('div');
         hint.className = 'hint';
-        hint.textContent = 'Not this concept. Look at the specific word doing the work in the clause.';
+        var specific = mismatchHints[id] && mismatchHints[id][col.dataset.concept];
+        hint.textContent = specific || 'Not this concept. Look at the specific word doing the work in the clause.';
         col.appendChild(hint);
-        setTimeout(function () { hint.remove(); }, 2200);
+        setTimeout(function () { hint.remove(); }, 3200);
       }
     });
   });
@@ -192,9 +216,11 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
   document.getElementById('reset').addEventListener('click', function () {
     placed = {};
     concepts.forEach(function (col) { col.querySelectorAll('.match, .hint').forEach(function (n) { n.remove(); }); });
+    shuffleArray(clauses);
     render();
   });
 
+  shuffleArray(clauses);
   render();
 })();
 </script>

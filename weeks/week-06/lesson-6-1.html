@@ -52,8 +52,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
 
 /* ===== embedded widget (byte-consistent widgets/colonial-regions-sorter.html); .card scoped under .optima-widget to avoid colliding with the page's own .card ===== */
-.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
-.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
 .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
 .optima-widget .tray { display: flex; flex-wrap: wrap; gap: 8px; background: #FFFFFF; border: 1px dashed #B9C4D9; border-radius: 8px; padding: 10px; margin-bottom: 14px; min-height: 50px; }
 .optima-widget .card { background: #FDF3E3; border: 1.5px solid #C7922C; border-radius: 6px; padding: 8px 12px; font-size: 13px; color: #0E1C42; cursor: grab; user-select: none; margin-bottom: 0; }
@@ -66,20 +66,20 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .optima-widget .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
 .optima-widget .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 14px; }
 .optima-widget .widget-reset:hover { background: #FDF3E3; }
-.optima-widget .progress { font-size: 13px; color: #1B6A94; margin-top: 10px; }
+.optima-widget .progress { font-size: 13px; color: #6b7a99; margin-top: 10px; }
 </style>
 </head>
 <body>
 
 <div class="oa-header">
-  <div class="brand"><div class="brand-dot">&#129417;</div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
   <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
   <div class="breadcrumb">Quarter 1 &middot; Module 6 &middot; Lesson 6.1</div>
 </div>
 <div class="meta-strip">
   <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 6.1</div></div>
   <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">Three Colonial Economies</div></div>
-  <div class="meta-cell"><div class="meta-label">Week</div><div class="meta-value">Week 6 of 18</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 6 of 18</div></div>
   <div class="meta-cell"><div class="meta-label">Benchmarks</div><div class="meta-value" style="font-size:14px;">SS.8.A.2.2, SS.8.A.2.3</div></div>
 </div>
 
@@ -135,7 +135,7 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 
 <div class="oa-footer">
   <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
-  <div class="line2">Week 6 of 18 &middot; Mid-Atlantic and Southern Colonies</div>
+  <div class="line2">Module 6 of 18 &middot; Mid-Atlantic and Southern Colonies</div>
   <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
 
@@ -153,6 +153,20 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
     { id: 9, text: "Large landholdings spread across the countryside, not clustered into towns", region: "south" },
     { id: 10, text: "Founded partly on religious toleration for many backgrounds", region: "mid" }
   ];
+
+  var traits = {
+    1: "town-centered settlement patterns",
+    2: "rocky soil unsuited to large-scale farming",
+    3: "a grain-farming export economy",
+    4: "an unusually diverse population",
+    5: "growing port cities as trade hubs",
+    6: "large-scale cash-crop plantations",
+    7: "a growing dependence on enslaved labor",
+    8: "church membership tied to voting rights",
+    9: "large landholdings spread across the countryside rather than towns",
+    10: "religious toleration for many backgrounds"
+  };
+  var regionLabels = { ne: "New England", mid: "the Middle Colonies", south: "the Southern Colonies" };
 
   var placed = {};
   var tray = document.getElementById('tray');
@@ -206,9 +220,11 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         var fb = document.createElement('div');
         fb.className = 'row-feedback incorrect';
         fb.dataset.for = id;
-        fb.textContent = 'Not this region. Try another column.';
+        var trait = traits[id] || "a different regional pattern";
+        var wrongLabel = regionLabels[col.dataset.region] || "this region";
+        fb.textContent = 'That card describes ' + trait + '. That is not a defining feature of ' + wrongLabel + '.';
         col.appendChild(fb);
-        setTimeout(function () { fb.remove(); }, 1800);
+        setTimeout(function () { fb.remove(); }, 3200);
       }
     });
   });
