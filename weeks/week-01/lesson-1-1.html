@@ -50,6 +50,12 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 
 .callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
 .callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
 
 .term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
 
@@ -92,37 +98,48 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <div class="title-strip">
   <div class="kicker">Lesson 1.1</div>
   <div class="title">Europe Reaches West</div>
-  <div class="subtitle">Lesson &middot; ~750 words</div>
+  <div class="subtitle">Lesson &middot; ~950 words</div>
+</div>
+
+<div class="callout-glossary">
+  <div class="callout-kicker-glossary">&#128214; Glossary of Subject Vocabulary</div>
+  <div class="card-body">A few words below may be new to you. Look them over before you read; they'll also show up, underlined, in tomorrow's lesson.
+  <p><b>circumference</b> <i>(ser-KUM-fer-ents)</i> <button class="term-audio" onclick="oaPronounce('circumference')" aria-label="Hear pronunciation">&#128266;</button> &mdash; the distance all the way around a circle, or all the way around a sphere like the Earth.</p>
+  <p><b>caravel</b> <i>(KARE-uh-vel)</i> <button class="term-audio" onclick="oaPronounce('caravel')" aria-label="Hear pronunciation">&#128266;</button> &mdash; a small, fast sailing ship built by the Portuguese that could sail closer into the wind than older ships.</p>
+  <p><b>astrolabe</b> <i>(AS-truh-layb)</i> <button class="term-audio" onclick="oaPronounce('astrolabe')" aria-label="Hear pronunciation">&#128266;</button> &mdash; a tool sailors used to find their ship's position by studying the stars.</p>
+  <p><b>Reconquista</b> <i>(ray-kon-KEE-stah)</i> <button class="term-audio" onclick="oaPronounce('Reconquista')" aria-label="Hear pronunciation">&#128266;</button> &mdash; the centuries-long effort by Christian kingdoms in Spain to take back land ruled by Muslim kingdoms, finished in January 1492.</p>
+  </div>
 </div>
 
 <div class="card card-gold-top">
   <div class="card-kicker">&#128214; Today's Focus</div>
-  <div style="font-size:18px; color:#0e1c42; font-style:italic; margin-bottom:10px;">Columbus did not prove the world was round. He won an argument about how big it was, and he won it by being wrong in a lucky way.</div>
-  <p>By January of 1492, the Spanish crown had just finished a seven-hundred-year project: the conquest of Granada, the last Muslim kingdom in Spain, completed on January 2. Nine months later, the same crown funded a Genoese sailor's plan to sail west into open ocean until he reached Asia. Neither of those two facts caused the other in any simple way. But without the first, it is hard to imagine the second happening when it did. That kind of hinge, where one contingent event opens a door for another, is something you should watch for all semester.</p>
+  <div style="font-size:18px; color:#0e1c42; font-style:italic; margin-bottom:10px;">Columbus did not prove the world was round. People already knew that. He won an argument about how big the world was, and he won it by being wrong in a lucky way.</div>
+  <p>In January 1492, the Spanish crown finished a seven-hundred-year project called the <span class="term" title="The centuries-long effort by Christian kingdoms in Spain to take back land ruled by Muslim kingdoms, finished in January 1492.">Reconquista</span>: the conquest of Granada, the last Muslim kingdom in Spain. Nine months later, that same crown paid for a sailor's plan to sail west across open ocean until he reached Asia. These two facts did not cause each other directly. But without the first one, it is hard to picture the second one happening when it did. Watch for this pattern all year: one event, by chance, opens the door for another.</p>
 </div>
 
 <div class="card card-gold-top">
-  <h3>Why Anyone Was Looking West at All</h3>
-  <p>Educated Europeans in 1492 already knew the earth was a sphere; that had been common knowledge among scholars since antiquity. What they argued about was <i>how big</i> that sphere was, and therefore how far a ship would have to sail west to reach Asia. For over a century before Columbus, European interest in reaching Asia by sea had been building for a concrete reason: the overland spice and silk trade ran through the eastern Mediterranean, and after the Ottoman Empire captured Constantinople in 1453, that route grew more expensive and less certain for European merchants. A sea route around the problem became worth a great deal of money to whoever found it first.</p>
-  <p>Portugal had been chasing that sea route for decades, sending ship after ship down the coast of Africa under the sponsorship of Prince Henry, known to later writers as "the Navigator." That patient, government-funded program paid off in 1488, when the Portuguese captain Bartolomeu Dias rounded the southern tip of Africa, proving a sea route to the Indian Ocean, and therefore to Asia, was possible. New tools made voyages like this survivable: the <span class="term" title="A small, fast, highly maneuverable ship developed by the Portuguese, able to sail closer to the wind than older ship designs.">caravel</span>, the magnetic compass, and the astrolabe, an instrument for measuring a ship's position by the stars.</p>
+  <h3>Why People Wanted a Western Sea Route</h3>
+  <p>By 1492, educated people in Europe already knew the Earth was round. Scholars had known that since ancient times. The real argument was about something else: how big is the Earth? That answer decided how far a ship would have to sail west to reach Asia.</p>
+  <p>Europeans wanted a sea route to Asia for a clear reason: money. Silk and spices from Asia sold for high prices in Europe. For over a hundred years, traders had carried these goods overland through the eastern Mediterranean. Then in 1453, the Ottoman Empire captured the city of Constantinople, and that old route grew slower and far more expensive. Whoever found a new route by sea stood to make a fortune.</p>
+  <p>Portugal had been chasing that sea route for decades. Prince Henry of Portugal, later called "the Navigator," paid for ship after ship to explore down the coast of Africa. In 1488, the plan finally paid off: a Portuguese captain named Bartolomeu Dias sailed around the southern tip of Africa. He proved that a ship could reach the Indian Ocean, and from there, Asia. New tools made trips like this survivable. Sailors used the <span class="term" title="A small, fast, highly maneuverable ship developed by the Portuguese, able to sail closer to the wind than older ship designs.">caravel</span>, a small, fast ship; the magnetic compass, for finding direction; and the <span class="term" title="A tool sailors used to find their ship's position by studying the stars.">astrolabe</span>, for finding position by the stars.</p>
 </div>
 
 <div class="callout-help">
   <div class="callout-kicker-help">&#128161; Helpful to Know</div>
-  <div class="card-body">Dias's 1488 voyage matters for a reason you might not expect: it gave Portugal's King John II a good reason to say no to Columbus. Portugal already had a working plan to reach Asia around Africa. Why would the king gamble money on an unproven route across open ocean when a proven one was already in hand? Columbus was rejected by the one court most likely to be interested, for the most reasonable of reasons.</div>
+  <div class="card-body">Dias's 1488 voyage matters for a reason you might not guess: it gave Portugal's King John II a good reason to say no to Columbus. Portugal already had a working plan to reach Asia, by sailing around Africa. Why would the king risk money on an untested ocean route when a working route was already in hand? Columbus asked the one king most likely to help him, and got turned down for a perfectly reasonable reason.</div>
 </div>
 
 <div class="card card-gold-top">
   <h3>An Argument Won by Being Wrong</h3>
-  <p>Columbus's own plan rested on a serious miscalculation. Using an old, small estimate of the earth's circumference (going back to the ancient geographer Marinus of Tyre) rather than the more accurate figure that other scholars of his own day preferred, Columbus concluded that Asia lay only about 2,400 miles west of the Canary Islands. The true distance is closer to 12,000 miles. Experts who reviewed his proposal, first for Portugal, later for Spain, rejected it again and again, and on the math, they were right to.</p>
-  <p>Here is the contingent twist: had Columbus been correct about the distance, his plan would never have been funded, because the true 12,000-mile distance was known by better-informed geographers to be impossibly far for a fifteenth-century ship carrying only a few months of food and water. And had he been wrong about the distance <i>and</i> there been no land in between, his crew would have starved in open ocean long before sighting Asia. Columbus's voyage worked only because two separate errors happened to cancel each other out: he underestimated the size of the earth, and he did not know an entire pair of continents sat in the ocean he intended to cross. Neither he nor anyone in Europe had any way of knowing that second fact in 1492.</p>
-  <p>After years of lobbying and repeated rejection at the Portuguese and then the Spanish court, Columbus finally secured backing from Isabella of Castile and Ferdinand of Aragon in April 1492: monarchs who, having just completed the conquest of Granada, had a treasury and a court newly free to consider his request. Persistence had put him in front of the right people at the right moment; it took the Reconquista's completion to make that moment arrive when it did.</p>
+  <p>Columbus's own plan rested on a real mistake. He used an old, small guess for the Earth's <span class="term" title="The distance all the way around a circle, or all the way around a sphere like the Earth.">circumference</span>, borrowed from an ancient geographer named Marinus of Tyre, instead of the larger, more accurate guess that most experts of his own day preferred. Using the small guess, Columbus decided Asia sat only about 2,400 miles west of the Canary Islands. The true distance is closer to 12,000 miles. Expert after expert, first in Portugal, then in Spain, reviewed his plan and turned it down. On the math, they were right to.</p>
+  <p>Here is the strange twist. If Columbus had guessed the distance correctly, no king or queen would have funded his trip at all, because everyone already knew 12,000 miles was too far for a ship of that time to sail on a few months of food and water. And if he had kept his wrong guess about the distance, but no land had happened to sit in between, his crew would have starved before ever reaching Asia. Columbus's plan worked only because two separate mistakes happened to cancel each other out: he underestimated the size of the Earth, and he had no way of knowing that an entire pair of continents sat in the ocean he meant to cross. No one in Europe could have known that second fact in 1492.</p>
+  <p>After years of being turned down again and again, Columbus finally found backers: Queen Isabella of Castile and King Ferdinand of Aragon agreed to fund his voyage in April 1492. Only months before, Spain had finished the Reconquista, so the royal treasury and the royal court finally had the money and the time to consider his request. Columbus's own persistence had put him in front of the right people. But it took Spain finishing a centuries-long war to make that moment arrive when it did.</p>
 </div>
 
 <div class="card card-gold-top">
   <h3>The Crossing</h3>
-  <p>Columbus's three ships, the <i>Ni&ntilde;a</i>, the <i>Pinta</i>, and the <i>Santa Mar&iacute;a</i>, departed the Spanish port of Palos on August 3, 1492, and stopped at the Canary Islands to resupply and pick up the reliable westward trade winds. From there they sailed into open ocean for five weeks, far longer than any of the crew had ever been out of sight of land, and unease turned to something closer to mutiny by early October. On October 12, a lookout aboard the <i>Pinta</i> sighted land: an island in the Bahamas that its Lucayan inhabitants called Guanahan&iacute;, which Columbus renamed San Salvador.</p>
-  <p>Columbus never accepted that he had found something other than the outer edge of Asia. He called the people he met "Indians," a name that stuck for the next several centuries, and on his later voyages he continued to interpret every new discovery as further confirmation of a theory his own crew had begun to doubt. That stubborn self-confidence is worth sitting with as a character trait, not just a mistake: the same refusal to accept "no" that carried a rejected proposal through a decade of European courts to a funded voyage also blinded its author to the plain evidence in front of him once he arrived. Virtue and vice, in the classical sense this course uses those words, are often the same disposition pointed in different directions depending on the circumstances.</p>
+  <p>Columbus's three ships, the <i>Ni&ntilde;a</i>, the <i>Pinta</i>, and the <i>Santa Mar&iacute;a</i>, left the Spanish port of Palos on August 3, 1492. They stopped at the Canary Islands to load supplies and catch reliable winds blowing west. From there, they sailed into open ocean for five weeks: longer than any sailor on board had ever gone without seeing land. By early October, unease on the ships had grown close to mutiny. On October 12, a lookout aboard the <i>Pinta</i> spotted land. It was an island in the Bahamas; its Lucayan people called it Guanahan&iacute;. Columbus renamed it San Salvador.</p>
+  <p>Columbus never accepted that he had found something other than the outer edge of Asia. He called the people he met "Indians," a name that stuck for centuries. On his later voyages, he kept treating every new discovery as more proof of his own theory, even as his own crew began to doubt it. That stubbornness is worth noticing as a character trait, not just a mistake. The same refusal to hear "no" that carried his plan through a decade of rejection also blinded him to the plain evidence once he arrived. In the way this course uses the words virtue and vice, the same trait can point in two directions at once: it can carry you to success, or it can blind you to the truth, depending on the situation you are in.</p>
 
   <div class="optima-widget">
     <div class="widget-kicker">Explore the Routes</div>
@@ -155,6 +172,11 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
   </div>
 </div>
 
+<div class="card">
+  <div class="card-kicker">Narration (written, one paragraph)</div>
+  <div class="card-body">Without looking back at the lesson, write one paragraph in your own words explaining why Columbus's 1492 voyage happened when it did, and why it survived even though his math was wrong. Write from memory; do not reread the lesson first, and do not use a summary or word bank.</div>
+</div>
+
 <div class="card card-navy-top">
   <div class="card-kicker">&#10145;&#65039; What You'll Do Next</div>
   <div class="num-row"><div class="num-circle navy">1</div><div class="num-text"><b>Reading Quiz: Europe Reaches West.</b> Six questions on this lesson, in Canvas.</div></div>
@@ -175,6 +197,13 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 </div>
 
 <script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+
 (function () {
   var data = {
     "1": { title: "1st Voyage (1492&ndash;1493)", body: "Palos &rarr; Canary Islands &rarr; San Salvador &rarr; Cuba &rarr; Hispaniola. First landfall in the Bahamas. Columbus establishes a small fort, La Navidad, on Hispaniola before returning to Spain to report his discovery." },
