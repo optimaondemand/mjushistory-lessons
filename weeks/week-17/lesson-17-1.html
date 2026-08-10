@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 17.1: A Government Too Weak to Govern</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 2 &middot; Module 17 &middot; Lesson 17.1</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 17.1</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">A Government Too Weak to Govern</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 17 of 18</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 17.1 · ~7 min</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">A Government Too Weak to Govern</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~800 words</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">A few words below may be new to you. Look them over before you read; they'll also show up, underlined, in tomorrow's lesson.
+  <p><b>foreclosure</b> <i>(for-KLOH-zher)</i> — when a lender takes away a property because the owner failed to pay what they owed.</p>
+<p><b>ratify</b> <i>(RAT-uh-fy)</i> — to officially approve a formal document, making it legally valid.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">The first American national government was built, quite deliberately, to be weak, and it worked exactly as designed, which turned out to be the problem.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The Articles of Confederation were <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Officially approved as a formal document, making it legally valid.">ratified</span> in 1781. They created a national government built on a clear premise. Colonists had a fresh, hard-earned fear of centralized power. That fear came after a full decade of fighting exactly that kind of power. So the new national government was built deliberately weak. Congress under the Articles could not tax citizens directly. It could only request funds from state legislatures. States frequently ignored or shortchanged those requests. Congress had no power to regulate commerce between states. It had no independent executive branch to enforce its own laws. It had no national judiciary either.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">That missing power created real, everyday friction. States taxed goods crossing their own borders as though they were separate countries. New York, for example, charged duties on firewood and produce shipped in from Connecticut and New Jersey. It treated these goods as if they were foreign imports. Merchants faced a tangle of different tariffs, currencies, and regulations from state to state. This exact kind of practical inconvenience made merchants and traders some of the strongest early voices for a stronger national government. Amending the Articles required unanimous consent from all thirteen states, with no exceptions allowed. That standard made even modest reform nearly impossible in practice.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Currency added another layer of chaos. Each state could print and value its own paper money. A dollar issued by Rhode Island might be worth far less in Massachusetts, or nothing at all. Merchants doing business across state lines faced constant uncertainty about what any given bill of credit was actually worth, from one state to the next. Congress had no power to establish one single, trusted national currency to replace this confusing patchwork of competing state currencies.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The Confederation Congress was not a complete failure, though. Its most celebrated success was the Northwest Ordinance of 1787. This law established an orderly process for organizing new territory north of the Ohio River. That territory would become future states, on equal footing with the original thirteen. It would not become permanent colonies of the existing states. The Ordinance also banned slavery in the entire territory it covered. That land would eventually become Ohio, Indiana, Illinois, Michigan, and Wisconsin. Whatever else the Articles government could not do, it managed this one piece of durable, forward-looking legislation. It passed this law the very same year the Constitutional Convention was meeting in Philadelphia, to replace the government that wrote it.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">A Rebellion That Exposed the Problem</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Shays' Rebellion, from 1786 to 1787, made these weaknesses concrete and urgent. Massachusetts farmers took up arms under a man named Daniel Shays. They wanted to shut down local courts and prevent further foreclosures. Many of these farmers were Revolutionary War veterans. They were burdened by wartime debt. They faced aggressive state tax collection and court-ordered farm <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="When a lender takes away a property because the owner failed to pay what they owed.">foreclosures</span>. The Massachusetts state government eventually suppressed the uprising. It used its own state militia to do so. The national Congress under the Articles had a serious problem of its own. It had neither the funds nor the legal authority to raise a federal force to respond.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The debt crisis behind Shays' Rebellion had real economic roots, not just political ones. A postwar depression left many Massachusetts farmers cash-poor. State tax collectors demanded payment in hard currency, gold or silver coin, not crops or produce. Farmers who could not pay in coin faced court judgments, seized property, and even debtors' prison. This was not simply about political philosophy. It was about real people facing real financial ruin, with a state government that offered little relief and a national government that could offer none at all.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">For many political leaders watching, Shays' Rebellion crystallized a fear that had been building for years. A national government this weak could not guarantee order. It could not defend property. It could not respond to a genuine crisis. Those are the exact first-order political problems this course's framework treats as the baseline test of any regime's success. Daniel Shays himself had fought at Bunker Hill and at Saratoga before returning home to a farm buried in debt. He was eventually sentenced to death for his role in the rebellion. He was then pardoned. Most of his followers faced no serious punishment at all. Massachusetts's response, in the end, mixed genuine alarm with real restraint. That same combination would recur when the framers debated how much power a new government should actually hold.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Notice, too, that Massachusetts handled its own crisis with its own resources. That was exactly the outcome the Articles' designers expected of the states. The problem was not that no government responded. It was that only a state government could.</p>
+</div>
+<div class="callout-help" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-help" style="font-size: 10px; color: #1B6A94; margin-bottom: 6px; ">💡 Helpful to Know</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Notice the contingent irony here. The same recent memory of British tyranny made Americans design a deliberately weak national government. That same memory also made Shays' own rebels feel justified resisting what they saw as an unresponsive, distant authority extracting money from ordinary farmers. Both the Articles' weakness and Shays' Rebellion drew on the same well of Revolutionary-era distrust of concentrated power, just pointed in different directions.</div>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>17.1 Reading Quiz: A Government Too Weak to Govern.</b></div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 1: The Articles of Confederation.</b></div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 17 of 18 &middot; The Articles of Confederation and the Constitutional Convention</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
