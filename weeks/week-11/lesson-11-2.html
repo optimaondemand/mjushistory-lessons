@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 11.2: From the Townshend Acts to Blood in Boston</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 2 &middot; Module 11 &middot; Lesson 11.2</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 11.2</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">From the Townshend Acts to Blood in Boston</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 11 of 18</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 11.2</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">From the Townshend Acts to Blood in Boston</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~800 words · ~7 min</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Two new words below, plus two carried over from yesterday.
+  <p><b>acquitted</b> <i>(uh-KWIT-ed)</i> — found not guilty of a crime at trial.</p>
+<p><b>boycott</b> <i>(BOY-kot)</i> — an organized refusal to buy or use certain goods, used as a form of protest.</p>
+<p><b>customs house</b> <i>(KUS-tumz hows)</i> — a government office where taxes on imported and exported goods are collected and enforced.</p>
+<p><b>revenue</b> <i>(REV-uh-noo)</i> — money a government collects, usually through taxes.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">The Townshend Acts threatened something colonists valued more than money: their assemblies' actual power, and the daily habits of self-government they had built for generations.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The 1767 Townshend Acts taxed imported glass, paint, paper, and tea. Their deeper threat, though, lay in how Parliament planned to spend the money. Parliament wanted to pay the salaries of royal governors and judges directly. That would free those officials from depending on colonial assemblies for their pay. Assemblies had traditionally controlled that funding. They used it as real leverage over royal appointees' behavior. A governor who angered his colony's assembly could see his own salary threatened. Assemblies had used exactly that leverage before, more than once, to push back on unpopular royal decisions. Colonists like Dickinson saw the Townshend Acts for what they were. They were an attack on their assemblies' actual power, not merely a new expense to grumble about.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Non-Importation and a Partial Retreat</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Colonists answered the Townshend Acts the same way they had answered the Stamp Act. They organized non-importation agreements. This meant refusing to buy the taxed British goods at all. Merchants in Boston, New York, and Philadelphia coordinated these boycotts across colonies. This kind of collective action was becoming a practiced skill, not a one-time experiment. The pressure worked, at least partly. In 1770, Parliament repealed every Townshend duty except one: the tax on tea. Parliament kept that single tax in place on purpose. It wanted to preserve its claimed right to tax the colonies, the same principle it had insisted on after repealing the Stamp Act. Notice the pattern repeating itself. Britain kept retreating on individual taxes. Britain kept refusing to retreat on its underlying claim of authority. That one remaining tax on tea would matter enormously three years later.</p>
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Troops in a Hostile City</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Boston's resistance to customs enforcement led Britain to station several regiments of troops in the city, beginning in 1768. This created constant friction between soldiers and Boston's civilian population. Off duty, soldiers competed with local workers for the same scarce jobs. On March 5, 1770, a confrontation broke out. A crowd faced off against a small group of British soldiers guarding the <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A government office where taxes on imported and exported goods are collected and enforced.">customs house</span>. The crowd pelted the soldiers with snowballs, ice, and other objects. The scene grew chaotic and threatening. The soldiers fired into the crowd. Five colonists were killed. Among the dead was Crispus Attucks, a sailor of mixed African and Native American ancestry. He was among the first Americans killed in the growing conflict with Britain. Ever since, he has been remembered as an early martyr of the Revolutionary cause.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Boston's town leaders demanded that British troops leave the town immediately after the shooting. Acting Governor Thomas Hutchinson agreed. Within days, both regiments withdrew to Castle William, an island fortress out in Boston harbor. Removing the troops calmed the town's immediate anger, at least for a while. It also removed the daily friction between soldiers and civilians that had helped cause the massacre in the first place.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Colonial propaganda moved fast. Paul Revere produced a widely circulated engraving of the event within weeks. It labeled the incident a "massacre." It showed the soldiers firing in a calm, organized line, as if on command. This image inflamed colonial anger across the colonies. Samuel Adams, already a skilled organizer of public opinion, made sure the event was not forgotten. Boston held a public "Massacre Day" oration every year afterward, keeping the memory alive on purpose. The soldiers who actually fired that night were following no clear order. Many later accounts describe the crowd as genuinely dangerous that night, not merely noisy. Untangling what a frightened young private actually saw, in the dark, surrounded by a mob, from what colonial propaganda later claimed he saw, is exactly the kind of source problem this course keeps asking you to sit with.</p>
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">A Verdict Colonists Largely Accepted</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Boston in 1770 was primed for outrage. Yet when the verdicts came back mostly acquittals, the town did not erupt into new violence. This restraint was not guaranteed. Many colonists had already decided, before the trial even began, that the soldiers were guilty. A different city, or a different moment, might have answered a lenient verdict with new rioting. Boston largely did not. That restraint was itself a choice, not an accident, and it says something important about how colonists understood their own protest. Boycotts, petitions, and public pressure were legitimate tools. So was a fair trial's verdict, even an unwelcome one. Mob violence against a jury's decision was not. This distinction, between organized political resistance and lawless violence, would matter again and again as the conflict with Britain deepened over the next several years. Keep it in mind, since not every colonist would agree on where exactly that line should be drawn as the crisis grew worse.</p>
+</div>
+<div class="callout-help" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-help" style="font-size: 10px; color: #1B6A94; margin-bottom: 6px; ">💡 Helpful to Know</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">John Adams was already a respected Boston lawyer, and a committed critic of British policy. He agreed to defend the accused British soldiers at trial anyway. It was a deeply unpopular decision, one that risked his own reputation and legal practice. Adams believed every defendant, however unpopular, deserved a fair trial under law. He argued that mob violence and intimidation could not be allowed to substitute for evidence and due process. This was true even for soldiers many of his own neighbors wanted to see punished, regardless of the facts. Most of the accused were <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Found not guilty of a crime at trial.">acquitted</span> or convicted of the lesser charge of manslaughter. The trial itself unfolded in two parts. Captain Thomas Preston, the officer in command that night, was tried separately from his men and acquitted first: the jury could not find clear evidence he had ordered his soldiers to fire. Six of the eight soldiers were acquitted outright. Two were convicted of manslaughter, a lesser charge than murder, and punished with a branding on the thumb rather than execution. For a jury drawn from the very city where the killings happened, this was a remarkably measured outcome, exactly what Adams had asked them to reach. It is worth pausing on that fact: a Boston jury, in a city primed for outrage, still returned a verdict that closely tracked the actual evidence. You'll read Adams's own trial notes next.</div>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 2: John Adams's Boston Massacre trial notes.</b></div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source Report</b> (Tier 3, M365 Word document) on Adams's defense.</div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 11 of 18 &middot; British Policy and Colonial Grievances, Part I: 1763&ndash;1770</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
