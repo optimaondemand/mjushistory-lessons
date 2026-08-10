@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 2.1: Cortés and the Fall of an Empire</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 1 &middot; Module 2 &middot; Lesson 2.1</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 2.1</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">Cortés and the Fall of an Empire</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 2 of 18</div></div>
+  <div class="meta-cell"><div class="meta-label">Benchmarks</div><div class="meta-value" style="font-size:14px;">SS.8.A.2.4, SS.8.A.2.5</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 2.1</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">Cortés and the Fall of an Empire</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~1,050 words · ~8 min</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">A word below may be new to you. Look it over before you read; it will also show up, underlined, in tomorrow's lesson.
+  <p><b>tribute</b> <i>(TRIB-yoot)</i> — payments of goods, food, or wealth that a weaker or conquered group must regularly give to a more powerful ruler.</p>
+</div>
+</div>
+<div class="callout-foreign" style="background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-foreign" style="font-size: 10px; color: #8a6216; margin-bottom: 6px; ">🌐 Foreign Language Vocabulary (continued from Lesson 1.2)</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><p><b>cacique</b> <i>(kah-SEE-kay)</i> — a Taíno word for a local chief or leader.</p></div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">Hernán Cortés did not defeat the Aztec Empire with six hundred Spaniards. He defeated it with six hundred Spaniards and tens of thousands of the empire's own resentful subjects.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">In February 1519, Hernán Cortés landed on the coast of what is now Mexico. He brought about 600 Spanish soldiers. He brought a handful of cannons. He brought sixteen horses. That last detail matters more than it might seem. The peoples of Mesoamerica had never seen a horse before. No large riding animal like it lived anywhere in the Americas. Some frightened observers saw a rider and his horse move together for the first time. They described the strange sight as a single creature, not two separate animals.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Cortés was not acting under clear orders from his own government. The governor of Cuba, Diego Velázquez, had only given him permission to trade and explore. Cortés went far beyond that permission almost immediately. He made sure his own men could not turn back. In one of the boldest moves of his career, he had his own ships run aground on the beach. He wrecked them on purpose. Then he told his soldiers the ships had been lost by accident. He hid what he had actually done. There would be no going back now. That single, calculated choice happened before a single battle began. It tells you a great deal about Cortés's character, before you even hear what he did next.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">An Empire Built on Tribute, Not Loyalty</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The Aztec Empire was centered on the island capital of Tenochtitlan. The city sat in the middle of a lake. Long causeways connected it to the mainland. Its emperor was Moctezuma II. The empire was not one single, unified nation. It was really a network of separately conquered city-states. Each had its own language, customs, and local rulers. Most of these city-states stayed loyal to the empire for one reason above all: they owed <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Payments of goods, food, or wealth that a weaker or conquered group must regularly give to a more powerful ruler.">tribute</span>. <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Payments of goods, food, or wealth that a weaker or conquered group must regularly give to a more powerful ruler.">Tribute</span> meant regular payments of goods, food, and captured prisoners sent to Tenochtitlan, often for religious sacrifice. This course keeps asking the same question about any government. Did it bind its people together around some shared good? Or did it just take wealth and obedience by force, giving nothing back? By that measure, the Aztec Empire had a real weakness. <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Payments of goods, food, or wealth that a weaker or conquered group must regularly give to a more powerful ruler.">Tribute</span> demanded without any shared cause breeds quiet resentment, not loyalty. That resentment is exactly what Cortés found waiting for him among the empire's conquered peoples.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The most important of these conquered peoples was Tlaxcala. Unlike most of its neighbors, Tlaxcala had resisted full Aztec conquest for decades. It paid a heavy, constant cost for that resistance. It held a bitter, long-standing grudge against the empire. Cortés reached Tlaxcala's territory in September 1519, after a costly clash with Tlaxcalan warriors. Tlaxcala's leaders made a hard choice. Instead of resisting the newcomers alone, they chose to ally with them. That single alliance did more to make Cortés's campaign possible than his own six hundred soldiers ever did. Cortés eventually brought tens of thousands of Tlaxcalan and other allied warriors into the final siege of Tenochtitlan. This is not a small side note to the story of "six hundred conquistadors." It is close to being the whole story.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Tlaxcala's grudge went back much further than ordinary politics. For generations, the two powers fought recurring ritual battles called Flower Wars. Both sides used these battles partly to capture prisoners for religious sacrifice. It was a grim but real feature of their rivalry. Tlaxcala had never been fully conquered. But the empire's power surrounded it on nearly every side. It cut off much of Tlaxcala's trade with other regions. By 1519, Tlaxcala's leaders had every reason to want the empire gone for good. That was true even if it meant trusting strange men they had never met.</p>
+</div>
+<div class="callout-help" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-help" style="font-size: 10px; color: #1B6A94; margin-bottom: 6px; ">💡 Helpful to Know</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">A woman named Malintzin, whom the Spanish called Doña Marina, was given to Cortés as a slave. She became his translator early in the campaign. She spoke both Nahuatl, the Aztec language, and Mayan, and she quickly learned Spanish too. She became Cortés's most important interpreter and advisor. Without her, Cortés could not have negotiated the Tlaxcalan alliance at all. Malintzin had not always been a slave. She was born into a Nahua noble family, but as a child she was given away, and then given away again, passing from one people to another until she ended up among Maya speakers near the coast where Cortés landed. Each of those unwanted transfers, taken alone, looks like ordinary bad luck. Strung together, they happened to build exactly the set of language skills an invading army would need. One person's specific history helped decide the fate of an entire empire. That is a small, chance fact with enormous consequences.</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">The Siege and the Silent Killer</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Cortés and his combined force entered Tenochtitlan peacefully in November 1519. That fact still surprises many students the first time they hear it. In one of his boldest moves, Cortés took the emperor Moctezuma prisoner inside his own palace. He ruled the city indirectly through Moctezuma for months. That uneasy arrangement fell apart the next year. Spanish soldiers killed a large number of Aztec nobles during a religious festival. The city would not forgive or forget that violence. Tenochtitlan rose up in fury almost at once. Cortés's Spanish and Tlaxcalan forces were driven out in a chaotic, bloody disaster. The Spanish called this desperate retreat <i>La Noche Triste</i>, "the Night of Sorrows." Cortés lost most of his remaining men. He lost nearly all the gold he had taken from the city. Historians still argue over exact numbers. But many Spanish soldiers, and even more of their Tlaxcalan allies, died crossing the city's narrow causeways that night. They were cut down or drowned in the dark as they fled.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Cortés did not give up after this humiliating defeat. He regrouped. He carefully rebuilt his alliance with Tlaxcala. Its warriors remained essential to any future attack on the city. In 1521, about a year later, he returned to attack Tenochtitlan again. This time he attacked by land and by a small fleet of ships he had built on Lake Texcoco. But the deadliest force in this second siege was not Spanish weapons. It was not Tlaxcalan warriors either. Smallpox spread rapidly through Tenochtitlan's crowded population during the siege. It arrived through the same contact that had brought Cortés himself. The disease killed Moctezuma's own successor, an emperor named Cuitláhuac, within months of taking power. It also killed an unknown but enormous number of the city's ordinary defenders and residents. It weakened the city from within before a single Spanish soldier ever breached its walls. Just as in the Caribbean the year before, disease arrived far ahead of anyone's plan. It changed the outcome of events no one meant it to affect. Tenochtitlan finally fell on August 13, 1521, after months of brutal fighting and starvation inside its walls. Cortés renamed the ruined city Mexico City. It became the capital of a new Spanish colony: New Spain.</p>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>2.1 Reading Quiz: Cortés and the Fall of an Empire.</b></div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 1: Bernal Díaz del Castillo's eyewitness account of first sighting Tenochtitlan.</b></div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 2 of 18 &middot; Spanish Conquistadors Make Latin America</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
