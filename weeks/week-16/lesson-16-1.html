@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 16.1: Saratoga and the French Alliance</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 2 &middot; Module 16 &middot; Lesson 16.1</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 16.1</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">Saratoga and the French Alliance</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 16 of 18</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 16.1 · ~7 min</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">Saratoga and the French Alliance</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~800 words</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">A few words below may be new to you. Look them over before you read; they'll also show up, underlined, in tomorrow's lesson.
+  <p><b>alliance</b> <i>(uh-LY-unts)</i> — a formal agreement between two or more countries to support each other, especially in war.</p>
+<p><b>aristocrat</b> <i>(uh-RISS-tuh-krat)</i> — a member of a wealthy, high-ranking noble family.</p>
+<p><b>viable</b> <i>(VY-uh-bul)</i> — capable of working or succeeding.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">France did not help America out of pure sympathy. It helped because France had its own old scores to settle with Britain.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">In October 1777, American forces surrounded and forced the surrender of an entire British army. This army, led by General John Burgoyne, surrendered at Saratoga, New York. It was the first time American forces had captured an entire British army in the field. It was proof, at last, that the Continental cause was militarily <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Capable of working or succeeding.">viable</span> on a large scale. France was still smarting from its own defeat and territorial losses in the French and Indian War, which you studied in Module 9. France had already been secretly supplying the Americans with money and weapons for two years. Saratoga's news convinced the French government of something important. Open, formal <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A formal agreement between two or more countries to support each other, especially in war.">alliance</span> was now a realistic bet, not a reckless gamble. France signed a formal Treaty of Alliance with the United States in February 1778.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">A Plan That Assumed Too Much</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Burgoyne's campaign was supposed to work by splitting the rebellion in two. His plan called for marching an army south from Canada, along the Hudson River. A second British force would march north from New York City to meet him. Together, the two armies would cut New England off from the other colonies entirely. The plan assumed close cooperation between commanders separated by hundreds of miles. There was no reliable, fast communication between them. General Howe, the British commander in New York, made a different choice instead. He chose to campaign against Philadelphia that same summer. This left Burgoyne to press south alone. Burgoyne's army grew stretched thin. It was poorly supplied. American militia harassed it at every turn. The army found itself surrounded at Saratoga, with no relief coming. A plan that depended on two armies acting in concert failed for a simple reason. They never actually coordinated at all.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Historians sometimes call Burgoyne "Gentleman Johnny." He was known in London as a playwright and a fashionable socialite, as much as a soldier. His confidence going into the campaign was, in hindsight, badly overplaced. He assumed reinforcement and cooperation that never actually arrived. Nearly 6,000 British and German soldiers surrendered with him at Saratoga. It was the largest single loss of troops Britain had suffered in the war so far. News of a disaster this size, arriving in London weeks later by slow ship, was hard for the government to explain away or minimize in front of Parliament.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Benjamin Franklin was already an international celebrity for his scientific work. He spent much of the war in Paris as America's chief diplomat. He cultivated French public opinion carefully. He dressed simply. He played up an image of a plain, virtuous American frontiersman. French elite society found this image irresistible. That cultivated image was itself a form of diplomatic work. Franklin built it over years, well before Saratoga's news gave France the practical opening it needed to act.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The 1778 treaty bound both sides together. France committed money, arms, and eventually its navy and army to the American cause. In return, the United States agreed not to make a separate peace with Britain without French consent. That commitment would matter later, once peace negotiations finally began in Paris. Notice, too, how much of this alliance rested on trust. These were two governments that had been enemies just fifteen years earlier, at the close of the French and Indian War.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Benjamin Franklin later described the moment news of Saratoga reached Paris. A French official supposedly asked him directly whether the news was true. Franklin is said to have replied that peace was now assured. Britain, he reasoned, would have to make peace with France once it lost America outright, one way or another. Whether or not Franklin's exact words survive accurately, the moment captures something real. Saratoga's news traveled across the Atlantic and immediately reshaped how French officials weighed the risk of joining the war.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Idealism and Self-Interest, Not One or the Other</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">France's motives combined two things at once. Some French officials and volunteers felt genuine Enlightenment sympathy for the American cause. But France also made a much colder strategic calculation. Weakening Britain, its chief global rival, mattered too. Helping Britain lose its most valuable American colonies served that goal directly. The Marquis de Lafayette exemplifies the idealistic side of this story. He was a young French <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A member of a wealthy, high-ranking noble family.">aristocrat</span>. He volunteered to serve without pay, before the formal alliance even existed. He became genuinely devoted to the American cause, and to Washington personally. The two developed a close, almost father-son relationship. But Lafayette's personal idealism operated within France's larger strategic interest, not instead of it. France still wanted to see Britain humbled after decades of rivalry. Both things were true at once, and neither cancels the other out or makes the other one less real.</p>
+</div>
+<div class="callout-help" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-help" style="font-size: 10px; color: #1B6A94; margin-bottom: 6px; ">💡 Helpful to Know</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">James Armistead was a Virginia slave. He served under Lafayette as a spy during the war's final Virginia campaign. Posing as a runaway slave, he gained access to British camps, including Cornwallis's own headquarters. The intelligence he gathered directly informed Continental and French movements ahead of Yorktown. After the war, Virginia's legislature granted Armistead his freedom in recognition of his service. He later took the surname Lafayette, in tribute to the general he had served. His contribution belongs in the same sentence as Saratoga and the French alliance, not in a separate, smaller footnote about "other contributions."</div>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>16.1 Reading Quiz: Saratoga and the French Alliance.</b></div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 1: Lafayette's letters to Washington.</b></div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 16 of 18 &middot; The American Revolution, Part II: Turning Points, Alliances, and Victory</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
