@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 7.2: The Middle Passage and an Atlantic System</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 1 &middot; Module 7 &middot; Lesson 7.2</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 7.2</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">The Middle Passage and an Atlantic System</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 7 of 18</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 7.2</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">The Middle Passage and an Atlantic System</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~830 words · ~7 min</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">One word carried over from yesterday. Look it over before you read.
+  <p><b>chattel slavery</b> <i>(CHAT-ul SLAY-vur-ee)</i> — carried over from Lesson 7.1: a system of slavery that treats an enslaved person as property, able to be bought, sold, moved, and passed down to that person's children, with no end date and no legal rights of their own.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">Over roughly four centuries, an estimated 12.5 million people were forced aboard slave ships bound for the Americas. Roughly 1.8 million did not survive the crossing.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The brutal Atlantic crossing was called the Middle Passage. Slave traders packed captives into cramped, filthy conditions below a ship's deck. The voyage typically lasted one to three months. Disease, hunger, and brutal treatment killed a large, predictable share of the people aboard every voyage. Many died before the ship ever reached American shores. Ship crews themselves also died in large numbers from disease during these voyages, though far fewer than the captives held below deck.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">This appalling death toll was not some accidental side effect of an ordinary trade. It was a direct, foreseeable result of how the whole trade was organized and financed. Traders coldly factored their own expected losses into their profit calculations, ahead of every voyage. They treated human deaths as a routine business cost. This fact needs no elaborate interpretation to grasp its terrible weight. It is simply what happened, at a well-documented scale, over and over, for centuries.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">From Indentured Servitude to Chattel Slavery</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Recall from Module 6, two weeks ago, that early Virginia relied heavily on indentured servants. These were mostly poor English men and women seeking a new start. They traded several years of unpaid labor for passage across the Atlantic. At the end of their term, they gained personal freedom. Africans brought to early Virginia before roughly the 1660s sometimes held a status closer to indentured servitude than to permanent, hereditary slavery. Some, like a man named Anthony Johnson, gained freedom this way. He even went on to acquire property and indentured servants of his own.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Over the following decades, Virginia and other Southern colonies passed increasingly explicit written laws, called slave codes. These laws hardened the earlier, flexible status into something categorically different. This shift did not happen overnight. It unfolded gradually, law by law, over the better part of a century. Under these harsh codes, slavery became fully permanent, with no end date at all. It passed automatically down through the mother's status, no matter the father's status. It was tied specifically to African ancestry, not to debt or crime. This is exactly the <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A system of slavery that treats an enslaved person as property, able to be bought, sold, moved, and passed down to that person's children, with no end date and no legal rights of their own.">chattel slavery</span> system you learned about yesterday, now written directly into colonial law. Ordinary indentured servitude for English colonists continued alongside this harsher system. But it never hardened into a permanent, hereditary, racial status the way slavery for Africans did.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">One specific Virginia law shows exactly how deliberate this hardening was. In 1662, Virginia's assembly passed a law about a child's legal status: free or enslaved. That status would follow the mother, not the father, as English common law had traditionally required. Virginia's lawmakers changed that long-standing rule for one specific reason. They wanted children born to enslaved mothers, including children fathered by slaveholders themselves, to be automatically enslaved for life. A single deliberately written sentence of law did enormous, lasting work. It turned slavery into something inherited automatically, generation after generation. By 1705, Virginia had gathered rules like this one into a single, comprehensive slave code covering the entire colony.</p>
+</div>
+<div class="callout-warn" style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-warn" style="font-size: 10px; color: #8A1F16; margin-bottom: 6px; ">⚠️ Watch Out</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Some historians connect this hardening of slave codes to the very rebellion you studied last week. Bacon's Rebellion briefly allied poor whites, indentured servants, and enslaved and free Black Virginians against the colonial elite. This is a serious, influential argument, not a settled fact beyond dispute. Treat it as one important piece of the explanation for <i>why</i> slave codes hardened when they did, not as the single, complete cause.</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Resistance</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Enslaved people resisted their condition constantly, in ways both large and small. Everyday acts of defiance included slowing work, feigning illness, and sabotage. Resistance also included fully organized, armed uprisings against enslavers. In 1712, a small group of enslaved people in New York City set fire to a building. They killed several colonists who rushed to respond. In 1739, a larger, more organized uprising took place: the Stono Rebellion in South Carolina. Dozens of enslaved people seized weapons and killed several slaveholders. They marched openly toward Spanish Florida, where escaped enslaved people could sometimes gain freedom under Spanish law. Both revolts ended in brutal suppression by colonial militias. Colonial forces hunted down survivors of the Stono Rebellion for weeks afterward. In both cases, colonial governments responded with even harsher slave codes, not any real reform. Watch closely for that pattern throughout the rest of this course. It appears again and again, whenever this course studies resistance to unjust authority. Resistance did not end with these two famous uprisings. Smaller acts of defiance continued on plantations across the South for as long as slavery itself lasted.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Recall from last week's lesson that Southern colonies built their economies on cash crops like tobacco, rice, and indigo. These crops demanded heavy, sustained labor across large, scattered landholdings, with no real break. That relentless demand for labor is exactly what made chattel slavery so attractive to planters. It is exactly why colonial law hardened around protecting that system. A labor system that could be bought once, and inherited forever at no further cost, solved a persistent labor problem. Indentured servitude never fully solved that problem, because it had a fixed term. It always led to the servant's eventual freedom. This same economic logic would repeat itself, in different forms, wherever plantation agriculture spread across the Americas in the centuries that followed.</p>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Continue your analysis of Clarkson's essay in the <b>Primary Source Exercise</b> (see previous page).</div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Join this week's <b>Discussion</b> and <b>VR Activities.</b></div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 7 of 18 &middot; Atlantic Trade Routes and the Slave Trade</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
