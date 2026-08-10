@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 10.1: From Charter to Township</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 2 &middot; Module 10 &middot; Lesson 10.1</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 10.1</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">From Charter to Township</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 10 of 18</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 10.1</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">From Charter to Township</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~830 words · ~7 min</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">A few words below may be new to you. Look them over before you read; they'll also show up, underlined, in tomorrow's lesson.
+  <p><b>charter</b> <i>(CHAR-ter)</i> — a legal document from a king or government that gives a person or group the right to settle, trade, or govern a piece of land.</p>
+<p><b>joint-stock company</b> <i>(joynt-stok KUM-puh-nee)</i> — a business owned by many investors, who buy shares and share in its profits and losses.</p>
+<p><b>proprietary</b> <i>(proh-PRY-uh-tair-ee)</i> — owned and controlled by one person, called a proprietor, who holds special legal rights over it.</p>
+<p><b>selectmen</b> <i>(suh-LEKT-men)</i> — town officials, elected at a town meeting, who handle the town's everyday business.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">By 1750, an ordinary New England farmer had more regular, direct experience governing his own community than most people anywhere else in the world.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Welcome to Quarter 2. Think back on everything you studied last quarter. You met the House of Burgesses in Module 6. You met the Mayflower Compact in Module 5. You met Massachusetts Bay's covenant theology in Module 8. Each of these already showed English colonists building habits of self-government. They built these habits piece by piece. Most colonists were not following some grand plan. They were solving one practical problem at a time. This quarter picks up that same thread. It follows the thread all the way to the American Revolution.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Charters as Foundations</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Every English colony operated under some kind of <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A legal document from a king or government that gives a person or group the right to settle, trade, or govern a piece of land.">charter</span>. A charter was a legal document. A king or a government used it to grant someone the right to settle, trade, or govern land. There were three main kinds. A royal charter came directly from the crown. A <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A business owned by many investors, who buy shares and share in its profits and losses.">joint-stock company</span> charter was owned by many investors. Virginia's original charter worked this way. A <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Owned and controlled by one person, called a proprietor, who holds special legal rights over it.">proprietary</span> charter gave one favored person broad authority over a whole territory. William Penn held Pennsylvania this way.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Charters varied enormously in how much self-government they allowed. Still, nearly every English colony ended up with an elected assembly of some kind. This assembly gave property-holding male colonists a voice in local law. But there was a catch. These colonial governments still answered to a distant crown. The king could grant a charter. The king could also take it away. Massachusetts Bay learned this the hard way later in the century. Its original charter was revoked. A new one arrived with tighter royal control. Self-government under a charter was real, but it depended on the crown's continued goodwill. It was not a right the colonists held on their own.</p>
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Virginia's Head Start: The House of Burgesses</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">You already met one of these assemblies in Module 6. In 1619, Virginia's colonists organized the House of Burgesses. It was the first elected legislative body anywhere in English America. Burgesses were representatives. Property-holding men elected them. Burgesses met to pass local laws and set local policy. The Virginia Company, back in London, still held final authority over the colony. But the Company had made a practical choice. Distant colonists needed some voice in decisions that affected their daily lives. That single practical choice in 1619 set a pattern. Nearly every English colony founded afterward eventually copied it in some form. An elected assembly became the normal expectation, not the exception. By the time Massachusetts Bay and Connecticut built their own systems, an elected voice in government was already becoming an American habit, not a novelty.</p>
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">The Town Meeting: Democracy at the Smallest Scale</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">New England's town meeting system gave ordinary colonists their most direct experience of self-government. Each town held an annual meeting. Many towns also held extra special meetings when needed. At these meetings, property-holding male residents gathered together. They elected local officials called <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Town officials, elected at a town meeting, who handle the town's everyday business.">selectmen</span>. They set the town's tax rates. They decided on roads and other public works. They settled other town business by direct vote. This kind of participation had no match at the colony level. As you saw in Module 8, colony-wide elections in Massachusetts Bay often restricted voting to full church members. That was a narrow group. A man who could never vote for the colony's governor might still speak up at his own town meeting. He might propose an idea there. He might vote directly on his town's budget every single year.</p>
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Connecticut Writes Its Own Rules</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Massachusetts Bay was not the only New England colony experimenting with written self-government. In 1639, settlers in the Connecticut River Valley adopted a plan called the Fundamental Orders of Connecticut. These settlers wrote this plan for themselves. No distant king or company handed it to them. The plan explained how each town would choose its representatives. It explained how much power the governor would hold. It explained how much power the assembly would hold. Some historians call it one of the first written constitutions in the English-speaking world. The exact label matters less than the plain fact underneath it. Ordinary settlers were now writing down their own rules, in advance, for their own government to follow.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Pennsylvania took a very different path to a similar place. William Penn held his colony as a personal grant from the king. That start was about as far from the colonists' own initiative as a charter could get. Yet in 1682, Penn made a surprising choice. He voluntarily wrote and adopted his own Frame of Government. This frame guaranteed an elected assembly. It also guaranteed broad religious liberty to any colonist who settled there. A proprietor held total legal authority over Pennsylvania. He chose to share that authority anyway. This is worth remembering. Self-government in the colonies did not always have to be won through force or protest. Sometimes, it was simply offered.</p>
+</div>
+<div class="callout-help" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-help" style="font-size: 10px; color: #1B6A94; margin-bottom: 6px; ">💡 Helpful to Know</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Historian Alexis de Tocqueville wrote about American democracy nearly two centuries later. He specifically credited New England's town-meeting tradition with teaching ordinary Americans the practical habits of self-government, from the ground up. This happened long before any national constitution existed to enshrine those habits in law. Practice preceded theory here, not the other way around.</div>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>10.1 Reading Quiz: From Charter to Township.</b></div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 1: The Massachusetts Body of Liberties (1641).</b></div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 10 of 18 &middot; Colonial Self-Government: Assemblies, Charters, and Representative Government</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
