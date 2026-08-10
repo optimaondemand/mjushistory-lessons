@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 12.1: The Tea Act and a Party in Boston</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 2 &middot; Module 12 &middot; Lesson 12.1</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 12.1</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">The Tea Act and a Party in Boston</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 12 of 18</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 12.1</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">The Tea Act and a Party in Boston</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~810 words · ~7 min</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">A few words below may be new to you. Look them over before you read; they'll also show up, underlined, in tomorrow's lesson.
+  <p><b>monopoly</b> <i>(muh-NAH-puh-lee)</i> — complete control over the sale of a good or service by one seller, with no real competition.</p>
+<p><b>tacitly</b> <i>(TASS-it-lee)</i> — without saying so directly; by silent agreement or implication.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">Parliament tried to make taxed tea cheaper than smuggled tea. Colonists recognized exactly what that offer was really asking them to accept.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">After 1770, Parliament repealed most Townshend duties. But it deliberately kept one tax in place: the tax on tea. Parliament kept this tax specifically to preserve one principle. It wanted to prove it could tax the colonies whenever it chose. A relative calm followed for a few years. Then the Tea Act of 1773 disrupted that calm. The British East India Company was in serious financial trouble. Parliament wanted to help it survive. So the Tea Act granted the company a legal <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Complete control over the sale of a good or service by one seller, with no real competition.">monopoly</span> on tea sales in the colonies. It also gave the company real tax advantages. Those advantages let the company undersell even smuggled Dutch tea. Colonial leaders saw through this plan right away. Buying the now-cheaper taxed tea, whatever the price, would mean <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Without saying so directly; by silent agreement or implication.">tacitly</span> accepting Parliament's right to tax the colonies. That was the exact principle colonists had been resisting for eight straight years.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Why did Parliament go to such lengths to help one company? The East India Company was not just any business. It managed enormous British trade and territory in India. Its financial collapse threatened to damage the entire British economy, not just a few investors. Parliament had strong reasons of its own to rescue the company. Colonists were, in effect, being asked to help solve a British financial problem they had no part in creating.</p>
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Boston Was Not the Only Port</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Boston was not the only colonial port that received East India Company tea ships in late 1773. In New York and Philadelphia, organized colonists convinced the ships' captains to turn back to England. The ships never even unloaded their cargo. This avoided violence entirely. Charleston, South Carolina, let the tea land. But colonists there left it to rot in a warehouse, unsold. Only in Boston did the royal governor, Thomas Hutchinson, refuse to let the ships leave. He would not let them go without unloading and paying the duty first. Hutchinson's own son held a financial interest in the tea's sale. That made his refusal look anything but neutral. This single refusal, more than any colonial hot-headedness, is why Boston's protest ended in destruction rather than a quiet return voyage.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">A Disciplined Act of Destruction</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">On the night of December 16, 1773, a group of Boston colonists boarded three East India Company ships in Boston Harbor. Some were disguised as Native Americans. Over roughly three hours, they methodically dumped 342 chests of tea into the water. That tea represented a substantial fortune. Contemporary accounts consistently describe the destruction as remarkably orderly. Participants avoided damaging the ships themselves. They avoided touching any other cargo too. By most accounts, they even swept the decks clean afterward. This was not a chaotic riot. It was a deliberate, disciplined political statement. Its organizers wanted witnesses to see the difference clearly.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The men who boarded the ships that night were organized by the Sons of Liberty. This was the same network that had intimidated stamp distributors eight years earlier. Their disguise as Mohawk warriors was not meant to fool anyone. Most Bostonians could likely guess who stood beneath the makeshift costumes. The disguise signaled something else instead. These men were acting as Americans, not as subjects of the king. For one night, they symbolically stepped outside English identity altogether.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The event was not even called the "Boston Tea Party" at the time. That name only came into common use decades later, well after the Revolution had already been won. In 1773, colonial newspapers more often called it simply "the destruction of the tea." That was a plainer description of exactly what had happened. It carried none of the festive associations the later name would attach to it.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Not every colonist cheered the destruction. Some, including Benjamin Franklin, thought the East India Company deserved compensation regardless of the political principle at stake. The tea itself was private property, not government property, Franklin pointed out. Destroying it crossed a line that boycotts and petitions had not crossed before. That discomfort is worth taking seriously. Escalating from refusal to destruction was a real choice. It was not some inevitable next step, and colonists at the time knew it.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">News of the Tea Party took about five weeks to cross the Atlantic by ship. When it finally reached London in late January 1774, Parliament reacted with genuine fury. Many members of Parliament saw the destruction of private property as a direct, deliberate insult to Britain's authority. They did not see it as a policy disagreement open to negotiation. That anger would shape Parliament's response the following spring, which you'll read about in tomorrow's lesson. A single night's disciplined protest in Boston harbor was about to trigger a much larger, much angrier response from London, one that no colonist in December 1773 could have fully predicted.</p>
+</div>
+<div class="callout-help" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-help" style="font-size: 10px; color: #1B6A94; margin-bottom: 6px; ">💡 Helpful to Know</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">The careful, restrained conduct of the Tea Party matters for how you should read the primary sources this week. A political act's discipline and its message are often deliberately connected. Organizers wanted to be taken seriously as defenders of constitutional rights, not dismissed as a violent mob. They had every reason to make sure their protest looked exactly as controlled as it did. Keep that motive in mind as you read this week's two very different accounts of the same night.</div>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>12.1 Reading Quiz: The Tea Act and a Party in Boston.</b></div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 1: <i>The Boston Pamphlet</i> (1772).</b></div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 12 of 18 &middot; British Policy and Colonial Grievances, Part II: 1770&ndash;1776</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
