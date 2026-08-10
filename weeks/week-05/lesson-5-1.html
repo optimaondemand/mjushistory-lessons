@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 5.1: Separating for Conscience's Sake</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 1 &middot; Module 5 &middot; Lesson 5.1</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 5.1</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">Separating for Conscience's Sake</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 5 of 18</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 5.1</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">Separating for Conscience's Sake</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~830 words · ~7 min</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">A few words below may be new to you. Look them over before you read; they'll also show up, underlined, in tomorrow's lesson.
+  <p><b>congregation</b> <i>(kong-gruh-GAY-shun)</i> — a group of people who gather regularly to worship together as one church community.</p>
+<p><b>jurisdiction</b> <i>(joor-iss-DIK-shun)</i> — the area or the group of people over which a government has the legal right to make and enforce law.</p>
+<p><b>Separatist</b> <i>(SEP-ur-uh-tist)</i> — an English Protestant who believed the Church of England was too corrupt to fix from the inside and wanted to leave it entirely.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">The Pilgrims were not trying to reach New England. They were trying to reach Virginia.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The colonists we now remember as the Pilgrims were <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="An English Protestant who believed the Church of England was too corrupt to fix from the inside and wanted to leave it entirely.">Separatists</span>. That word matters a great deal. It is not the same as Puritan, even though people often confuse the two. You will meet the Puritans again in Module 8. Puritans wanted to purify the Church of England from the inside. They wanted to stay loyal members within it. Separatists, by contrast, had already decided the Church of England was too corrupt to fix from within. They believed the only faithful choice was to walk away from the church entirely, no matter the cost.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">In England at this time, walking away from the official church was treated as a crime. Separatist <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A group of people who gather regularly to worship together as one church community.">congregations</span> were flatly illegal under English law. Their members faced fines, jail time, and constant government watching. One such congregation came from the small village of Scrooby. Facing mounting persecution, it fled across the water to Holland in 1608. Its members hoped to find a place where they could finally worship as they believed they must.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Life in the Dutch city of Leiden proved tolerable for these exiled Separatists. But it was genuinely hard in practical terms. Available work was poor and low-paying for foreigners like them. The congregation's leaders worried about something else too. Their children seemed to be slowly drifting into Dutch life and language. They were drifting away from the English church culture their parents had suffered to preserve. By 1620, those worried leaders had borrowed money from a group of English investors called the Merchant Adventurers. That money was meant to fund a new colony in America. Notice that this was not purely a religious voyage. Like Jamestown before it, this venture combined a religious motive with an ordinary business loan. Somebody back in London fully expected to be repaid with interest.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Blown Off Course</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The Mayflower's charter gave its passengers legal permission to settle in the northern part of the Virginia Company's territory. That territory lay well south of where they eventually landed. Bad weather and difficult ocean navigation put the ship somewhere else entirely, far off its intended course. In November 1620, after a long crossing, the ship finally reached Cape Cod. That was well north of anywhere their paperwork legally covered.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">That navigational error was not some small, easily fixed inconvenience. It meant the colonists were about to settle on land outside any English colonial government's legal <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="The area or the group of people over which a government has the legal right to make and enforce law.">jurisdiction</span>. No charter applied there. No appointed governor held any authority over that stretch of coast. To make matters more complicated, roughly half the people aboard were not members of the original Scrooby congregation at all. They had joined the voyage for their own practical reasons. That meant no shared religious loyalty held this mixed group together, once their boats reached the beach.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">So before a single colonist went ashore, 41 of the adult men aboard signed a short but important agreement. We now call it the Mayflower Compact. In it, the signers bound themselves into a "civil body politic." This new body would govern the colony by laws its own members made, until a proper charter could be obtained from England. You will read the whole document next, in the primary source that follows this lesson. It really is quite short, just a single paragraph.</p>
+</div>
+<div class="callout-help" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-help" style="font-size: 10px; color: #1B6A94; margin-bottom: 6px; ">💡 Helpful to Know</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">The Mayflower Compact was a practical fix for an urgent legal problem. It was not a grand statement of philosophy composed at leisure. That does not make it less important. It may make it more interesting. Here were ordinary people, cold and frightened on a ship. They reached for one idea: a government can be made by the agreement of the governed. John Locke would publish a full philosophical defense of that idea about seventy years later. These people got there first, under pressure, because they had to.</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">A Familiar First Winter</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Roughly half of the entire Plymouth colony died during that first brutal winter. Disease, bitter cold, and outright hunger all played a part. The share of the population lost is strikingly close to what Jamestown had lost in its own worst season, thirteen years earlier. Two separate English colonies, founded thirteen years apart under very different religious motives, were both nearly erased within their first few months.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Plymouth survived into the following year largely through the help and diplomacy of the neighboring Wampanoag people. A man named <i>Tisquantum</i> had learned to speak English fluently. He had earlier contact with European fishermen and traders along the coast. The English colonists simply called him Squanto. He went on to serve the struggling colony as a skilled translator and advisor on farming and survival. The Wampanoag leader known by the title <i>Massasoit</i> signed a mutual-defense treaty with Plymouth in 1621. Each side agreed to come to the other's aid if attacked. Squanto and Massasoit are often remembered as symbols of easy friendship between two peoples. Their actual motives were more complicated. Each side mixed genuine goodwill with its own political interests.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The harvest celebration held in autumn 1621 came at the end of a growing season that had gone far better than the disastrous year before. Later generations of Americans retold this celebration as "the First Thanksgiving." It has kept a lasting place in national memory. Tomorrow's lesson will connect that agricultural improvement to a change in how Plymouth's leaders reorganized its farming. You have already watched one other English colony make that exact same policy change, for the same reason, just a few weeks ago in this course.</p>
+</div>
+<div class="callout-foreign" style="background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-foreign" style="font-size: 10px; color: #8a6216; margin-bottom: 6px; ">🌐 Foreign Language Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">
+<p><b>Massasoit</b> <i>(MASS-uh-soyt)</i> — not a personal name but a Wampanoag title meaning roughly "great leader." The man who held it when Plymouth was founded was named Ousamequin. English writers used his title as though it were his name, and most books still do.</p>
+<p><b>Tisquantum</b> <i>(tiss-KWAN-tum)</i> — the Wampanoag name of the man the English called Squanto, who spoke English and acted as translator and advisor to the Plymouth colonists.</p>
+</div>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>5.1 Reading Quiz: Separating for Conscience's Sake.</b></div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 1: The Mayflower Compact,</b> read in full.</div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 5 of 18 &middot; Religious Reformers in New England</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
