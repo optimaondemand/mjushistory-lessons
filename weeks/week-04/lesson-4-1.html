@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 4.1: Starving in Paradise</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 1 &middot; Module 4 &middot; Lesson 4.1</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 4.1</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">Starving in Paradise</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 4 of 18</div></div>
+  <div class="meta-cell"><div class="meta-label">Benchmarks</div><div class="meta-value" style="font-size:14px;">SS.8.HC.1.1, SS.8.A.2.4</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 4.1</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">Starving in Paradise</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~830 words · ~7 min</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">A few words below may be new to you. Look them over before you read; they'll also show up, underlined, in tomorrow's lesson.
+  <p><b>charter</b> <i>(CHAR-ter)</i> — a written document from a government or a company that sets out how a colony will be organized and governed.</p>
+<p><b>incentive</b> <i>(in-SEN-tiv)</i> — a reason a person has to act a certain way, usually because doing so brings them something they want.</p>
+<p><b>paramount chief</b> <i>(PAIR-uh-mount CHEEF)</i> — a chief whom other chiefs answer to, ruling over many separate communities at once.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">Of the roughly 500 colonists at Jamestown in the winter of 1609–1610, only about 60 were alive by spring. Most of them were not killed by the Powhatan.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The Virginia Company of London founded Jamestown in May 1607. Three small ships sailed up a river the colonists named after their king. Jamestown was not a religious mission. It was not a royal government project either. At its core, it was a private business. A group of investors back in London paid for it. They fully expected to make their money back, and more, through gold, or a shortcut trade route to Asia, or something else valuable.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">What the colonists actually found, once they landed, was a low, marshy swamp. The site had genuinely bad drinking water, tainted by salt and waste. Thick clouds of disease-carrying mosquitoes filled the warmer months. Leaders had chosen the site because it could be defended against Spanish warships. Nobody had asked whether people could actually live there, or grow enough food. Many of the first arrivals were gentlemen by birth. They had never done hard physical labor in their lives. They had been sent to search for gold, not to plant corn in unfamiliar soil. The young colony's food supply came mostly from two sources it did not control. One source was trade with the neighboring Powhatan Confederacy, who sold corn when it suited them. The other was supply ships from England. Those ships did not always arrive on time, or arrive at all.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">The Common Store That Nearly Killed Everyone</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Jamestown's original <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A written document from a government or a company that sets out how a colony will be organized and governed.">charter</span> organized food and labor entirely in common. The whole colony shared everything, rather than dividing work among individual families. Colonists labored for the colony as a single unit, not for themselves. Food from the colony's one shared storehouse was handed out equally to everyone. It did not matter how much any one person had actually grown, gathered, or hunted that season.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Think about what an arrangement like that does to a person's reasons for working hard. If you plant and tend crops all day, and your neighbor naps in the shade instead, you both still eat the same dinner that night. This course keeps asking a question about any community's rules. Do they bind people together around a shared good? Or do they quietly work against it? At early Jamestown, the rules clearly worked against it. When reward gets cut loose from effort, the natural <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A reason a person has to act a certain way, usually because doing so brings them something they want.">incentive</span> to work hard disappears. By the colony's own leaders' honest accounts, many colonists eventually just stopped working.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Now add disease, bad drinking water, and late supply ships to that failing incentive system. You get the brutal winter the colonists called the Starving Time. In 1609 and 1610, starving people at Jamestown ate their own horses first. Then they ate their dogs. Then they ate whatever rats they could catch. In a few documented, horrifying cases, witnesses recorded that starving colonists ate the bodies of the dead.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Faced with this disaster, the colony's leaders finally gave up on the common storehouse system. They began assigning private plots of land to individual colonists. Each man worked his own ground. Under the new system, each colonist could keep what he grew, beyond one required share owed to the colony. Food production rose sharply, almost at once. This was not a lesson only the English at Jamestown had to learn the hard way. You will study Plymouth Colony next week. It failed for almost the same reason. It fixed the problem in almost the same way, without ever consulting Jamestown's example.</p>
+</div>
+<div class="callout-help" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-help" style="font-size: 10px; color: #1B6A94; margin-bottom: 6px; ">💡 Helpful to Know</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">You will read Captain John Smith's account this week. Smith ran the colony from 1608 to 1609 and enforced hard work discipline. He reportedly told the colonists that he who will not work shall not eat. Smith spends a great deal of his own writing praising Smith, and you should read him with that in mind. But the problem he was responding to was real. Colonial leaders across English North America kept rediscovering the same lesson about effort and reward for the next two centuries.</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Powhatan's Confederacy, and Early Dependence</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The Powhatan Confederacy was the dominant Native power in this region. A <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A chief whom other chiefs answer to, ruling over many separate communities at once.">paramount chief</span> named <i>Wahunsenacawh</i> led it. The English colonists simply called him Powhatan, after the name of his own people. That simpler name stuck in most history books ever since. He held real authority over roughly thirty allied communities across the wider Chesapeake region. By any honest measure, his confederacy was the stronger power in that neighborhood in 1607. The small, struggling English fort at Jamestown was not.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">This point is worth stating plainly, because the usual telling of this story gets it backward. Early Jamestown survived largely <i>because of</i> the Powhatan Confederacy's willingness to trade. It did not survive in spite of any Powhatan threat. English colonists regularly ate Powhatan-grown corn, obtained through trade, during years when they could not feed themselves.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">That deep dependence created its own quiet, growing tension over time, though. The English kept needing more food from their Powhatan neighbors, year after year. At the same time, they kept claiming more land for their own use. That land had held Powhatan and allied communities for generations. Think about a relationship where one side needs the other for basic survival. At the same time, that same side wants more and more of what the other side has. That is not a stable, lasting relationship. Holding both facts together, honest dependence and growing appetite, is exactly what this week's discussion asks you to do.</p>
+</div>
+<div class="callout-foreign" style="background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-foreign" style="font-size: 10px; color: #8a6216; margin-bottom: 6px; ">🌐 Foreign Language Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><p><b>Wahunsenacawh</b> <i>(wah-hun-SEN-uh-caw)</i> — the Powhatan-language name of the paramount chief who led the Powhatan Confederacy when Jamestown was founded. The English called him Powhatan, after the name of his people, which is why most books use that name instead of his own.</p></div>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>4.1 Reading Quiz: Starving in Paradise.</b></div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source: John Smith, <i>A True Relation of Virginia.</i></b></div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 4 of 18 &middot; The First English Settlements: Jamestown and the Chesapeake</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
