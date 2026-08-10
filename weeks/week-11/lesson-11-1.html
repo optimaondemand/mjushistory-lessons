@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 11.1: Debt, Taxes, and a New Colonial Policy</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 2 &middot; Module 11 &middot; Lesson 11.1</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 11.1</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">Debt, Taxes, and a New Colonial Policy</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 11 of 18</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 11.1</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">Debt, Taxes, and a New Colonial Policy</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~815 words · ~7 min</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">A few words below may be new to you. Look them over before you read; they'll also show up, underlined, in tomorrow's lesson.
+  <p><b>boycott</b> <i>(BOY-kot)</i> — an organized refusal to buy or use certain goods, used as a form of protest.</p>
+<p><b>revenue</b> <i>(REV-uh-noo)</i> — money a government collects, usually through taxes.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">Britain's massive new North American empire came with a massive new bill, and Parliament decided the colonies should help pay it.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The French and Indian War roughly doubled Britain's national debt. It also left Britain in charge of an enormous new territory. Defending and running that territory took money and troops. Thousands of British soldiers now had to guard the interior. They also had to manage relations with Native nations. Many of those nations had never agreed to British rule in the first place. Trouble came almost immediately. In 1763, a Native uprising called Pontiac's Rebellion broke out across the Great Lakes region. Britain responded with the Proclamation of 1763. This order forbade colonial settlement west of the Appalachian Mountains. The goal was to reduce conflict with Native nations. But land-hungry colonists and speculators hated it. George Washington himself was one of them. These colonists had expected the war's victory to open that land for their own use, not close it off.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Two Taxes, Two Reactions</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Parliament's Sugar Act of 1764 actually lowered the existing tax on molasses. But it paired that lower rate with much stricter enforcement. For decades, colonial merchants had smuggled and evaded this tax routinely. That routine now ended. Colonial protest to the Sugar Act was real, but it stayed limited. The Stamp Act of 1765 provoked a far bigger reaction. It was a direct tax. It required stamped paper for legal documents, newspapers, and even playing cards. Parliament applied it across every colony. No colonial assembly had consented to it. Colonists organized the Stamp Act Congress in 1765 in response. They coordinated <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="An organized refusal to buy or use certain goods, used as a form of protest.">boycotts</span> of British goods. A group called the Sons of Liberty intimidated stamp distributors into resigning outright. The colonists' argument was constitutional, not just about money. Colonists drew a clear line. Parliament had long held accepted authority to regulate trade across the empire. But this was something new: a claimed right to tax colonies directly for <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Money a government collects, usually through taxes.">revenue</span>, without any colonial representation in the body doing the taxing.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">A short phrase captured the colonists' whole argument: "no taxation without representation." This was not just a slogan. It named the exact constitutional principle colonists believed Parliament had violated. Even colonists who still supported the empire, and many did, could repeat this phrase and mean it seriously.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">British defenders of the Stamp Act had their own counter-argument. They pointed out that most people in Britain itself could not vote for a member of Parliament either. Yet Parliament was still understood to represent their interests anyway. Historians call this idea virtual representation. Colonists rejected it outright. They argued a representative had to be chosen by the very people he taxed. That representative also had to answer directly to those same people. It was not enough for him to simply be presumed to care about their interests from three thousand miles away. This deeper disagreement, over what representation itself actually means, sat underneath the whole tax controversy.</p>
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Patrick Henry and the Virginia Resolves</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Virginia's own assembly, the House of Burgesses, added fuel to the fire. In May 1765, a young lawmaker named Patrick Henry introduced a set of resolutions. They declared that only Virginia's own elected assembly had the lawful right to tax Virginians. Parliament, Henry argued, had no such power over the colony at all. The Burgesses did not pass every one of Henry's boldest resolutions. Newspapers throughout the colonies reprinted several of them anyway. Some printings added language even more forceful than what Henry had actually said. Colonists in other colonies read Virginia's stand and recognized their own argument in it. A protest that began in Massachusetts over stamped paper was turning into something larger. It was becoming a shared colonial argument about the limits of Parliament's power.</p>
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">The Quartering Act: A Different Kind of Burden</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Parliament paired its new taxes with a different kind of demand. The Quartering Act of 1765 required colonial assemblies to supply British troops with housing, food, and other provisions. New York held the largest concentration of these troops. New York's assembly resisted funding these provisions in full. Parliament responded by suspending New York's own legislature in 1767. The suspension lasted until New York complied. Notice what that suspension actually meant. An elected colonial assembly, the same kind of institution you studied last week, could simply be shut down by London. All it took was refusing a demand the assembly had never agreed to as a tax in the first place. This is exactly the kind of practical power John Dickinson worried about losing. It was not some abstract principle to him. It was a real threat to a real institution.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">By 1770, colonists across several colonies had practiced the same basic moves more than once. They organized. They boycotted. They petitioned. Then they watched Parliament repeal one specific measure while reasserting its authority in some new form. That repeating pattern is worth remembering as you move into next week's lesson.</p>
+</div>
+<div class="callout-help" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-help" style="font-size: 10px; color: #1B6A94; margin-bottom: 6px; ">💡 Helpful to Know</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Parliament repealed the Stamp Act in 1766. British merchants were losing business to the boycotts, and that pressure pushed the repeal through. But Parliament paired that repeal with the Declaratory Act. This new act asserted Parliament's right to tax and legislate for the colonies "in all cases whatsoever." Britain backed down on this specific tax while explicitly refusing to concede the underlying constitutional argument colonists were making. That unresolved disagreement, not this one tax alone, is what kept driving the conflict forward. Historians still debate whether any different British approach after 1763 could have kept the colonies loyal. Others think the collision was, by that point, close to unavoidable, given the scale of Britain's new debt and the colonies' own century of growing self-rule. Both views take the argument over representation seriously; they simply disagree about whether it could have been resolved peacefully.</div>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>11.1 Reading Quiz: Debt, Taxes, and a New Colonial Policy.</b></div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 1: John Dickinson, <i>Letters from a Pennsylvania Farmer.</i></b></div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 11 of 18 &middot; British Policy and Colonial Grievances, Part I: 1763&ndash;1770</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
