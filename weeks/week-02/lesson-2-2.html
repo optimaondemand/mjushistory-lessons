@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 2.2: Spain's American Empire Takes Shape</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 1 &middot; Module 2 &middot; Lesson 2.2</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 2.2</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">Spain's American Empire Takes Shape</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 2 of 18</div></div>
+  <div class="meta-cell"><div class="meta-label">Benchmarks</div><div class="meta-value" style="font-size:14px;">SS.8.A.2.5, SS.8.A.1.4</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 2.2</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">Spain's American Empire Takes Shape</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~1,000 words · ~8 min</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">One new word below, plus one carried over from yesterday. Look them over before you read.
+  <p><b>tribute</b> <i>(TRIB-yoot)</i> — payments of goods, food, or wealth that a weaker or conquered group must regularly give to a more powerful ruler.</p>
+<p><b>viceroy</b> <i>(VYSE-roy)</i> — a person appointed by a king to govern a colony or territory in the king's name.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">Conquest was the fast part. Governing what had been conquered took the rest of the century, and Spain never fully solved the problem.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">After Tenochtitlan fell in 1521, Spain faced a difficult practical question. The question had nothing to do with fighting. Every conquering power eventually faces this same question. How do you actually run the place afterward, day to day, for decades? Spain's answer was a system called the <b>forced-labor grant</b>, or <i>encomienda</i>. It gave a Spanish colonist the legal right to demand labor and <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Payments of goods, food, or wealth that a weaker or conquered group must regularly give to a more powerful ruler.">tribute</span> from a Native community. In theory, that colonist owed something back in return. He owed protection from outside threats. He owed religious instruction in Christianity. In practice, encomienda holders very often worked people to death. They cared little for the promised protection. This was especially true in the silver mines that would soon make New Spain hugely profitable for Spain. The word <i>encomienda</i> comes from a Spanish verb meaning "to entrust." It sounds as if the Native community had simply been placed in a colonist's caring hands. The word and the actual reality did not always match. This same encomienda system later spread across Spain's growing American empire. It appeared wherever Spanish conquest reached a settled Native population large enough to exploit.</p>
+</div>
+<div class="callout-foreign" style="background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-foreign" style="font-size: 10px; color: #8a6216; margin-bottom: 6px; ">🌐 Foreign Language Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><p><b>encomienda</b> <i>(en-koh-mee-EN-dah)</i> — a Spanish colonial system that gave a colonist the right to demand forced labor and tribute from Native peoples in a district, supposedly in exchange for protection and religious teaching.</p></div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">A Debate Spain Itself Could Not Ignore</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The cruelty of the encomienda system did not go unchallenged, even inside Spain. A Dominican friar named Bartolomé de las Casas became its fiercest critic. He had once held an encomienda of his own. That makes his change of heart especially striking. He witnessed the abuses firsthand. He wrote detailed, horrified accounts of what he saw happen to Native workers. He pushed the Spanish crown directly for reform. He traveled back to Spain to make his case in person. His tireless efforts led to real, if incomplete, changes in Spanish colonial law over the following decades. This matters for how you think about this whole period. Spain's American empire was not one single policy carried out smoothly. It held real moral disagreement. That disagreement was argued out loudly and in public, with real consequences. The disagreement never fully stopped the abuses it targeted. But it was genuinely real all the same, not just for show.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">This disagreement eventually reached the highest level of the Spanish court. In 1550 and 1551, King Charles V called for a formal public debate. It took place in the city of Valladolid, in Spain. Las Casas argued that Native peoples were fully rational human beings. He said they deserved the same basic rights as any European. A rival scholar named Juan Ginés de Sepúlveda argued the opposite. He said some peoples were naturally suited to be ruled by others. He used ancient philosophical arguments to make his case. No official winner was ever declared. But the debate itself remains remarkable to historians today. Few, if any, other European empires held a public argument this early over whether the people they conquered counted as fully human.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Las Casas's advocacy did not stop at debate and published writing. In 1542, King Charles V issued a sweeping set of reforms called the New Laws. They aimed to phase out the encomienda system over time. They also aimed to end the practice of passing forced-labor grants down to a colonist's own children. Colonists in the Americas resisted these reforms fiercely. Their whole fortunes often depended on the labor encomienda guaranteed them. Some of the toughest New Laws provisions were softened or quietly reversed within a few years. But the New Laws still show something worth remembering. The long argument over encomienda produced real legal action from the highest levels of government. It was not just heartfelt words left sitting on a page.</p>
+</div>
+<div class="callout-warn" style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-warn" style="font-size: 10px; color: #8A1F16; margin-bottom: 6px; ">⚠️ Watch Out</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">It is easy to read this lesson and decide that every Spaniard either wanted to destroy Native peoples or wanted to protect them, with nothing in between. Most people's real motives were more mixed and more ordinary than that. Profit, religious duty, ambition, and sometimes a genuine desire to reform things: these motives often sat uncomfortably together in the same person, or in the same royal court. A colonist could genuinely believe he was fulfilling his duty to protect and convert Native workers, while also driving them mercilessly in a silver mine, without feeling like a hypocrite at the time.</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Building a Government, Not Just Winning a War</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Winning a war and running a government are two very different jobs. Spain had to do both, one right after the other. In 1535, Spain created the Viceroyalty of New Spain. This was a new government covering Mexico and the surrounding conquered territory. A <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A person appointed by a king to govern a colony or territory in the king's name.">viceroy</span>, appointed directly by the king, ruled from Mexico City in the king's own name. Beneath the <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A person appointed by a king to govern a colony or territory in the king's name.">viceroy</span>, a network of Spanish officials, royal courts, and Catholic missions carried royal authority outward. It spread from the very city Cortés had destroyed and then rebuilt as his own capital. This new structure gave Spain something the old Aztec Empire had lacked. It had a single, clear chain of command answering to one distant king. The empire had been a loose network of separately <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Payments of goods, food, or wealth that a weaker or conquered group must regularly give to a more powerful ruler.">tribute</span>-paying city-states instead. Did this more centralized structure treat ordinary people any better? That is a separate question. This lesson has already begun to answer it, through the encomienda system's own brutal record.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Two Accounts, Two Positions</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">You already read Bernal Díaz's firsthand account of first seeing Tenochtitlan, in yesterday's primary source. He wrote it as an ordinary common soldier. He looked back on events that happened decades earlier in his own life. Next you will read Hernán Cortés's own words, from his Second Letter to King Charles V. Cortés wrote this letter in 1520, while the campaign was still underway. Its final outcome was still genuinely uncertain. He badly needed the king's approval. He had taken a whole series of actions without his own governor's permission. That included his unauthorized landing. That included his defiance of Velázquez's orders. A letter written to win royal favor reads differently than a memoir written decades later to settle old scores. This is true even when both documents describe the same city, the same market, and the same empire. Read Cortés's letter watching for what he chooses to emphasize, and what he leaves out. He is, in effect, asking a king to forgive his outright insubordination. His enormous gamble paid off. Charles V confirmed him as governor of New Spain, the very authority Governor Velázquez had refused to give him in the first place.</p>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 2: Cortés's Second Letter to Charles V.</b></div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source Report</b> (Tier 3, with M365 Word deliverable) on Cortés's letter.</div></div>
+</div>
+<div class="callout-help" style="margin-top:14px; background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 2 of 18 &middot; Spanish Conquistadors Make Latin America</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
