@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 3.1: Four Powers, Four Strategies</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 1 &middot; Module 3 &middot; Lesson 3.1</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 3.1</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">Four Powers, Four Strategies</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 3 of 18</div></div>
+  <div class="meta-cell"><div class="meta-label">Benchmarks</div><div class="meta-value" style="font-size:14px;">SS.8.A.2.1</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 3.1</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">Four Powers, Four Strategies</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~950 words · ~8 min</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">A few words below may be new to you. Look them over before you read; they'll also show up, underlined, in tomorrow's lesson.
+  <p><b>chartered company</b> <i>(CHAR-terd KUM-puh-nee)</i> — a business given legal permission by a government to trade, settle, or govern in a certain place, run for its owners' profit.</p>
+<p><b>confederacy</b> <i>(kun-FED-er-uh-see)</i> — a group of separate nations or states that join together for shared purposes, such as defense or trade, while each keeps its own leaders.</p>
+<p><b>sedentary</b> <i>(SED-un-tair-ee)</i> — living in one settled place year-round rather than moving with the seasons.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">Four European powers looked at the same continent and saw four completely different opportunities.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">By the early 1600s, four European powers each held a colony in North America. Or at least a serious claim, or a strong ambition. Spain already ruled a vast empire across the Caribbean and Mexico, built on conquest. France was pushing steadily up the St. Lawrence River into what is now Canada. It chased furs, not gold. England was struggling to plant its first lasting settlements along the Atlantic coast. Some earlier English attempts had already failed completely. The Dutch, meanwhile, were setting up scattered trading posts along the Hudson River. A private company ran these posts, not a king. Each of the four powers chose a different strategy for the same continent. Each strategy actually makes good sense, once you know two things. What did that power want out of North America? And what did it actually find once it arrived?</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Spain: Take the Wealth by Conquest</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">You studied Spain's approach in detail last week. Spain looked for Native societies that were already large. It looked for societies already settled in one place. It looked for societies already rich in resources. Then it conquered those societies by force. It took their wealth, above all silver mined from the ground. Spanish colonists ran this system through the <b>forced-labor grant</b>, or <i>encomienda</i>. They also ran it through a growing network of royal officials sent from Spain.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">This plan worked well wherever Spain found the conditions it needed. Central Mexico and the Andes had huge <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Living in one settled place year-round rather than moving with the seasons.">sedentary</span> populations already organized into cities. They also had enormous silver deposits waiting to be mined. But north of Mexico and Florida, Spain found neither ingredient. There were no treasure-filled cities to seize in the forests of North America. There was no dense population to force into mining labor. Valuable mines simply did not exist there either. So Spanish colonization north of Mexico stayed thin and small. The strategy that worked so well further south did not travel well at all. The conditions it depended on, dense population and mineral wealth, were simply not there.</p>
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">France: Trade Through Alliance</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">France took a very different road, partly because it had no other real choice. French explorers and traders in Canada found no rich, settled empire to conquer, the way Spain had in Mexico. What they found instead was dense northern forest. Living in that forest were beaver, in great numbers. Back in Europe, hats made from beaver felt had become the height of fashion among the wealthy. Buyers across the continent paid extremely well for good beaver pelts.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Here is the real difficulty France faced, though. Trapping beaver across thousands of miles of unfamiliar forest is genuinely skilled work. It requires people who know the land, the animal's habits, and the rivers. It requires knowledge of the trade routes connecting distant regions. Native trappers and traders already knew all of this. They had generations of experience behind them. Frenchmen fresh off a ship from Europe knew almost none of it. They could not learn all that specialized knowledge quickly, no matter how determined. Conquest, France's only other option, could not solve this problem. You cannot force someone to hand over knowledge and skill they have and you lack.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">France also sent remarkably few colonists to its North American territory. That number was nothing close to what Spain or England would eventually send. Even if France had wanted to rule the region by force, it did not have nearly enough people to do it. So France built its whole colonial presence on alliance instead of conquest. That meant real trading partnerships. It meant frequent intermarriage between French traders and Native women. It meant genuine mutual dependence with the Native nations who controlled the fur supply. France allied most closely with the Huron Confederacy. Its relationship with the powerful Iroquois <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A group of separate nations or states that join together for shared purposes, such as defense or trade, while each keeps its own leaders.">Confederacy</span>, by contrast, was often tense.</p>
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">England: Settlement and Land</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">England's colonists came across the Atlantic for something else entirely: land. They wanted land they could farm and keep as their own. You will study these colonists closely starting next week. They arrived in growing numbers over time. Often they traveled as entire families, not as lone traders or soldiers.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">That difference placed England in a very different relationship with its Native neighbors than France was in. A fur trade can, in principle, keep involving both sides for a long time. Both sides keep wanting the exchange to continue. But once an English family cleared a patch of forest and fenced it off, that land changed for good. It was no longer available to the Native peoples who had hunted or farmed there before. Land held permanently as private property cannot be shared the way an ongoing trade can be. That basic difference built lasting conflict directly into the pattern of English settlement. It was never built into the pattern of French trade in the same way.</p>
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">The Dutch: Commerce Above All</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The Dutch worked through a private business called the Dutch West India Company, a <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A business given legal permission by a government to trade, settle, or govern in a certain place, run for its owners' profit.">chartered company</span>. It ran posts such as Fort Orange, known today as Albany, and New Amsterdam, known today as Manhattan. Their method looked much like France's approach: trade, not conquest. But the engine driving that method was genuinely different. France's colonial ambitions ran through a king and his royal crown. They served national and religious goals alongside commercial ones. The Dutch trading posts, though, answered directly to private shareholders back in Amsterdam. Those owners wanted straightforward financial profit above almost anything else. A similar method, in other words, but a very different reason for pursuing it.</p>
+</div>
+<div class="callout-foreign" style="background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-foreign" style="font-size: 10px; color: #8a6216; margin-bottom: 6px; ">🌐 Foreign Language Vocabulary (continued from Lesson 2.2)</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><p><b>encomienda</b> <i>(en-koh-mee-EN-dah)</i> — a Spanish colonial system that gave a colonist the right to demand forced labor and tribute from Native peoples in a district, supposedly in exchange for protection and religious teaching.</p></div>
+</div>
+<div class="callout-help" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-help" style="font-size: 10px; color: #1B6A94; margin-bottom: 6px; ">💡 Helpful to Know</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Notice that none of these four powers picked its strategy off a blank menu. Each one was shaped by what it found on arrival. How many people already lived there? What resources were available? How many colonists could that power actually send? Those material conditions narrowed the realistic choices. They did not fully decide them. Inside those limits, real people still made real decisions that could have gone another way.</div>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>3.1 Reading Quiz: Four Powers, Four Strategies.</b></div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 1: Samuel de Champlain's 1609 account of fighting alongside the Huron against the Iroquois.</b></div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 3 of 18 &middot; Great Powers Competition in the New World</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
