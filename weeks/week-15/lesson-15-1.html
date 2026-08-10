@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 15.1: The War's Grim First Years</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 2 &middot; Module 15 &middot; Lesson 15.1</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 15.1</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">The War's Grim First Years</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 15 of 18</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 15.1 · ~7 min</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">The War's Grim First Years</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~800 words</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary (two words continued from Lesson 14.2, four new today)</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">
+<p><b>consent</b> <i>(kun-SENT)</i> — agreement or permission given freely.</p>
+<p><b>desertion</b> <i>(dih-ZUR-shun)</i> — leaving military duty without permission.</p>
+<p><b>enlistment</b> <i>(en-LIST-ment)</i> — the act of officially joining the military for a set period of time.</p>
+<p><b>garrison</b> <i>(GAIR-ih-sun)</i> — a group of troops stationed in a fort or town to defend it.</p>
+<p><b>Hessian</b> <i>(HESH-un)</i> — a German soldier hired by Britain to fight in the war.</p>
+<p><b>natural rights</b> <i>(NACH-uh-rul rites)</i> — rights every person has simply by being human, which no government gave and no government can fairly take away.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">The Continental Army's greatest early achievement was often simply continuing to exist, week after uncertain week.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Britain entered the war with enormous advantages. It had a professional, well-supplied army. It had the world's most powerful navy. It also had substantial Loyalist support among colonists who remained committed to the crown. The Continental Army was different. It relied heavily on short-term militia enlistments. It faced chronic shortages of pay and supplies. Most of its officers had little formal military training. Only a handful, like Washington, had gained real experience fighting in the French and Indian War. Washington developed a core strategic insight through hard experience. The Continental Army did not need to win every battle. It did not even need to win most of them. It needed to survive and keep the cause alive. Suppose it imposed enough cost on Britain over enough time. Then a war of endurance, not a decisive battlefield victory, would become Britain's own problem to solve.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Disaster in New York, Salvation on the Delaware</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">British forces captured New York City in 1776. They inflicted a series of defeats that nearly destroyed the Continental Army. They forced a grueling retreat across New Jersey. By December, morale had collapsed. <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Leaving military duty without permission.">Desertion</span> was rising fast. Most soldiers' <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="The act of officially joining the military for a set period of time.">enlistments</span> were set to expire on December 31. Absent some dramatic change, that deadline threatened to leave Washington with no army at all, come January. On Christmas night 1776, Washington led his remaining forces across the ice-choked Delaware River. A surprise attack captured a <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A German soldier hired by Britain to fight in the war.">Hessian</span> <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A group of troops stationed in a fort or town to defend it.">garrison</span> at Trenton. A second victory followed at Princeton, in early January 1777. These were relatively small engagements, by the standards of the war's larger battles. But their timing mattered enormously. They arrived exactly when the cause most needed proof that it could still win. They revived flagging enlistment and public confidence, at the precise moment both were about to collapse completely.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Consider how differently this could have gone. Suppose the ice on the Delaware had been thinner, or thicker. Boats might not have crossed at all that night. Suppose a single Hessian sentry had spotted the crossing in time. Surprise would have been lost, and disaster might have followed instead of victory. The Continental cause's survival through the winter of 1776 to 1777 did not rest on some inevitable historical current. It rested on one commander's decision, one night's weather, and a fair amount of luck, all holding together at the same time.</p>
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">The Attack Itself</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Washington's plan called for three separate crossings of the Delaware River that night. Only his own column, roughly 2,400 men, actually made it across in the freezing weather and ice. The other two columns turned back before reaching the far shore. Washington pressed forward anyway with the troops he had. His men marched nine miles through sleet and snow to reach Trenton by early morning. The surprise was complete. Hessian commander Johann Rall, caught off guard, was mortally wounded trying to organize a defense. Continental forces captured nearly a thousand Hessian soldiers. Only a handful of American soldiers were lost that morning. It was a small battle by the standards of European warfare, a skirmish rather than a grand set-piece engagement. But surprise, not scale, was exactly the point. After Princeton, Washington moved his army into winter quarters at Morristown, New Jersey. This gave his soldiers a chance to rest, resupply, and rebuild before the next year's campaigns began.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Washington had a specific text read aloud to his troops just before the crossing. It was Thomas Paine's newest pamphlet, called <i>The American Crisis</i>. It had been published only days earlier. Its opening line, "These are the times that try men's souls," was written for exactly this moment. Soldiers whose enlistments were about to expire faced a river crossing in freezing weather, before dawn, against a professional garrison. Paine, the same author whose <i>Common Sense</i> you read last week, had gone from arguing for independence in the abstract to writing directly for an army on the edge of collapse. The password Washington chose for the operation was "Victory or Death." That was a fair summary of what the army's situation had actually become by that Christmas night.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">This week's primary source lets you hear from an ordinary soldier who lived through exactly this kind of hardship. Joseph Plumb Martin was not a general planning strategy from behind a map table. He was a teenager marching through snow in worn-out shoes. Keep his perspective in mind as you read Washington's own strategic reasoning above. Both accounts describe the very same army, seen from two very different vantage points. A general's strategy and a private's frozen feet are two halves of the same true story, and this course asks you to hold onto both halves at once, not just the more comfortable one to read.</p>
+</div>
+<div class="callout-help" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-help" style="font-size: 10px; color: #1B6A94; margin-bottom: 6px; ">💡 Helpful to Know</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Black soldiers, both free and slave, served in the Continental cause from its earliest engagements. Peter Salem, a slave granted his freedom in part through his military service, fought at the Battle of Bunker Hill in June 1775. Later in the war, the 1st Rhode Island Regiment fought effectively for the Continental cause. It was formed substantially of Black soldiers, many recruited from slaves promised freedom for their service. Hold this service alongside every other contribution this week studies. It is not a footnote to the story. This service was not a foregone conclusion. Washington initially barred enlisting new Black soldiers in 1775. He reversed that policy within months, partly because Continental forces badly needed manpower, and partly in response to a British offer. Virginia's royal governor, Lord Dunmore, had promised freedom to any enslaved person who fled to fight for the crown, and thousands took him up on it. Faced with the prospect that Britain might recruit soldiers the Continental Army refused to accept, Washington and Congress reversed course. Necessity, more than principle, opened the door, but the men who walked through it fought all the same. Notice how closely this echoes a pattern from earlier weeks: real, practical need for soldiers moved policy in a way abstract argument alone had not.</div>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>15.1 Reading Quiz: The War's Grim First Years.</b></div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 1: Joseph Plumb Martin, <i>A Narrative of Some Adventures, Dangers, and Sufferings of a Revolutionary Soldier.</i></b></div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 15 of 18 &middot; The American Revolution, Part I: Early Campaigns</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
