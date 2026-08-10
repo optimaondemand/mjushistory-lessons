@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 13.1: Samuel Adams and the Machinery of Resistance</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 2 &middot; Module 13 &middot; Lesson 13.1</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 13.1</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">Samuel Adams and the Machinery of Resistance</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 13 of 18</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 13.1</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">Samuel Adams and the Machinery of Resistance</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~805 words · ~7 min</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">A few words below may be new to you. Look them over before you read; they'll also show up, underlined, in tomorrow's lesson.
+  <p><b>intelligence</b> <i>(in-TEL-uh-junss)</i> — secret or important information gathered about an enemy's plans or movements.</p>
+<p><b>militia</b> <i>(muh-LISH-uh)</i> — ordinary citizens who train and organize as part-time soldiers, ready to fight when needed, unlike full-time professional troops.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">Documents like last week's Boston Pamphlet did not circulate themselves. Someone had to build the network that carried them from town to town.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Samuel Adams was a Boston politician. He was also a second cousin to John Adams. He spent the early 1770s building exactly that network: the Committees of Correspondence. This was a system of local committees. They formed in towns across Massachusetts, and eventually other colonies too. These committees exchanged letters. They shared news, grievances, and coordinated strategy with each other. John Adams worked mainly through the law and formal argument. You saw this already in his Boston Massacre defense. Samuel Adams worked differently. He worked through organization, persuasion, and, when useful, deliberately inflammatory political framing. He was among those most responsible for popularizing the label "massacre" for the 1770 Boston shooting.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Boston's own Committee of Correspondence formed in November 1772. It was the first of its kind. Samuel Adams served as its guiding hand from the start. Other Massachusetts towns followed within months. By 1773, Virginia's House of Burgesses had created its own intercolonial committee. That is the same body you studied in Module 6. For the first time, colonies were linked together in a standing, ongoing way. This was different from the occasional, one-off congresses colonies had relied on before.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Two Cousins, Two Temperaments</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The contrast between the two Adamses is worth holding onto. John's character trait was principled legal commitment. It explains his willingness to defend unpopular soldiers, even at personal cost. Samuel's character trait was different: relentless, practical organizing. It explains how isolated local grievances turned into one coordinated intercolonial movement. That movement could act together when it mattered. Neither trait alone would have produced the Revolution by itself. Both men were doing different, necessary work at the same time, and the Revolution needed both kinds of work to succeed.</p>
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">From Committees to a Shadow Government</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The Committees of Correspondence did more than exchange letters. After the Massachusetts Government Act stripped the colony's traditional self-government, described in Module 12, ordinary Massachusetts towns needed some way to keep functioning. Local committees increasingly took on real governing tasks. They organized militia companies. They collected supplies. They enforced the boycott agreements colonies had adopted. By late 1774, many Massachusetts towns answered to a Provincial Congress instead of the royal governor. This body had no legal authority under British law. Colonists organized and obeyed it anyway. It is worth pausing on that fact. Massachusetts effectively built a second, unofficial government right alongside the official one Parliament had just tightened its grip on. Doctor Joseph Warren, a Boston physician and close ally of Samuel Adams, helped lead this Provincial Congress. He was the same Warren who sent Paul Revere on his famous ride. Warren would be killed just weeks later at the Battle of Bunker Hill, a loss colonists felt deeply.</p>
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Lexington and Concord</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">On the night of April 18, 1775, British General Thomas Gage sent troops from Boston toward Concord. Their mission was to seize colonial military supplies stored there. He also sent them toward Lexington. <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Secret or important information gathered about an enemy's plans or movements.">Intelligence</span> suggested Samuel Adams and John Hancock might be found there. Riders, including Paul Revere and William Dawes, carried warning ahead of the troops. At Lexington the next morning, colonial <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Ordinary citizens who train and organize as part-time soldiers, ready to fight when needed, unlike full-time professional troops.">militia</span> and British regulars faced off. Eight colonists died in the war's first exchange of fire. British forces reached Concord and destroyed some supplies there. Then they began a long, costly retreat back to Boston. Militia fire followed them along the entire route. It was the opening battle of the American Revolutionary War.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Many of the militia companies that responded that morning were "minutemen." These were specially chosen militia who trained more often than ordinary companies. They agreed to be ready to march at a minute's notice, day or night. Massachusetts had been organizing minutemen companies since late 1774, well before any actual fighting began. That organizing decision, made months in advance, is a big part of why so many armed colonists could reach the Concord road so quickly on a single morning.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">This was not the first time British troops had marched to seize colonial gunpowder. In September 1774, months earlier, General Gage sent troops to remove gunpowder from a storehouse near Boston. Word spread that fighting had already broken out. That word was inaccurate and exaggerated. Tens of thousands of armed militia from across New England began marching toward Boston anyway. They marched before anyone could confirm what had actually happened. No shots were fired that day. Once the rumor was corrected, the militia went home again. But the event, known afterward as the Powder Alarm, taught both sides something important. It showed exactly how fast, and how large, a mobilization New England's militia network could produce. Six months later, in April 1775, that same network was ready to act for real, and this time the alarm was not a false one.</p>
+</div>
+<div class="callout-help" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-help" style="font-size: 10px; color: #1B6A94; margin-bottom: 6px; ">💡 Helpful to Know</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Notice how much of this week's story runs through named individuals doing specific, identifiable jobs. Samuel Adams organized. Paul Revere and William Dawes rode. John Hancock and Samuel Adams were the intelligence's actual targets. This is the Great Men and Great Events framework in action. That does not mean ordinary colonists and militiamen didn't matter. They very much did, and you'll meet many of them this quarter. But specific individuals' specific decisions shaped how, when, and where this crisis actually broke into open warfare. One more thing worth knowing: the famous phrase "the shot heard round the world" comes from a poem the writer Ralph Waldo Emerson published in 1837, more than sixty years after the battle. No one at Lexington or Concord used that phrase in 1775. Watch for this pattern across the semester. Some of the most familiar language attached to this history was written well after the fact, by people constructing a memory of the event rather than reporting it in real time.</div>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>13.1 Reading Quiz: Samuel Adams and the Machinery of Resistance.</b></div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 1: Paul Revere's letter to Jeremy Belknap.</b></div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 13 of 18 &middot; The Road to Revolution: The Patriots</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
