@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 13.2: Two Paths at Once: War and Peace Overtures</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 2 &middot; Module 13 &middot; Lesson 13.2</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 13.2</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">Two Paths at Once: War and Peace Overtures</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 13 of 18</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 13.2</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">Two Paths at Once: War and Peace Overtures</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~815 words · ~7 min</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Two new words below, plus two carried over from yesterday.
+  <p><b>intelligence</b> <i>(in-TEL-uh-junss)</i> — secret or important information gathered about an enemy's plans or movements.</p>
+<p><b>Loyalist</b> <i>(LOY-uh-list)</i> — a colonist who remained loyal to the king and opposed independence from Britain.</p>
+<p><b>militia</b> <i>(muh-LISH-uh)</i> — ordinary citizens who train and organize as part-time soldiers, ready to fight when needed, unlike full-time professional troops.</p>
+<p><b>reconciliation</b> <i>(rek-un-sil-ee-AY-shun)</i> — making up after a disagreement and restoring a peaceful relationship.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">Independence was not yet the plan in the summer of 1775, not even for most delegates who would go on to sign the Declaration a year later.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The Second Continental Congress convened in Philadelphia in May 1775. Lexington and Concord had already made armed conflict a reality, just weeks before. Congress moved quickly to organize the war effort already underway. In June 1775, it appointed George Washington Commander-in-Chief of the newly formed Continental Army. This choice drew partly on his French and Indian War experience, which you studied in Module 9. It also drew on political value. The fighting so far was mostly a New England-based conflict. A Virginian leading that fight helped bind the colonies together in the war effort from its very earliest weeks.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Washington took command of an army that was, in truth, barely an army at all. Most of the roughly fifteen thousand men gathered outside Boston were state militia, not a unified national force. They lacked common training, common supplies, and even a common chain of command. Washington spent his first months rebuilding basic discipline. He assigned uniform ranks. He standardized drills. He organized regiments by colony into something closer to one real army. This work was unglamorous, tedious, and completely unlike a battlefield victory. But without it, the Continental Army could not have survived its first winter, let alone fought a war lasting years. Washington's own character trait mattered here as much as any battlefield decision: patient, steady organization under pressure.</p>
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Bunker Hill: A Costly Preview</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Just weeks after Congress appointed Washington, colonial forces fought British regulars again. This time it was at Breed's Hill and Bunker Hill, outside Boston, in June 1775. British troops eventually took the hill. But they only won after repeated assaults and staggering losses. More than a thousand British soldiers became casualties. The colonial side lost roughly half that number. The battle proved something neither side had been certain of. Colonial militia, dug into a fortified position, could inflict serious damage on Britain's professional army. It also proved something grimmer. This war, however it ended, was not going to be short or cheap for either side. Both armies had just learned the same hard lesson, from opposite ends of the same battlefield.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Among the colonial dead at Bunker Hill was Doctor Joseph Warren, the same physician who had sent Paul Revere on his ride two months earlier. Warren held a militia officer's commission by that point. Even so, he chose to fight in the ranks as a private soldier rather than take rear command. His death was a serious blow to Massachusetts's resistance leadership. It was also a reminder that this war's cost fell on real, specific people colonists already knew well, not just anonymous casualties on a distant list.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Fighting and Petitioning at the Same Time</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">In July 1775, the same Congress that had just appointed a commanding general also approved the Olive Branch Petition. It addressed this petition directly to King George III. The petition affirmed continued loyalty to the crown. It requested the king's personal intervention. Congress hoped he could resolve the crisis and prevent further war. This was not hypocrisy or confusion on Congress's part. It reflected where most delegates' actual thinking stood in mid-1775. They were prepared to defend colonial rights by force if necessary. But they still hoped, sincerely, that <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Making up after a disagreement and restoring a peaceful relationship.">reconciliation</span> with the king remained possible. Many colonists still drew a line between the king and Parliament. They blamed Parliament far more directly for the crisis.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Congress paired the Olive Branch Petition with a second, very different document that same summer. Thomas Jefferson and John Dickinson drafted it together. It was called the Declaration of the Causes and Necessity of Taking Up Arms. The petition spoke directly and personally to the king. This declaration explained something different, to a much wider audience. It explained to the public, and to the world, why armed resistance had become necessary. It insisted that Congress had not chosen war. War had been forced upon the colonies, the declaration argued. Even so, it stopped well short of any call for independence. Reading the two documents side by side shows something important. Congress was speaking to two different audiences at once, in two different registers, without contradicting itself in either one.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Timing worked against the Olive Branch Petition in a way Congress could not control. News of Bunker Hill's bloodshed reached London at almost the same time as the petition itself. King George III received a formal request for peace and a report of the war's most stunning bloodshed within days of each other. A king trying to weigh sincere colonial loyalty against a battle that had just cost Britain over a thousand casualties was unlikely to read the petition generously. Timing, not just content, helped seal the petition's fate, no matter how carefully Dickinson and the other drafters had worded every line of it.</p>
+</div>
+<div class="callout-warn" style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-warn" style="font-size: 10px; color: #8A1F16; margin-bottom: 6px; ">⚠️ Watch Out</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Do not read the events of 1775 backward from the Declaration of Independence's certainty a year later. In the summer of 1775, a genuine range of opinion existed among colonists, and even among Congress's own delegates. Some were already convinced independence was necessary. Others still hoped for reconciliation. Still others, <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A colonist who remained loyal to the king and opposed independence from Britain.">Loyalists</span>, considered the whole resistance movement illegitimate from the start. King George III flatly rejected the Olive Branch Petition later that year. He also declared that the colonies were in open rebellion. Together, these two acts closed off the reconciliation path for good. But that closure was itself a specific, contingent event. Congress could not have known for certain, when it sent the petition, that this is how it would end. Historians estimate that perhaps a fifth of colonists remained committed Loyalists throughout the war, with roughly another fifth firmly Patriot. The remainder were genuinely undecided, or simply trying to stay safe and uninvolved as the conflict unfolded around them. That range matters. It means the Revolution was never simply "the colonists versus the British." In many towns, it was also neighbor against neighbor, a fact this course will return to when the war itself begins next quarter.</div>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 2: The Olive Branch Petition (1775).</b></div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source Exercise</b> on the petition.</div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 13 of 18 &middot; The Road to Revolution: The Patriots</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
