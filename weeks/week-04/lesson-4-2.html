@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 4.2: Tobacco, Land, and War</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 1 &middot; Module 4 &middot; Lesson 4.2</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 4.2</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">Tobacco, Land, and War</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 4 of 18</div></div>
+  <div class="meta-cell"><div class="meta-label">Benchmarks</div><div class="meta-value" style="font-size:14px;">SS.8.A.2.5</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 4.2</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">Tobacco, Land, and War</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~820 words · ~7 min</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Three new words below. Look them over before you read.
+  <p><b>encroachment</b> <i>(en-KROHCH-ment)</i> — the slow, steady taking over of land or rights that belong to someone else, a little at a time rather than all at once.</p>
+<p><b>headright</b> <i>(HED-ryte)</i> — a Virginia land policy granting about fifty acres to anyone who paid the cost of bringing a settler across the Atlantic, including the settler's own passage.</p>
+<p><b>uprising</b> <i>(UP-ry-zing)</i> — an organized armed revolt by a people against a power that has been ruling or pressing on them.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">The crop that finally made Jamestown profitable is the same crop that made lasting peace with the Powhatan nearly impossible.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Around 1612, a colonist named John Rolfe grew a sweeter, milder strain of tobacco. It suited English tastes far better than the harsher native Virginia variety. At last, Virginia had something the Virginia Company's investors had wanted from the start: a real cash crop that sold for real money in England. Investors back in London had waited years for a moment like this one.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">But tobacco is famously hungry for land. It strips nutrients out of the soil within just a few growing seasons. It leaves exhausted fields behind. A planter who wants to keep growing profitable tobacco has no choice. He must keep claiming fresh new fields to replace the worn-out ones. That single agricultural fact shaped an entire century of Virginia's history.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Compare this to the fur trade you studied last week in France's colony. A fur trade can go on and on, because both partners keep wanting the exchange to continue. Tobacco farming is fundamentally different. Tobacco created a growing English hunger for Powhatan land, not just for Powhatan goods. That hunger grew larger every year, with no sign of slowing. It had no natural stopping point. No treaty, no marriage, and no goodwill on either side could satisfy a demand like that for long.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">The Rule That Turned People Into Acres</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">There was also one specific Virginia land rule that poured fuel onto this fire. It is worth knowing by name. Under the <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A Virginia land policy granting about fifty acres to anyone who paid the cost of bringing a settler across the Atlantic, including the settler's own passage.">headright</span> system, anyone who paid the cost of shipping a person across the Atlantic received land as a reward. The reward was about fifty acres of Virginia land per person transported. Pay your own passage, and claim fifty acres for yourself. Pay for four laborers, and claim two hundred more.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Look at exactly what this rule rewards, and what it does not. It does not reward farming well at all. It rewards bringing more people over to Virginia, no matter how well they actually farmed once they arrived. Every new person a planter brought over converted directly into more land he could claim. A planter who wanted to grow richer had every reason to keep importing more workers. Importing more workers automatically pushed the colony's fenced boundary further into Powhatan territory, whether anyone intended that or not. By the 1620s, headright grants had brought thousands of new colonists to Virginia. Tobacco exports grew from a few thousand pounds to hundreds of thousands of pounds within a decade. Land under English cultivation grew just as fast.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">So the mounting pressure on Powhatan land was not only the result of soil wearing out. It was written directly into Virginia's own land law as a financial reward. Nobody in London designed the headright system to start a war with the Powhatan. They designed it to attract new settlers to a struggling colony. That colony had already lost many colonists to disease and starvation. The war that followed was a real consequence London's lawmakers never intended or foresaw.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">A Fragile Peace, and Its Collapse</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">For a good while, an uneasy peace between the two peoples did hold. In 1614, John Rolfe, the same man who introduced the sweeter tobacco, married Pocahontas, Wahunsenacawh's daughter. Both sides seem to have treated that marriage as a real diplomatic bridge, not an empty gesture. This fragile peace even outlasted Wahunsenacawh's own death, around 1618.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">What that peace did not outlast was the steady spread of English tobacco fields. Under Wahunsenacawh's successor, a leader named Opechancanough, the situation kept getting worse in one specific way. Every passing year, there was noticeably less Powhatan land, and noticeably more English fence.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">In March 1622, Powhatan forces finally struck, after years of watching their land disappear. The attack hit Virginia's scattered settlements at once, across a wide area. It struck almost entirely on a single, carefully planned day. It killed roughly a quarter of the colony's English population in a matter of hours. Most historians do not read this attack as simple revenge for one insult. They read it as a calculated attempt to reverse years of creeping land <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="The slow, steady taking over of land or rights that belong to someone else, a little at a time rather than all at once.">encroachment</span>, while reversing it still seemed possible.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">It did not work. English retaliation in the years that followed grew far harsher than anything before. It aimed openly at destroying Powhatan communities, not simply at trade and accommodation. A second, smaller <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="An organized armed revolt by a people against a power that has been ruling or pressing on them.">uprising</span> in 1644 ended with Opechancanough captured and killed. By then he was a very old man, leading what remained of his people's resistance. A formal treaty in 1646 placed the once-mighty Powhatan Confederacy under English colonial authority. The dominant power of 1607 had become the subordinate power of 1646. That happened in less than forty years, a genuinely rapid reversal of fortune. This pattern, land hunger outrunning any peace agreement, would repeat again and again as English colonies expanded west in the following century.</p>
+</div>
+<div class="callout-foreign" style="background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-foreign" style="font-size: 10px; color: #8a6216; margin-bottom: 6px; ">🌐 Foreign Language Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">
+<p><b>Opechancanough</b> <i>(oh-puh-CHAN-kuh-noh)</i> — the Powhatan leader who succeeded Wahunsenacawh and led both the 1622 and 1644 uprisings against the Virginia colonists.</p>
+<p><b>Wahunsenacawh</b> <i>(wah-hun-SEN-uh-caw)</i> — carried over from Lesson 4.1: the paramount chief who led the Powhatan Confederacy when Jamestown was founded, whom the English called Powhatan.</p>
+</div>
+</div>
+<div class="callout-warn" style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-warn" style="font-size: 10px; color: #8A1F16; margin-bottom: 6px; ">⚠️ Watch Out</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Do not read this story as though the war was settled from the first day. For more than a decade, trade, negotiation, and even intermarriage were live options. Both sides pursued them with what looks like real sincerity. What changed was not a secret English plan to destroy the Powhatan from the start. What changed was the land appetite of a tobacco economy that had no limit built into it. Material conditions narrowed which long-term outcomes were still workable. They did not schedule the war in advance. Between 1614 and 1622, there were years when a different path was still open. People made choices that closed it.</div>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Continue your analysis of Smith's account in the <b>Primary Source Exercise</b> (see previous page).</div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Join this week's <b>Discussion</b> and <b>VR Activities.</b></div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 4 of 18 &middot; The First English Settlements: Jamestown and the Chesapeake</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
