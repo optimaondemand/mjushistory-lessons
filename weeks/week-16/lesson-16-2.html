@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 16.2: Yorktown and the World Turned Upside Down</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 2 &middot; Module 16 &middot; Lesson 16.2</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 16.2</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">Yorktown and the World Turned Upside Down</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 16 of 18</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 16.2 · ~7 min</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">Yorktown and the World Turned Upside Down</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~800 words</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Two new words below, plus three carried over from yesterday.
+  <p><b>alliance</b> <i>(uh-LY-unts)</i> — a formal agreement between two or more countries to support each other, especially in war.</p>
+<p><b>aristocrat</b> <i>(uh-RISS-tuh-krat)</i> — a member of a wealthy, high-ranking noble family.</p>
+<p><b>capitulation</b> <i>(kuh-pich-uh-LAY-shun)</i> — a formal agreement to surrender, listing the specific terms of surrender.</p>
+<p><b>untenable</b> <i>(un-TEN-uh-bul)</i> — impossible to defend or maintain.</p>
+<p><b>viable</b> <i>(VY-uh-bul)</i> — capable of working or succeeding.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">The battle that decided the war's outcome was fought between two navies, with no Continental Army soldier anywhere near it, and no way for Washington to influence it directly.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">You read Cornwallis's own frustration with the difficult southern campaigns last week. Following those campaigns, his forces withdrew to Yorktown, Virginia, in 1781. There he waited to be resupplied and reinforced by sea. Washington and the French general Rochambeau seized the opportunity. They marched their combined American and French land forces south from New York. Their goal was to trap Cornwallis at Yorktown for good, a gamble on a scale the war had not yet seen. But the plan depended entirely on one thing neither general directly controlled. Could a French fleet reach the Chesapeake Bay first? Could it keep the Royal Navy from rescuing or resupplying Cornwallis by sea? The march itself was a feat of coordination and secrecy. Washington kept the British command in New York guessing about his true target for weeks. He maintained camps and communications that suggested an attack on the city itself. He kept up this deception right up until his combined force was already well on its way south toward Virginia. By the time the British realized what was actually happening, there was no longer enough time to reinforce Cornwallis by land, no matter how fast reinforcements might have marched.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Decided at Sea</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">In early September 1781, the French Admiral de Grasse's fleet defeated a British relief fleet. This happened at the Battle of the Chesapeake. The victory secured naval control of the bay. It sealed Cornwallis's only escape route completely. Combined American-French land forces surrounded Yorktown on land at the very same time. With no path to resupply or retreat, Cornwallis's position became <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Impossible to defend or maintain.">untenable</span>. He surrendered his army on October 19, 1781. His land forces had not been decisively beaten in the field. He surrendered because a naval battle he had no part in fighting had cut off any possibility of relief. Reports held that British musicians played a tune called "The World Turned Upside Down" during the surrender ceremony. This story is probably legendary rather than strictly documented. It was widely repeated at the time, though. It is an apt title regardless of whether the story is literally true.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The siege itself followed standard European siege practice. American and French engineers dug a series of trenches, called parallels, closer and closer to the British defenses each night. On October 14, American and French troops stormed two key British defensive positions. These were known as Redoubts 9 and 10. Soldiers took them in a nighttime bayonet assault. A young officer named Alexander Hamilton led one of these assaults personally. That is worth remembering when you meet him again as a framer of the Constitution next quarter. These two captured redoubts let American and French artillery move close enough to make Cornwallis's position hopeless within days. What had been a siege measured in weeks suddenly became a countdown measured in days instead.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Cornwallis himself did not appear at the formal surrender ceremony. He claimed illness and sent his second-in-command, General Charles O'Hara, to surrender in his place. O'Hara first tried to hand Cornwallis's sword to the French commander Rochambeau, rather than to Washington. Rochambeau politely redirected him to Washington's own second-in-command instead. The surrender, after all, was understood to be made to the American commander. Even the small details of a surrender ceremony, it turns out, carried real diplomatic meaning, right down to whose hand actually received the sword and in what precise order it happened.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">One detail in the surrender terms carries more weight than it might first appear. British troops marched out to surrender their weapons. They were forbidden from playing their own military music. They could not display their unfurled flags either. That honor was customarily extended to a defeated army that had fought well. Washington's command denied Cornwallis's forces that honor for a specific reason. British forces had denied the same honor to American troops who surrendered at Charleston the year before. Even in defeat, armies of this era kept careful track of exactly which customary honors had, and had not, been extended. They answered each slight in kind.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">News of the surrender reached London in November 1781. Prime Minister Lord North heard the report. He reportedly responded as though he had been physically shot, pacing his room in visible distress and repeating the same words over and over. He repeated "Oh God, it is all over" again and again. His entire government fell from power within months. Parliament voted to end offensive operations in America soon after. This formally acknowledged what Yorktown had already decided in practice, months earlier, on a Virginia peninsula most Londoners could not have found on a map if their own lives had depended on it.</p>
+</div>
+<div class="callout-help" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-help" style="font-size: 10px; color: #1B6A94; margin-bottom: 6px; ">💡 Helpful to Know</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Yorktown did not formally end the war. Scattered fighting continued for another two years. Peace negotiations in Paris, led for the American side by Benjamin Franklin, John Adams, and John Jay, dragged on. The Treaty of Paris was finally signed in September 1783. It formally recognized American independence and settled the new nation's boundaries. But Yorktown broke British political will to continue funding the war. No further major campaign followed it. The war's decisive military moment and its formal legal conclusion were two separate events, separated by nearly two years of negotiation. Franklin, Adams, and Jay negotiated directly with Britain in Paris, largely without consulting France first, even though the 1778 treaty technically required it. They judged, correctly as it turned out, that Britain would offer better terms directly to the Americans than France's own interests might otherwise produce. Loyalty to an ally, in other words, had its practical limits once independence itself was no longer in doubt.</div>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 2: The Yorktown Articles of Capitulation.</b></div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source Exercise</b> on the surrender terms.</div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 16 of 18 &middot; The American Revolution, Part II: Turning Points, Alliances, and Victory</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
