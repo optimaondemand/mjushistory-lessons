@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 5.2: The Compact and the Common Good</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 1 &middot; Module 5 &middot; Lesson 5.2</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 5.2</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">The Compact and the Common Good</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 5 of 18</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 5.2</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">The Compact and the Common Good</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~920 words · ~8 min</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Two new words below, plus one carried over from yesterday. Look them over before you read.
+  <p><b>body politic</b> <i>(BOD-ee POL-ih-tik)</i> — a group of people who have joined together to be governed as one community, spoken of as though the community were a single living body.</p>
+<p><b>covenant</b> <i>(KUV-uh-nunt)</i> — a solemn, binding promise between parties, understood by these colonists as made before God and not merely between people.</p>
+<p><b>Separatist</b> <i>(SEP-ur-uh-tist)</i> — an English Protestant who believed the Church of England was too corrupt to fix from the inside and wanted to leave it entirely.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">Plymouth made almost exactly the same mistake Jamestown made, and fixed it in almost exactly the same way.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">In its first years, Plymouth farmed entirely in common. Jamestown had done the same thing thirteen years earlier, under a nearly identical arrangement. The land, and everything grown on it, belonged legally to the whole colony. It did not belong to any one family.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The colony's governor, William Bradford, carefully wrote down what happened next, in his own journal. His account is unusually honest for a leader describing his own colony's failure. Young, strong men resented working just as hard for other families as they would for their own wives and children. Wives objected to their husbands laboring for other men's households while their own families went without. Food output stayed stubbornly low, season after season. Bradford does not blame bad or lazy people for this failure. He describes a bad arrangement instead. It gave nobody any personal reason to work harder than anyone else. He says so plainly, without excuses.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">In 1623, Bradford's government finally gave each family its own private plot of land. Each household could keep whatever it grew there. Bradford recorded that this single change "made all hands very industrious" almost overnight. Far more corn was planted that season than the governor could ever have obtained by any other method.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Two Colonies, One Lesson</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">You have now watched this same pattern play out twice in this course. A community shares everything equally. Individual effort quietly falls off over time. People go hungry as a result. The community switches to private, individually owned plots instead. Food production then rises sharply.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Two entirely separate colonies. Different religions. Different charters. Different climates. Founded thirteen years apart, with neither one learning anything from the other's experience. That striking repetition is itself a genuine piece of historical evidence. It is not simply a coincidence to shrug off. You should treat it seriously as exactly that.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Be careful, though, about exactly what this repeated pattern proves. It does not prove some rigid economic law true everywhere and always. Human beings do sometimes work hard for shared ends without any personal reward. You have surely seen ordinary people do exactly that, in a family, a team, or a church. What these two cases do show is simpler than a universal law. Put a large group of strangers under hard survival conditions, with no personal stake in the outcome. That group tends not to work hard for a shared common pot. A careful historian takes a pattern this strong seriously, as real evidence. But a careful historian does not pretend one pattern settles every question about human cooperation.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">What "Combine Ourselves Together" Actually Meant</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Go back to the Mayflower Compact's exact wording for a moment. The signers deliberately <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A solemn, binding promise between parties, understood by these colonists as made before God and not merely between people.">covenant</span> and combine themselves into a civil <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A group of people who have joined together to be governed as one community, spoken of as though the community were a single living body.">body politic</span>. Those words were not chosen as mere decoration. They carry a specific theological idea, one widely shared among English Protestants of this period. A group of people becomes a real community through a deliberate, mutual promise made before God. A group of people does not become a real community simply by living near one another.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">John Winthrop put this same idea into words as clearly as anyone in this period of American history. Winthrop led a much larger, better-funded wave of Puritan settlers to Massachusetts Bay in 1630, about a decade after Plymouth's founding. These settlers were Puritans, not <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="An English Protestant who believed the Church of England was too corrupt to fix from the inside and wanted to leave it entirely.">Separatists</span> like the Pilgrims. You will explore that distinction further in Module 8. Winthrop argued that a colony's success or failure would depend on one thing. Would its people "delight in each other" and "make others' conditions our own," acting as one body? Or would each person chase his own private advantage, at the whole community's expense?</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Winthrop later looked back at his own colony's founding, and at the earlier Plymouth example that came before it. He saw the same principle at work in both, despite their real differences. Political authority becomes legitimate through the consent of those who freely agree to be governed by it. A community holds together through a purpose its own members have deliberately chosen, not one imposed on them from outside.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">One more fact belongs here, in the main text, not tucked away in a footnote. Forty-one adult men signed. Women aboard the ship did not sign it. Neither did the indentured servants, nor any of the children present. Yet every one of them, signers and non-signers alike, would be governed by whatever laws the signers made. Consent-based self-government began in this country as consent given by some, on behalf of everyone else. Saying so plainly is not scolding the Pilgrims for failing to be modern. It is simply stating what the document did, and did not yet do. That honest accounting is the only fair way to measure how far this idea of consent would later have to travel, before it included everyone.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Now hold that fact beside the earlier section of this lesson. The two do not sit together comfortably, and that discomfort is worth noticing. Bradford's colony survived by giving families their own private land and their own harvest. Winthrop's covenant ideal, by contrast, asks people to make others' conditions their own. Is that a real contradiction between the two visions? Or are these two different answers to two different questions about community life? You will read Winthrop's own words next, in this week's primary source. This week's written report will ask you to weigh exactly that tension.</p>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 2: John Winthrop, <i>History of New England.</i></b></div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source Report</b> (Tier 3, M365 Word document) on Winthrop's account.</div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 5 of 18 &middot; Religious Reformers in New England</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
