@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 15.2: A War Fought Everywhere, Including Florida</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 2 &middot; Module 15 &middot; Lesson 15.2</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 15.2</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">A War Fought Everywhere, Including Florida</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 15 of 18</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 15.2 · ~7 min</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">A War Fought Everywhere, Including Florida</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~800 words</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Two new words below, plus four carried over from yesterday.
+  <p><b>desertion</b> <i>(dih-ZUR-shun)</i> — leaving military duty without permission.</p>
+<p><b>enlistment</b> <i>(en-LIST-ment)</i> — the act of officially joining the military for a set period of time.</p>
+<p><b>garrison</b> <i>(GAIR-ih-sun)</i> — a group of troops stationed in a fort or town to defend it.</p>
+<p><b>Hessian</b> <i>(HESH-un)</i> — a German soldier hired by Britain to fight in the war.</p>
+<p><b>subordinate</b> <i>(suh-BOR-din-it)</i> — a person of lower rank who reports to someone above them.</p>
+<p><b>theater</b> <i>(THEE-uh-ter)</i> — in war, a region where military campaigns and battles take place.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">Florida never joined the American Revolution. It fought against it, on the side of the crown, from beginning to end.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Britain had gained Florida from Spain in the 1763 Treaty of Paris (Module 9). It divided the territory into East and West Florida. Both Floridas remained firmly loyal to the British crown throughout the Revolution. This set them apart from the thirteen rebelling colonies. They served as havens for Loyalist refugees fleeing the rebelling colonies. They also served as bases for British military operations in the southern <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="In war, a region where military campaigns and battles take place.">theater</span>. Spain formally entered the war against Britain in 1779. Spain never allied directly with the United States. It simply pursued its own interests against a shared British enemy. Spanish forces under Bernardo de Gálvez captured British positions in West Florida, including Pensacola in 1781. This restored Spanish control over territory Spain had first lost back in that same 1763 treaty.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">British strategists increasingly looked south as the war dragged on. They had a specific reason for this. They believed large numbers of Loyalists in Georgia and the Carolinas were simply waiting for British troops to arrive. Once British troops showed up, the thinking went, these Loyalists would rise up openly in support of the crown. Florida's own firm loyalty seemed to confirm this theory. Suppose British forces could secure the South once and for all. Loyalist militia could then hold it. That would free up regular troops to finish off the rebellion further north. You will find out next week whether that assumption held up once British forces actually tested it.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Gálvez's own campaign moved steadily south and west. He captured Baton Rouge and Mobile first. He finally took Pensacola after a monthslong siege in 1781. Spain's help never took the form of a direct alliance with the United States, the way France's did. But it tied down British resources across an entire second front. Those resources could not then be sent north to fight Washington's army, no matter how badly London wanted them there.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Consider a counterfactual here. Suppose Spain had stayed neutral throughout the war, sending Gálvez no orders to attack British Florida at all. Britain would then have had a free hand along the entire Gulf Coast. It could have shifted those defending troops north, to reinforce Cornwallis and Howe against Washington instead. Spain's Gulf Coast campaign never fought alongside American soldiers directly. But it forced Britain to defend a second, distant front, at a moment when every single regiment mattered enormously to the war's outcome further north.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Battlefield Victories, Strategic Frustration</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">British commanders won most of the war's early set-piece battles. This included New York, and later engagements in Pennsylvania and elsewhere. These commanders included General William Howe and his <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A person of lower rank who reports to someone above them.">subordinate</span> Charles Cornwallis. You'll read Cornwallis's later correspondence this week. Yet occupying territory and winning battles never translated into actually suppressing the rebellion. British forces could not be everywhere at once. Each region they left, to pursue victory elsewhere, tended to revert to Patriot control. This mismatch between tactical success and strategic failure would only grow more pronounced as the war moved south in later years. It frustrated British commanders precisely because it defied their own professional military expectations. Winning battles was supposed to accomplish something lasting. It did not, at least not in the way British commanders had trained their whole careers to expect.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Historians have long debated General Howe's own character as a commander. He won nearly every battle he fought against Washington in 1776 and 1777. Yet he repeatedly paused after victories instead of pursuing Washington's weakened army to finish it off. Some historians point to Howe's own personal sympathy for the American cause. He had publicly opposed the war in Parliament before ever accepting his command. Others see simple military caution instead, a trait that had served Howe well in European warfare but proved costly against an enemy that only needed to survive, not win outright. Whatever the true cause, Howe's hesitation gave Washington's battered army room to recover again and again, room it badly needed after each defeat.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Cornwallis was not a minor figure sent to a secondary front. He was one of Britain's most capable field commanders. His private correspondence this week reflects a general genuinely wrestling with a problem his training had not prepared him for. He faced an enemy that would not stand and fight one final, decisive battle. He faced a country too large to occupy everywhere at once, no matter how many battles his troops won along the way. Reading his own private words this week, rather than a textbook's summary of him, lets you judge his character and his difficulty for yourself. A skilled, experienced general, admitting real doubt in a private letter to a trusted colleague, is a different kind of evidence than any official report meant for London's eyes.</p>
+</div>
+<div class="callout-warn" style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-warn" style="font-size: 10px; color: #8A1F16; margin-bottom: 6px; ">⚠️ Watch Out</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Do not treat "the colonies" as a single unified bloc during the Revolution. Florida's loyalty is a reminder of something else, alongside the significant Loyalist populations within the rebelling colonies themselves. The Revolution was, among other things, a civil conflict within British America. It was not simply "the colonies versus Britain." Loyalist colonists did not merely stay quiet. Many organized their own military units and fought directly alongside British regulars, in provincial corps recruited from Loyalist volunteers. In parts of the South especially, fighting between Patriot and Loyalist militia bands could be as brutal, and as personal, as anything fought against British regulars: neighbors settling old scores under the cover of a larger war. A war that looks simple from a distance, king versus colonists, rarely looks that simple up close. Keep this complexity in view as you study the war's remaining campaigns.</div>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 2: Cornwallis's correspondence with Clinton.</b></div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source Exercise</b> on the correspondence.</div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 15 of 18 &middot; The American Revolution, Part I: Early Campaigns</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
