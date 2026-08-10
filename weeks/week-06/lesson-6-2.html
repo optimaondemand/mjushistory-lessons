@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 6.2: The Virginia Company's Twilight and Bacon's Rebellion</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 1 &middot; Module 6 &middot; Lesson 6.2</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 6.2</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">The Virginia Company's Twilight and Bacon's Rebellion</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 6 of 18</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 6.2</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">The Virginia Company's Twilight and Bacon's Rebellion</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~830 words · ~7 min</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Two new words below, plus one carried over from yesterday. Look them over before you read.
+  <p><b>burgess</b> <i>(BUR-jess)</i> — an elected representative of a town or district in a colonial assembly.</p>
+<p><b>indentured servant</b> <i>(in-DEN-cherd SUR-vunt)</i> — a person who agreed to work without wages for a set number of years, often in exchange for passage across the Atlantic, and who was legally free at the end of that term.</p>
+<p><b>royal colony</b> <i>(ROY-ul KOL-uh-nee)</i> — a colony governed directly by the king through a governor he appointed, rather than by a private company or its own charter.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">Virginia gained an elected assembly in 1619 and lost its company government in 1624. Neither event prevented an armed rebellion fifty-two years later.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">In 1619, the Virginia Company created the House of <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="An elected representative of a town or district in a colonial assembly.">Burgesses</span>. This was a genuine landmark in colonial history. It was the very first elected lawmaking assembly in English North America. It gave property-owning male colonists a real voice in shaping the laws they lived under. Remember what you read last week about a very different colony. The Mayflower Compact was signed just one year later, in 1620. Within roughly a single year of each other, on two different stretches of the Atlantic coast, English colonists were independently doing something people back in England were not yet doing. They were making their own laws through their own chosen representatives.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Five years later, though, the Virginia Company itself was finished. In 1624, King James I revoked the Virginia Company's charter outright. This came after years of financial mismanagement, and a death toll that had grown impossible to defend. Virginia then became a <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A colony governed directly by the king through a governor he appointed, rather than by a private company or its own charter.">royal colony</span> instead, run directly by a governor the king appointed.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">So Virginia now had two different sources of authority at once. One was an elected assembly of its own colonists. The other was a royal governor, answerable only to a distant king across an ocean. Those two sources of authority did not always fit together neatly. Bacon's Rebellion, which you will study today, is what it looked like when that uneasy seam finally tore apart.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Grievance on the Frontier</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">By the 1670s, Virginia's colonial government sat comfortably in the Tidewater region. The colony's oldest, wealthiest plantations had long been established there. Virginia's population had grown quickly in the preceding decades. Growth pushed more families onto land near Native territory, where conflict was most likely. Settlers living further out on the dangerous frontier increasingly saw the government as indifferent to whether they lived or died. They also saw it as a closed, self-serving circle. It had quietly handed the colony's most profitable fur and deerskin trades to the governor's own favorites.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Then, in 1675 and 1676, raids on isolated frontier settlements increased sharply. Governor William Berkeley responded cautiously. He held his forces back rather than launching a full-scale response. He had his own reasons for this caution, including his own profitable trading relationships with several Native nations. A wider war would have disrupted those relationships. A cautious response was arguably the wiser policy for the whole colony. But to frontier settlers watching their neighbors' farms burn, it looked like open betrayal. It looked like a government protecting its friends' profits, not its subjects' lives. Frontier settlers had good reason to feel abandoned. Virginia's government had done little to build forts or send soldiers to protect the outer settlements.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Nathaniel Bacon stepped directly into that boiling anger. He offered himself as the leader it seemed to need. He raised his own unauthorized military force, with no government permission. He attacked several Native communities with that force. Some of those communities had nothing to do with the original raids. Then he turned that same force against Berkeley's own government. In September 1676, Bacon's forces burned the colonial capital of Jamestown to the ground.</p>
+</div>
+<div class="callout-warn" style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-warn" style="font-size: 10px; color: #8A1F16; margin-bottom: 6px; ">⚠️ Watch Out</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Do not read Bacon's Rebellion as a simple story of the poor rising against the rich. Bacon was not a landless laborer. He was a wealthy, well-connected planter with family ties to the colony's governing class. His following did include <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A person who agreed to work without wages for a set number of years, often in exchange for passage across the Atlantic, and who was legally free at the end of that term.">indentured servants</span>, small farmers, and some enslaved and free Black Virginians. That mix is remarkable, and it matters for what came after. But what held that coalition together was shared anger at one specific governing group, not a shared class or a shared program. And notice who the rebellion's first victims were: Native communities, attacked by men whose stated grievance was against their own governor.</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">The Rebellion That Needed One Man</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">In October 1676, just a few weeks after burning down the colonial capital, Nathaniel Bacon suddenly died. He did not die gloriously in battle, facing Berkeley's forces. He died quietly of dysentery, an ordinary and unglamorous intestinal illness common in this period.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The entire rebellion effectively died along with him, almost immediately. Royal forces sent from England put down whatever scattered resistance remained within just a few months of Bacon's sudden death. Governor Berkeley himself was recalled back to England in real disgrace not long afterward, his own reputation permanently damaged by the whole episode.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Sit with that sudden collapse for a moment, because it holds this week's real lesson. A rebel coalition strong enough to burn a colonial capital came completely apart within weeks, once a single man was gone. That rapid collapse tells you something important. The movement's unity had rested on Bacon's own leadership, far more than on any shared plan that could outlive him. Compare that fragility to the Mayflower Compact you studied two weeks ago. That document was designed from the start to survive the death of any signer. It functioned as an ongoing institution, not a personal following. Or compare it to the House of Burgesses itself. It kept meeting and functioning as a government, even after the company that created it had ceased to exist. A movement built around one charismatic person, and a government built around a lasting agreement, are two different kinds of thing. They fail, when they fail, in different ways. Keep this distinction in mind. You will need it later, when this course reaches 1776. By then, a great deal will depend on whether the colonists have built the first, fragile kind of thing, or the second, more durable kind.</p>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Continue your analysis of Bacon's Declaration in the <b>Primary Source Exercise</b> (see previous page).</div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Join this week's <b>Discussion</b> and <b>VR Activities.</b></div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 6 of 18 &middot; Mid-Atlantic and Southern Colonies</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
