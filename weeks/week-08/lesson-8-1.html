@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 8.1: Puritanism and the City Upon a Hill</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a2340; background: #F4F6FA; }
+
+.oa-header { background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px; }
+.oa-header .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.oa-header .brand-dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #0E1C42; font-size: 24px; flex-shrink: 0; }
+.oa-header .brand-name { font-size: 24px; color: #fff; line-height: 1.2; }
+.oa-header .brand-tag { font-size: 12px; color: #55c8e8; }
+.oa-header .course-name { font-size: 30px; color: #fff; margin-top: 6px; }
+.oa-header .breadcrumb { font-size: 15px; color: #55c8e8; margin-top: 2px; }
+
+.oa-footer { background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center; }
+.oa-footer .line1 { font-size: 15px; color: #fff; }
+.oa-footer .line1 .brand { color: #55c8e8; }
+.oa-footer .line2 { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 3px; }
+.oa-footer .line3 { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.meta-strip { background: #fff; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap; }
+.meta-cell { flex: 1; min-width: 150px; padding: 12px 18px; border-right: 1px solid #D0D9E8; }
+.meta-cell:last-child { border-right: none; }
+.meta-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+.meta-value { font-size: 17px; color: #0e1c42; }
+
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 24px 28px 32px; }
+
+.title-strip { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px; }
+.title-strip .kicker { font-size: 11px; color: #0e1c42; margin-bottom: 6px; text-transform: uppercase; }
+.title-strip .title { font-size: 24px; color: #0e1c42; margin-bottom: 4px; }
+.title-strip .subtitle { font-size: 14px; color: #666; }
+
+.card { background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.card-gold-top { border-top: 3px solid #C7922C; }
+.card-navy-top { border-top: 3px solid #0E1C42; }
+.card-kicker { font-size: 11px; color: #c7922c; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+.card-body { font-size: 17px; color: #1a2340; line-height: 1.65; }
+.card h3 { font-size: 19px; color: #0e1c42; margin: 14px 0 8px 0; }
+.card p { font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0; }
+
+.num-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.num-circle { min-width: 28px; height: 28px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.num-circle.navy { background: #0E1C42; }
+.num-text { font-size: 17px; color: #1a2340; line-height: 1.6; }
+
+.callout-help { background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-help { font-size: 11px; color: #1B6A94; margin-bottom: 8px; text-transform: uppercase; }
+.callout-glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-glossary { font-size: 11px; color: #0E1C42; margin-bottom: 8px; text-transform: uppercase; }
+.callout-foreign { background: #EEF1F8; border-left: 5px solid #C7922C; border-top: 3px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+.callout-kicker-foreign { font-size: 11px; color: #8a6216; margin-bottom: 8px; text-transform: uppercase; }
+.term-audio { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; cursor: pointer; margin-left: 4px; padding: 0; line-height: 1; }
+.term-audio:hover { background: #FDF3E3; }
+
+.term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== embedded widget (byte-consistent widgets/exploration-routes-map.html) ===== */
+.optima-widget { background: #EEF1F8; border: 1px solid #D0D9E8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 4px 0 0; }
+.widget-kicker { font-size: 11px; color: #C7922C; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+.map-wrap { position: relative; background: #0E1C42; border-radius: 8px; padding: 20px; margin-bottom: 16px; overflow: hidden; }
+.map-svg { width: 100%; height: auto; display: block; }
+.marker { cursor: pointer; transition: r 0.2s; }
+.marker:hover { opacity: 0.85; }
+.marker.active circle { stroke: #C7922C; stroke-width: 3; }
+.detail-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 14px 16px; margin-top: 4px; min-height: 90px; }
+.detail-card .voyage-title { font-size: 15px; color: #0E1C42; font-weight: bold; margin-bottom: 6px; }
+.detail-card .voyage-body { font-size: 14px; color: #1a2340; line-height: 1.55; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.legend button { flex: 1; min-width: 120px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+.legend button:hover { border-color: #55C8E8; background: #F4F6FA; }
+.legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+.widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+
+<div class="oa-header">
+  <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
+  <div class="course-name">MJ U.S. HISTORY 1492&ndash;RECONSTRUCTION</div>
+  <div class="breadcrumb">Quarter 1 &middot; Module 8 &middot; Lesson 8.1</div>
+</div>
+<div class="meta-strip">
+  <div class="meta-cell"><div class="meta-label">Lesson</div><div class="meta-value">Lesson 8.1</div></div>
+  <div class="meta-cell"><div class="meta-label">Topic</div><div class="meta-value" style="font-style:italic;">Puritanism and the City Upon a Hill</div></div>
+  <div class="meta-cell"><div class="meta-label">Module</div><div class="meta-value">Module 8 of 18</div></div>
+</div>
+
+<div class="page-wrap">
+
+<div class="title-strip" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 14px 20px; margin-bottom: 16px;"><div class="kicker" style="font-size: 10px; color: #0e1c42; margin-bottom: 5px; ">Lesson 8.1</div><div class="title" style="font-size: 20px; color: #0e1c42; margin-bottom: 3px;">Puritanism and the City Upon a Hill</div><div class="subtitle" style="font-size: 13px; color: #666;">Lesson · ~840 words · ~7 min</div></div>
+<div class="callout-glossary" style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-glossary" style="font-size: 10px; color: #0E1C42; margin-bottom: 6px; ">📖 Glossary of Subject Vocabulary</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">A few words below may be new to you. Look them over before you read; they will also show up, underlined, in tomorrow's lesson.
+  <p><b>freeman</b> <i>(FREE-man)</i> — in early Massachusetts Bay, a full, examined member of a Puritan congregation who had the right to vote in colony-wide elections; a status that most colonists, including many churchgoers, did not hold.</p>
+<p><b>town meeting</b> <i>(TOWN MEE-ting)</i> — a New England practice in which property-holding male residents of a town gathered together to decide local matters directly, regardless of whether they were full church members.</p>
+</div>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">📖 Today's Focus</div>
+<div style="font-size:17px; color:#0e1c42; font-style:italic; margin-bottom:8px;">In early Massachusetts Bay, whether you could vote and whether you were considered saved by God were not entirely separate questions.</div>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Recall from Module 5, two weeks ago, that the Puritans were different from the Separatist Pilgrims at Plymouth. People often lump the two groups together, but they were not the same. The Puritans wanted to reform the Church of England from within. They did not want to abandon it entirely, the way the Separatists had. John Winthrop led roughly a thousand Puritan colonists across the Atlantic to Massachusetts Bay, beginning in 1630. This was a much larger, better-funded migration than Plymouth's voyage a decade earlier. Massachusetts Bay grew far faster than Plymouth ever did, partly because it started with more money and more colonists from the very beginning. Through the rest of the 1630s, a large wave of arrivals known as the "Great Migration" grew the young colony to tens of thousands of people, in just one decade. You already read about Winthrop's covenant vision last week, in Plymouth's story. He imagined this new colony as a "city upon a hill," visible from far away. Its success or failure at living up to its religious purpose, Winthrop believed, would be visible to the whole world.</p>
+</div>
+<div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">Church, Vote, and Town</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Massachusetts Bay tied civic and religious life together far more tightly than Plymouth had. For much of the 1600s, only adult male <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="In early Massachusetts Bay, a full, examined member of a Puritan congregation who had the right to vote in colony-wide elections; a status that most colonists, including many churchgoers, did not hold.">freemen</span> could vote in colony-wide elections. To become a freeman, a man first had to be a full, examined member of a Puritan congregation. That kind of membership required him to give a public account of his own conversion experience. He had to describe it convincingly before the whole congregation. Simply attending church regularly was not nearly enough to qualify for full membership, or for the right to vote.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Local town government worked differently from this stricter colony-wide system. New England's <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A New England practice in which property-holding male residents of a town gathered together to decide local matters directly, regardless of whether they were full church members.">town meeting</span> system let ordinary property-holding men gather and decide local matters directly. It did not matter whether they were full church members. This more open local system gave ordinary colonists real, regular experience governing themselves. At the same time, the colony as a whole still restricted its highest-level vote along these same narrow religious lines. This split between an open local system and a restricted colony-wide system was not an accident. It reflected two different ideas about what kind of trust a community owed its members.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Education mattered enormously to this project, for a specific reason. In 1647, the Massachusetts Bay government passed an important law. People today remember it by its nickname, the "Old Deluder Satan Act." The law stated its purpose plainly: thwarting Satan's efforts to keep people ignorant of the Bible. The law required any town above a certain size to fund a schoolteacher. It stands today as one of the earliest publicly mandated education requirements in English North America. It was also a direct expression of the colony's own religious purpose. A colony that expected every believer to read Scripture and testify to their faith needed its people to be able to read. Reading was not treated as a private skill in this colony. It was treated as a public duty owed to God and to the whole community.</p>
+<h3 style="font-size: 17px; color: #0e1c42; margin: 12px 0 6px 0;">A Second Generation, and a Compromise</h3>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">By the 1660s, roughly a generation after the colony's founding, Massachusetts Bay faced a problem its founders had not fully planned for. Many children of the original Puritan settlers had been carefully raised in the church. Even so, quite a few of them could not give the dramatic conversion account full membership required. Without that testimony, they could not become freemen, and could not vote. Their own children, in turn, could not even be baptized in the church, under the existing rules. Worried ministers feared this strict standard would shrink the colony's religious community with every passing generation. This problem was not unique to Massachusetts Bay. Other Puritan colonies faced the same tension between strict religious standards and the practical need to keep families connected to the church.</p>
+<p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">In 1662, a formal synod of Massachusetts ministers adopted what became known as the Half-Way Covenant. It let baptized adults who had not experienced full conversion become "half-way" members instead. Their own children could then be baptized in the church, keeping the family connection across generations. But these half-way members still could not vote in colony-wide elections. They still could not take full communion. It was, in effect, a compromise built to keep struggling families connected to the church, rather than losing them entirely. Not everyone in the colony approved. Some stricter ministers thought it watered down the very conversion standard that made Massachusetts Bay's church distinct in the first place. Keep this argument in mind. It raises a question you will meet again soon. How much of true faith depends on an inward, felt experience, rather than mere outward conformity? That same question will resurface tomorrow, in a different form, in your lesson on the Great Awakening.</p>
+</div>
+<div class="callout-help" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
+<div class="callout-kicker-help" style="font-size: 10px; color: #1B6A94; margin-bottom: 6px; ">💡 Helpful to Know</div>
+<div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Not everyone in Massachusetts Bay accepted its leadership's religious authority. Anne Hutchinson was tried and banished in 1637 for holding unauthorized religious meetings and challenging clergy teachings. Roger Williams was banished in 1636 for advocating separation of church and state and fair dealing with Native peoples. Williams went on to found Rhode Island. He built it as a colony explicitly devoted to religious toleration. It was a live alternative model, existing right next door to Massachusetts Bay's tightly bound religious community.</div>
+</div>
+<div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
+<div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">➡️ What You'll Do Next</div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>8.1 Reading Quiz: Puritanism and the City Upon a Hill.</b></div></div>
+<div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 1: Jonathan Edwards, <i>A Divine and Supernatural Light</i> (1734).</b></div></div>
+</div>
+
+</div>
+
+<div class="oa-footer">
+  <div class="line1"><span class="brand">Optima Academy Online</span> &middot; MJ U.S. History 1492&ndash;Reconstruction &middot; GitHub Lesson Page</div>
+  <div class="line2">Module 8 of 18 &middot; Massachusetts Bay Colony and Puritanism</div>
+  <div class="line3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+<script>
+function oaPronounce(text) {
+  if (!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
