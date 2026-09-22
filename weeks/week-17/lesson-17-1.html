@@ -77,6 +77,27 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
 .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
 .widget-reset:hover { background: #FDF3E3; }
+
+/* ===== new widgets for this lesson: articles-powers-match.html + shays-rebellion-timeline.html ===== */
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.pool, .sequence { background: #FFFFFF; border: 1px dashed #B9C4D9; border-radius: 8px; padding: 10px; min-height: 56px; margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+.sequence { border-style: solid; flex-direction: column; }
+.sequence .slot { border: 1px dashed #D0D9E8; border-radius: 6px; min-height: 44px; padding: 8px 12px; font-size: 13px; color: #999; display: flex; align-items: center; }
+.sequence .slot.filled { border-style: solid; color: #0E1C42; background: #F4F6FA; cursor: pointer; }
+.optima-widget .card { background: #FDF3E3; border: 1.5px solid #C7922C; border-radius: 6px; padding: 8px 12px; font-size: 13px; color: #0E1C42; cursor: pointer; user-select: none; margin-bottom: 0; }
+.optima-widget .card:hover { background: #FBE7C4; }
+.feedback { font-size: 13px; margin-top: 4px; min-height: 18px; }
+.feedback.incorrect { color: #8A1F16; }
+.feedback.correct { color: #1A6B3D; }
 </style>
 </head>
 <body>
@@ -356,6 +377,54 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 1: The Articles of Confederation.</b></div></div>
 </div>
 
+<div class="optima-widget">
+  <div class="widget-kicker">&#9889; TRY IT &middot; Power Congress Had, or Lacked?</div>
+  <div class="widget-question">The Articles of Confederation gave Congress some real powers and deliberately withheld others. For each statement, choose which is true.</div>
+
+  <div class="widget-row" data-correct="lacked" data-fb="Right. Congress could only request funds from state legislatures, which often ignored or shortchanged those requests." data-hint="Could Congress collect taxes directly from citizens, or only ask the states?">
+    <div class="widget-row-prompt">1. The power to tax citizens directly, rather than just requesting funds from state legislatures</div>
+    <div class="widget-options">
+      <button data-choice="had">Congress had this power</button>
+      <button data-choice="lacked">Congress lacked this power</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="lacked" data-fb="Right. Congress had no power to regulate commerce between states, which let states tax each other's goods as if they were foreign imports." data-hint="Could Congress stop states from taxing each other's goods at the border?">
+    <div class="widget-row-prompt">2. The power to regulate commerce between states, stopping New York from taxing Connecticut goods as if they were foreign imports</div>
+    <div class="widget-options">
+      <button data-choice="lacked">Congress lacked this power</button>
+      <button data-choice="had">Congress had this power</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="had" data-fb="Right. The Northwest Ordinance of 1787 was the Confederation Congress's most celebrated success, organizing new territory and banning slavery there." data-hint="What was the Confederation Congress's one celebrated legislative success?">
+    <div class="widget-row-prompt">3. The power to pass the Northwest Ordinance, organizing new territory north of the Ohio River and banning slavery there</div>
+    <div class="widget-options">
+      <button data-choice="had">Congress had this power</button>
+      <button data-choice="lacked">Congress lacked this power</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="lacked" data-fb="Right. Congress had no funds and no legal authority to raise a federal force to respond to Shays' Rebellion; only Massachusetts's own militia could." data-hint="Who actually suppressed Shays' Rebellion: a federal force, or the state itself?">
+    <div class="widget-row-prompt">4. The funds and legal authority to raise a federal force to suppress Shays' Rebellion</div>
+    <div class="widget-options">
+      <button data-choice="had">Congress had this power</button>
+      <button data-choice="lacked">Congress lacked this power</button>
+    </div>
+  </div>
+
+  <button class="widget-reset" id="reset-articlespowers">Reset</button>
+</div>
+
+<div class="optima-widget" style="margin-top:16px;">
+  <div class="widget-kicker">&#9889; Order the Rebellion</div>
+  <div class="widget-question">Click these four moments, in order, to trace how a debt crisis became the fear that helped drive the Constitutional Convention.</div>
+  <div class="pool" id="pool-shays"></div>
+  <div class="sequence" id="sequence-shays"></div>
+  <div class="feedback" id="feedback-shays"></div>
+  <button class="widget-reset" id="reset-shays">Reset</button>
+</div>
+
 </div>
 
 <div class="oa-footer">
@@ -371,6 +440,107 @@ function oaPronounce(text) {
   u.rate = 0.85;
   window.speechSynthesis.speak(u);
 }
+</script>
+
+<script>
+(function () {
+  document.querySelectorAll('.widget-row').forEach(function (row) {
+    var correct = row.dataset.correct;
+    row.querySelectorAll('.widget-options button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+        var right = btn.dataset.choice === correct;
+        btn.classList.add(right ? 'correct' : 'incorrect');
+        var text = right ? row.dataset.fb : row.dataset.hint;
+        var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+        rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+        rf.textContent = text;
+      });
+    });
+  });
+  document.getElementById('reset-articlespowers').addEventListener('click', function () {
+    document.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+    document.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var events = [
+    { id: 1, text: "A postwar depression leaves Massachusetts farmers cash-poor, facing debt and tax demands paid only in hard currency", order: 1 },
+    { id: 2, text: "Farmers who cannot pay in coin face court judgments, seized property, and foreclosures", order: 2 },
+    { id: 3, text: "Daniel Shays leads armed farmers to shut down local courts and prevent further foreclosures (1786-87)", order: 3 },
+    { id: 4, text: "Massachusetts suppresses the uprising with its own state militia, since Congress has neither funds nor authority to raise a federal force", order: 4 }
+  ];
+  var shuffled = events.slice().sort(function () { return Math.random() - 0.5; });
+  var slots = new Array(events.length).fill(null);
+  var pool = document.getElementById('pool-shays');
+  var sequence = document.getElementById('sequence-shays');
+  var feedback = document.getElementById('feedback-shays');
+
+  function renderPool() {
+    pool.innerHTML = '';
+    shuffled.forEach(function (ev) {
+      var placed = slots.some(function (s) { return s && s.id === ev.id; });
+      if (placed) return;
+      var el = document.createElement('div');
+      el.className = 'card';
+      el.textContent = ev.text;
+      el.addEventListener('click', function () {
+        var idx = slots.indexOf(null);
+        if (idx === -1) return;
+        slots[idx] = ev;
+        renderPool(); renderSlots(); checkComplete();
+      });
+      pool.appendChild(el);
+    });
+  }
+
+  function renderSlots() {
+    sequence.innerHTML = '';
+    slots.forEach(function (s, i) {
+      var slot = document.createElement('div');
+      slot.className = 'slot' + (s ? ' filled' : '');
+      slot.textContent = s ? (i + 1) + '. ' + s.text : 'Position ' + (i + 1);
+      if (s) {
+        slot.addEventListener('click', function () {
+          slots[i] = null;
+          feedback.textContent = '';
+          document.querySelectorAll('#sequence-shays .slot').forEach(function (x) { x.style.background = ''; x.style.borderColor = ''; });
+          renderPool(); renderSlots();
+        });
+      }
+      sequence.appendChild(slot);
+    });
+  }
+
+  function checkComplete() {
+    if (slots.every(function (s) { return s; })) {
+      var allCorrect = slots.every(function (s, i) { return s.order === i + 1; });
+      if (allCorrect) {
+        feedback.className = 'feedback correct';
+        feedback.textContent = 'Correct. Massachusetts handled its own crisis with its own resources, exactly what the Articles\' designers expected of the states.';
+        document.querySelectorAll('#sequence-shays .slot').forEach(function (s) { s.style.background = '#D8F0DD'; s.style.borderColor = '#2A9D5C'; });
+      } else {
+        feedback.className = 'feedback incorrect';
+        feedback.textContent = 'Not quite the right order yet. Click a filled slot to send it back, then try again.';
+      }
+    } else {
+      feedback.textContent = '';
+    }
+  }
+
+  document.getElementById('reset-shays').addEventListener('click', function () {
+    slots = new Array(events.length).fill(null);
+    shuffled = events.slice().sort(function () { return Math.random() - 0.5; });
+    feedback.textContent = '';
+    renderPool(); renderSlots();
+  });
+
+  renderPool();
+  renderSlots();
+})();
 </script>
 
 </body>
