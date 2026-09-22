@@ -77,6 +77,27 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
 .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
 .widget-reset:hover { background: #FDF3E3; }
+
+/* ===== new widgets for this lesson: two-adamses-match.html + lexington-concord-timeline.html ===== */
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.pool, .sequence { background: #FFFFFF; border: 1px dashed #B9C4D9; border-radius: 8px; padding: 10px; min-height: 56px; margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+.sequence { border-style: solid; flex-direction: column; }
+.sequence .slot { border: 1px dashed #D0D9E8; border-radius: 6px; min-height: 44px; padding: 8px 12px; font-size: 13px; color: #999; display: flex; align-items: center; }
+.sequence .slot.filled { border-style: solid; color: #0E1C42; background: #F4F6FA; cursor: pointer; }
+.optima-widget .card { background: #FDF3E3; border: 1.5px solid #C7922C; border-radius: 6px; padding: 8px 12px; font-size: 13px; color: #0E1C42; cursor: pointer; user-select: none; margin-bottom: 0; }
+.optima-widget .card:hover { background: #FBE7C4; }
+.feedback { font-size: 13px; margin-top: 4px; min-height: 18px; }
+.feedback.incorrect { color: #8A1F16; }
+.feedback.correct { color: #1A6B3D; }
 </style>
 </head>
 <body>
@@ -357,6 +378,54 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 1: Paul Revere's letter to Jeremy Belknap.</b></div></div>
 </div>
 
+<div class="optima-widget">
+  <div class="widget-kicker">&#9889; TRY IT &middot; Samuel Adams or John Adams?</div>
+  <div class="widget-question">Two cousins, two very different kinds of work. For each statement, choose which Adams it describes.</div>
+
+  <div class="widget-row" data-correct="samuel" data-fb="Right. Samuel Adams built the Committees of Correspondence, a network of organization and persuasion." data-hint="Which cousin's trait was organizing, not formal argument?">
+    <div class="widget-row-prompt">1. Built a network of local committees that exchanged letters and coordinated strategy across colonies.</div>
+    <div class="widget-options">
+      <button data-choice="john">John Adams</button>
+      <button data-choice="samuel">Samuel Adams</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="john" data-fb="Right. John Adams's character trait was principled legal commitment, shown by defending the unpopular soldiers." data-hint="Which cousin defended the British soldiers on trial after the Boston Massacre?">
+    <div class="widget-row-prompt">2. Defended the British soldiers accused in the Boston Massacre, at real cost to his own reputation, because he believed every defendant deserved a fair trial.</div>
+    <div class="widget-options">
+      <button data-choice="samuel">Samuel Adams</button>
+      <button data-choice="john">John Adams</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="samuel" data-fb="Right. Samuel Adams was among those most responsible for popularizing the inflammatory label 'massacre' itself." data-hint="Which cousin worked through persuasion and deliberately inflammatory framing?">
+    <div class="widget-row-prompt">3. Was among those most responsible for popularizing the label &ldquo;massacre&rdquo; for the 1770 Boston shooting.</div>
+    <div class="widget-options">
+      <button data-choice="john">John Adams</button>
+      <button data-choice="samuel">Samuel Adams</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="samuel" data-fb="Right. British intelligence suggested Samuel Adams himself might be found at Lexington, since he was the organizer London most wanted stopped." data-hint="Which cousin was British intelligence specifically hoping to capture at Lexington?">
+    <div class="widget-row-prompt">4. British intelligence suggested this man, along with John Hancock, might be found at Lexington on the night of the famous ride.</div>
+    <div class="widget-options">
+      <button data-choice="john">John Adams</button>
+      <button data-choice="samuel">Samuel Adams</button>
+    </div>
+  </div>
+
+  <button class="widget-reset" id="reset-twoadamses">Reset</button>
+</div>
+
+<div class="optima-widget" style="margin-top:16px;">
+  <div class="widget-kicker">&#9889; Order the Night</div>
+  <div class="widget-question">Click these five moments, in order, to trace the night the war began.</div>
+  <div class="pool" id="pool-lexconcord"></div>
+  <div class="sequence" id="sequence-lexconcord"></div>
+  <div class="feedback" id="feedback-lexconcord"></div>
+  <button class="widget-reset" id="reset-lexconcord">Reset</button>
+</div>
+
 </div>
 
 <div class="oa-footer">
@@ -372,6 +441,108 @@ function oaPronounce(text) {
   u.rate = 0.85;
   window.speechSynthesis.speak(u);
 }
+</script>
+
+<script>
+(function () {
+  document.querySelectorAll('.widget-row').forEach(function (row) {
+    var correct = row.dataset.correct;
+    row.querySelectorAll('.widget-options button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+        var right = btn.dataset.choice === correct;
+        btn.classList.add(right ? 'correct' : 'incorrect');
+        var text = right ? row.dataset.fb : row.dataset.hint;
+        var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+        rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+        rf.textContent = text;
+      });
+    });
+  });
+  document.getElementById('reset-twoadamses').addEventListener('click', function () {
+    document.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+    document.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var events = [
+    { id: 1, text: "Gage sends troops from Boston toward Concord and Lexington", order: 1 },
+    { id: 2, text: "Revere and Dawes ride ahead to warn the countryside", order: 2 },
+    { id: 3, text: "Militia and regulars exchange the war's first shots at Lexington", order: 3 },
+    { id: 4, text: "British troops reach Concord and destroy some colonial supplies", order: 4 },
+    { id: 5, text: "Militia fire on the retreating British column all the way back to Boston", order: 5 }
+  ];
+  var shuffled = events.slice().sort(function () { return Math.random() - 0.5; });
+  var slots = new Array(events.length).fill(null);
+  var pool = document.getElementById('pool-lexconcord');
+  var sequence = document.getElementById('sequence-lexconcord');
+  var feedback = document.getElementById('feedback-lexconcord');
+
+  function renderPool() {
+    pool.innerHTML = '';
+    shuffled.forEach(function (ev) {
+      var placed = slots.some(function (s) { return s && s.id === ev.id; });
+      if (placed) return;
+      var el = document.createElement('div');
+      el.className = 'card';
+      el.textContent = ev.text;
+      el.addEventListener('click', function () {
+        var idx = slots.indexOf(null);
+        if (idx === -1) return;
+        slots[idx] = ev;
+        renderPool(); renderSlots(); checkComplete();
+      });
+      pool.appendChild(el);
+    });
+  }
+
+  function renderSlots() {
+    sequence.innerHTML = '';
+    slots.forEach(function (s, i) {
+      var slot = document.createElement('div');
+      slot.className = 'slot' + (s ? ' filled' : '');
+      slot.textContent = s ? (i + 1) + '. ' + s.text : 'Position ' + (i + 1);
+      if (s) {
+        slot.addEventListener('click', function () {
+          slots[i] = null;
+          feedback.textContent = '';
+          document.querySelectorAll('#sequence-lexconcord .slot').forEach(function (x) { x.style.background = ''; x.style.borderColor = ''; });
+          renderPool(); renderSlots();
+        });
+      }
+      sequence.appendChild(slot);
+    });
+  }
+
+  function checkComplete() {
+    if (slots.every(function (s) { return s; })) {
+      var allCorrect = slots.every(function (s, i) { return s.order === i + 1; });
+      if (allCorrect) {
+        feedback.className = 'feedback correct';
+        feedback.textContent = 'Correct. Years of Committees of Correspondence organizing let this network respond in a single morning.';
+        document.querySelectorAll('#sequence-lexconcord .slot').forEach(function (s) { s.style.background = '#D8F0DD'; s.style.borderColor = '#2A9D5C'; });
+      } else {
+        feedback.className = 'feedback incorrect';
+        feedback.textContent = 'Not quite the right order yet. Click a filled slot to send it back, then try again.';
+      }
+    } else {
+      feedback.textContent = '';
+    }
+  }
+
+  document.getElementById('reset-lexconcord').addEventListener('click', function () {
+    slots = new Array(events.length).fill(null);
+    shuffled = events.slice().sort(function () { return Math.random() - 0.5; });
+    feedback.textContent = '';
+    renderPool(); renderSlots();
+  });
+
+  renderPool();
+  renderSlots();
+})();
 </script>
 
 </body>
