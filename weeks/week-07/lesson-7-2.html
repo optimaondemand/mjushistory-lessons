@@ -77,6 +77,27 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
 .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
 .widget-reset:hover { background: #FDF3E3; }
+
+/* ===== new widgets for this lesson: slave-code-timeline.html + servitude-or-slavery.html ===== */
+.pool, .sequence { background: #FFFFFF; border: 1px dashed #B9C4D9; border-radius: 8px; padding: 10px; min-height: 56px; margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+.sequence { border-style: solid; flex-direction: column; }
+.sequence .slot { border: 1px dashed #D0D9E8; border-radius: 6px; min-height: 44px; padding: 8px 12px; font-size: 13px; color: #999; display: flex; align-items: center; }
+.sequence .slot.filled { border-style: solid; color: #0E1C42; background: #F4F6FA; cursor: pointer; }
+.optima-widget .card { background: #FDF3E3; border: 1.5px solid #C7922C; border-radius: 6px; padding: 8px 12px; font-size: 13px; color: #0E1C42; cursor: pointer; user-select: none; margin-bottom: 0; }
+.optima-widget .card:hover { background: #FBE7C4; }
+.feedback { font-size: 13px; margin-top: 4px; min-height: 18px; }
+.feedback.incorrect { color: #8A1F16; }
+.feedback.correct { color: #1A6B3D; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
 </style>
 </head>
 <body>
@@ -357,6 +378,62 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Join this week's <b>Discussion</b> and <b>VR Activities.</b></div></div>
 </div>
 
+<div class="optima-widget">
+  <div class="widget-kicker">&#9889; Order the Hardening of Slavery</div>
+  <div class="widget-question">Click these five moments, in the order you think they happened, to build the timeline of how Virginia slavery hardened into a permanent, hereditary system.</div>
+  <div class="pool" id="pool-slavecode"></div>
+  <div class="sequence" id="sequence-slavecode"></div>
+  <div class="feedback" id="feedback-slavecode"></div>
+  <button class="widget-reset" id="reset-slavecode">Reset</button>
+</div>
+
+<div class="optima-widget" style="margin-top:16px;">
+  <div class="widget-kicker">&#9889; TRY IT &middot; Indentured Servitude or Chattel Slavery?</div>
+  <div class="widget-question">For each statement, choose which labor system it describes.</div>
+
+  <div class="widget-row" data-correct="indentured" data-fb="Right. A fixed term, followed by freedom, is exactly what set indentured servitude apart." data-hint="Look for whether the status has a fixed end date.">
+    <div class="widget-row-prompt">1. This status ends automatically once the person finishes an agreed number of years of labor.</div>
+    <div class="widget-options">
+      <button data-choice="chattel">Chattel Slavery</button>
+      <button data-choice="indentured">Indentured Servitude</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="chattel" data-fb="Right. Virginia's 1662 law made exactly this rule official." data-hint="Which system did the lesson say was inherited automatically, generation after generation?">
+    <div class="widget-row-prompt">2. This status passes automatically to a person's children, following the mother's legal status.</div>
+    <div class="widget-options">
+      <button data-choice="chattel">Chattel Slavery</button>
+      <button data-choice="indentured">Indentured Servitude</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="indentured" data-fb="Right. Anthony Johnson's own path to freedom and property depended on his status having an end date." data-hint="Recall what eventually happened to Anthony Johnson.">
+    <div class="widget-row-prompt">3. Anthony Johnson held this status before eventually earning his own freedom, property, and servants.</div>
+    <div class="widget-options">
+      <button data-choice="chattel">Chattel Slavery</button>
+      <button data-choice="indentured">Indentured Servitude</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="chattel" data-fb="Right. The 1705 code gathered a century of laws hardening exactly this permanent, hereditary status." data-hint="Which system did Virginia's 1705 code comprehensively cover?">
+    <div class="widget-row-prompt">4. Virginia's 1705 code gathered a century of laws creating a permanent, hereditary version of this status.</div>
+    <div class="widget-options">
+      <button data-choice="chattel">Chattel Slavery</button>
+      <button data-choice="indentured">Indentured Servitude</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="indentured" data-fb="Right. This status was tied to a debt of labor owed, not to ancestry." data-hint="Chattel slavery was tied to ancestry. What was this one tied to instead?">
+    <div class="widget-row-prompt">5. This status was tied to a specific debt of labor owed, not to a person's ancestry.</div>
+    <div class="widget-options">
+      <button data-choice="chattel">Chattel Slavery</button>
+      <button data-choice="indentured">Indentured Servitude</button>
+    </div>
+  </div>
+
+  <button class="widget-reset" id="reset-servitude">Reset</button>
+</div>
+
 </div>
 
 <div class="oa-footer">
@@ -372,6 +449,108 @@ function oaPronounce(text) {
   u.rate = 0.85;
   window.speechSynthesis.speak(u);
 }
+</script>
+
+<script>
+(function () {
+  var events = [
+    { id: 1, text: "Anthony Johnson gains his freedom and later owns property and indentured servants of his own", order: 1 },
+    { id: 2, text: "Virginia rules that a child's free or enslaved status follows the mother (1662)", order: 2 },
+    { id: 3, text: "Virginia gathers decades of slave laws into one comprehensive code (1705)", order: 3 },
+    { id: 4, text: "Enslaved people in New York City set fire to a building and kill several colonists (1712)", order: 4 },
+    { id: 5, text: "Dozens of enslaved people seize weapons and march toward Spanish Florida in the Stono Rebellion (1739)", order: 5 }
+  ];
+  var shuffled = events.slice().sort(function () { return Math.random() - 0.5; });
+  var slots = new Array(events.length).fill(null);
+  var pool = document.getElementById('pool-slavecode');
+  var sequence = document.getElementById('sequence-slavecode');
+  var feedback = document.getElementById('feedback-slavecode');
+
+  function renderPool() {
+    pool.innerHTML = '';
+    shuffled.forEach(function (ev) {
+      var placed = slots.some(function (s) { return s && s.id === ev.id; });
+      if (placed) return;
+      var el = document.createElement('div');
+      el.className = 'card';
+      el.textContent = ev.text;
+      el.addEventListener('click', function () {
+        var idx = slots.indexOf(null);
+        if (idx === -1) return;
+        slots[idx] = ev;
+        renderPool(); renderSlots(); checkComplete();
+      });
+      pool.appendChild(el);
+    });
+  }
+
+  function renderSlots() {
+    sequence.innerHTML = '';
+    slots.forEach(function (s, i) {
+      var slot = document.createElement('div');
+      slot.className = 'slot' + (s ? ' filled' : '');
+      slot.textContent = s ? (i + 1) + '. ' + s.text : 'Position ' + (i + 1);
+      if (s) {
+        slot.addEventListener('click', function () {
+          slots[i] = null;
+          feedback.textContent = '';
+          document.querySelectorAll('#sequence-slavecode .slot').forEach(function (x) { x.style.background = ''; x.style.borderColor = ''; });
+          renderPool(); renderSlots();
+        });
+      }
+      sequence.appendChild(slot);
+    });
+  }
+
+  function checkComplete() {
+    if (slots.every(function (s) { return s; })) {
+      var allCorrect = slots.every(function (s, i) { return s.order === i + 1; });
+      if (allCorrect) {
+        feedback.className = 'feedback correct';
+        feedback.textContent = 'Correct. Notice how each step came after the last, hardening the system further rather than resolving it.';
+        document.querySelectorAll('#sequence-slavecode .slot').forEach(function (s) { s.style.background = '#D8F0DD'; s.style.borderColor = '#2A9D5C'; });
+      } else {
+        feedback.className = 'feedback incorrect';
+        feedback.textContent = 'Not quite the right order yet. Click a filled slot to send it back, then try again.';
+      }
+    } else {
+      feedback.textContent = '';
+    }
+  }
+
+  document.getElementById('reset-slavecode').addEventListener('click', function () {
+    slots = new Array(events.length).fill(null);
+    shuffled = events.slice().sort(function () { return Math.random() - 0.5; });
+    feedback.textContent = '';
+    renderPool(); renderSlots();
+  });
+
+  renderPool();
+  renderSlots();
+})();
+</script>
+
+<script>
+(function () {
+  document.querySelectorAll('.widget-row').forEach(function (row) {
+    var correct = row.dataset.correct;
+    row.querySelectorAll('.widget-options button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+        var right = btn.dataset.choice === correct;
+        btn.classList.add(right ? 'correct' : 'incorrect');
+        var text = right ? row.dataset.fb : row.dataset.hint;
+        var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+        rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+        rf.textContent = text;
+      });
+    });
+  });
+  document.getElementById('reset-servitude').addEventListener('click', function () {
+    document.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+    document.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+  });
+})();
 </script>
 
 </body>
