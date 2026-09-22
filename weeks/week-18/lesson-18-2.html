@@ -77,6 +77,27 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
 .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
 .widget-reset:hover { background: #FDF3E3; }
+
+/* ===== new widgets for this lesson: washington-precedents-match.html + washington-presidency-timeline.html ===== */
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 13px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.pool, .sequence { background: #FFFFFF; border: 1px dashed #B9C4D9; border-radius: 8px; padding: 10px; min-height: 56px; margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+.sequence { border-style: solid; flex-direction: column; }
+.sequence .slot { border: 1px dashed #D0D9E8; border-radius: 6px; min-height: 44px; padding: 8px 12px; font-size: 13px; color: #999; display: flex; align-items: center; }
+.sequence .slot.filled { border-style: solid; color: #0E1C42; background: #F4F6FA; cursor: pointer; }
+.optima-widget .card { background: #FDF3E3; border: 1.5px solid #C7922C; border-radius: 6px; padding: 8px 12px; font-size: 13px; color: #0E1C42; cursor: pointer; user-select: none; margin-bottom: 0; }
+.optima-widget .card:hover { background: #FBE7C4; }
+.feedback { font-size: 13px; margin-top: 4px; min-height: 18px; }
+.feedback.incorrect { color: #8A1F16; }
+.feedback.correct { color: #1A6B3D; }
 </style>
 </head>
 <body>
@@ -356,6 +377,49 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source Exercise</b> on the Farewell Address, this Fall semester's final assessment.</div></div>
 </div>
 
+<div class="optima-widget">
+  <div class="widget-kicker">&#9889; TRY IT &middot; Match the Precedent to What It Established</div>
+  <div class="widget-question">Washington knew nearly everything he did as president would become precedent. Match each choice to what it actually established.</div>
+
+  <div class="widget-row" data-correct="monarchy" data-fb="Right. Congress rejected 'His Highness' and settled on 'Mr. President,' signaling this office would not borrow the trappings of monarchy." data-hint="What did Congress decide about how to address the president, and what did that choice signal?">
+    <div class="widget-row-prompt">1. Congress rejected John Adams's proposal to address the president as &ldquo;His Highness&rdquo;</div>
+    <div class="widget-options">
+      <button data-choice="trust">The presidency as a temporary public trust</button>
+      <button data-choice="monarchy">The office would not borrow monarchy's trappings</button>
+      <button data-choice="federal">Federal authority strong enough to enforce its own laws</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="trust" data-fb="Right. Washington's voluntary exit after two terms, with nothing in the Constitution requiring it, taught the country the presidency was a temporary trust, not a permanent possession." data-hint="What norm did Washington establish simply by choosing to step down when nothing required it?">
+    <div class="widget-row-prompt">2. Washington voluntarily stepped down after two terms, though nothing in the Constitution required it</div>
+    <div class="widget-options">
+      <button data-choice="monarchy">The office would not borrow monarchy's trappings</button>
+      <button data-choice="federal">Federal authority strong enough to enforce its own laws</button>
+      <button data-choice="trust">The presidency as a temporary public trust</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="federal" data-fb="Right. Washington personally led federal militia to suppress the Whiskey Rebellion, showing the government now had the funds, authority, and will Shays' Rebellion had exposed it as lacking." data-hint="How did the federal response to the Whiskey Rebellion differ from the response to Shays' Rebellion?">
+    <div class="widget-row-prompt">3. Washington personally led federal militia to suppress the Whiskey Rebellion in 1794</div>
+    <div class="widget-options">
+      <button data-choice="trust">The presidency as a temporary public trust</button>
+      <button data-choice="monarchy">The office would not borrow monarchy's trappings</button>
+      <button data-choice="federal">Federal authority strong enough to enforce its own laws</button>
+    </div>
+  </div>
+
+  <button class="widget-reset" id="reset-washprecedents">Reset</button>
+</div>
+
+<div class="optima-widget" style="margin-top:16px;">
+  <div class="widget-kicker">&#9889; Order the Presidency</div>
+  <div class="widget-question">Click these five moments, in order, to trace Washington's presidency from its first year to its last.</div>
+  <div class="pool" id="pool-washpresidency"></div>
+  <div class="sequence" id="sequence-washpresidency"></div>
+  <div class="feedback" id="feedback-washpresidency"></div>
+  <button class="widget-reset" id="reset-washpresidency">Reset</button>
+</div>
+
 </div>
 
 <div class="oa-footer">
@@ -371,6 +435,108 @@ function oaPronounce(text) {
   u.rate = 0.85;
   window.speechSynthesis.speak(u);
 }
+</script>
+
+<script>
+(function () {
+  document.querySelectorAll('.widget-row').forEach(function (row) {
+    var correct = row.dataset.correct;
+    row.querySelectorAll('.widget-options button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+        var right = btn.dataset.choice === correct;
+        btn.classList.add(right ? 'correct' : 'incorrect');
+        var text = right ? row.dataset.fb : row.dataset.hint;
+        var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+        rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+        rf.textContent = text;
+      });
+    });
+  });
+  document.getElementById('reset-washprecedents').addEventListener('click', function () {
+    document.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+    document.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var events = [
+    { id: 1, text: "Washington forms the first Cabinet, with Hamilton and Jefferson immediately at odds (1789)", order: 1 },
+    { id: 2, text: "The Judiciary Act of 1789 builds the federal court system from nothing", order: 2 },
+    { id: 3, text: "Washington declares American neutrality despite France's request to honor the 1778 alliance (1793)", order: 3 },
+    { id: 4, text: "Washington personally leads federal militia to suppress the Whiskey Rebellion (1794)", order: 4 },
+    { id: 5, text: "Washington's Farewell Address defends his choices and voluntarily steps down after two terms (1796)", order: 5 }
+  ];
+  var shuffled = events.slice().sort(function () { return Math.random() - 0.5; });
+  var slots = new Array(events.length).fill(null);
+  var pool = document.getElementById('pool-washpresidency');
+  var sequence = document.getElementById('sequence-washpresidency');
+  var feedback = document.getElementById('feedback-washpresidency');
+
+  function renderPool() {
+    pool.innerHTML = '';
+    shuffled.forEach(function (ev) {
+      var placed = slots.some(function (s) { return s && s.id === ev.id; });
+      if (placed) return;
+      var el = document.createElement('div');
+      el.className = 'card';
+      el.textContent = ev.text;
+      el.addEventListener('click', function () {
+        var idx = slots.indexOf(null);
+        if (idx === -1) return;
+        slots[idx] = ev;
+        renderPool(); renderSlots(); checkComplete();
+      });
+      pool.appendChild(el);
+    });
+  }
+
+  function renderSlots() {
+    sequence.innerHTML = '';
+    slots.forEach(function (s, i) {
+      var slot = document.createElement('div');
+      slot.className = 'slot' + (s ? ' filled' : '');
+      slot.textContent = s ? (i + 1) + '. ' + s.text : 'Position ' + (i + 1);
+      if (s) {
+        slot.addEventListener('click', function () {
+          slots[i] = null;
+          feedback.textContent = '';
+          document.querySelectorAll('#sequence-washpresidency .slot').forEach(function (x) { x.style.background = ''; x.style.borderColor = ''; });
+          renderPool(); renderSlots();
+        });
+      }
+      sequence.appendChild(slot);
+    });
+  }
+
+  function checkComplete() {
+    if (slots.every(function (s) { return s; })) {
+      var allCorrect = slots.every(function (s, i) { return s.order === i + 1; });
+      if (allCorrect) {
+        feedback.className = 'feedback correct';
+        feedback.textContent = 'Correct. The Farewell Address generalized Washington\'s neutrality decision into lasting advice, at the very end of his presidency, not the start.';
+        document.querySelectorAll('#sequence-washpresidency .slot').forEach(function (s) { s.style.background = '#D8F0DD'; s.style.borderColor = '#2A9D5C'; });
+      } else {
+        feedback.className = 'feedback incorrect';
+        feedback.textContent = 'Not quite the right order yet. Click a filled slot to send it back, then try again.';
+      }
+    } else {
+      feedback.textContent = '';
+    }
+  }
+
+  document.getElementById('reset-washpresidency').addEventListener('click', function () {
+    slots = new Array(events.length).fill(null);
+    shuffled = events.slice().sort(function () { return Math.random() - 0.5; });
+    feedback.textContent = '';
+    renderPool(); renderSlots();
+  });
+
+  renderPool();
+  renderSlots();
+})();
 </script>
 
 </body>
