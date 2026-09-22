@@ -77,6 +77,20 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
 .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
 .widget-reset:hover { background: #FDF3E3; }
+
+/* ===== new widgets for this lesson: tea-act-ports-match.html + tea-party-discipline-scale.html ===== */
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 13px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; min-width: 90px; text-align: center; font-size: 12px; }
 </style>
 </head>
 <body>
@@ -357,6 +371,91 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 1: <i>The Boston Pamphlet</i> (1772).</b></div></div>
 </div>
 
+<div class="optima-widget" id="widget-teaports">
+  <div class="widget-kicker">&#9889; TRY IT &middot; Match the Port to What Happened</div>
+  <div class="widget-question">Boston was not the only port that received East India Company tea in late 1773. Match each port to what actually happened there.</div>
+
+  <div class="widget-row" data-correct="boston" data-fb="Right. Only in Boston did Governor Hutchinson refuse to let the ships leave without unloading, which is exactly why the tea was destroyed there instead of simply turned away." data-hint="Which port's governor refused to let the ships leave without paying the duty?">
+    <div class="widget-row-prompt">1. Colonists boarded the ships at night and dumped 342 chests of tea into the harbor</div>
+    <div class="widget-options">
+      <button data-choice="charleston">Charleston</button>
+      <button data-choice="nyphil">New York and Philadelphia</button>
+      <button data-choice="boston">Boston</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="nyphil" data-fb="Right. Organized colonists convinced the ships' captains to turn back to England without ever unloading." data-hint="Where did the ships simply sail back to England, cargo untouched?">
+    <div class="widget-row-prompt">2. Organized colonists convinced the ships' captains to turn back to England, never unloading the tea at all</div>
+    <div class="widget-options">
+      <button data-choice="boston">Boston</button>
+      <button data-choice="charleston">Charleston</button>
+      <button data-choice="nyphil">New York and Philadelphia</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="charleston" data-fb="Right. Charleston let the tea land, but colonists left it to rot in a warehouse, unsold." data-hint="Where did the tea actually reach land, but colonists refused to sell it?">
+    <div class="widget-row-prompt">3. The tea was allowed to land, but colonists left it to rot in a warehouse, unsold</div>
+    <div class="widget-options">
+      <button data-choice="nyphil">New York and Philadelphia</button>
+      <button data-choice="boston">Boston</button>
+      <button data-choice="charleston">Charleston</button>
+    </div>
+  </div>
+
+  <button class="widget-reset" id="reset-teaports">Reset</button>
+</div>
+
+<div class="optima-widget ow-scale" id="widget-teadiscipline" style="margin-top:16px;">
+  <div class="widget-kicker">&#9889; Place It on the Spectrum</div>
+  <div class="widget-question">Contemporary accounts describe the Tea Party as remarkably orderly. Place each specific detail on a spectrum from chaotic riot to disciplined statement.</div>
+
+  <div class="widget-row" data-correct="4" data-fb="Right. Avoiding damage to the ships themselves is a clear sign of restraint, not chaos." data-hint="What did the participants deliberately avoid damaging?">
+    <div class="widget-row-prompt">1. Participants avoided damaging the ships themselves, and avoided touching any other cargo</div>
+    <div class="widget-options">
+      <button data-choice="0">Chaotic Riot</button>
+      <button data-choice="1">Mostly Chaotic</button>
+      <button data-choice="2">Mixed</button>
+      <button data-choice="3">Mostly Disciplined</button>
+      <button data-choice="4">Disciplined Statement</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="4" data-fb="Right. Sweeping the decks clean afterward is about as far from a chaotic riot as a protest can get." data-hint="What did participants reportedly do to the decks before leaving?">
+    <div class="widget-row-prompt">2. By most accounts, participants swept the decks clean afterward</div>
+    <div class="widget-options">
+      <button data-choice="0">Chaotic Riot</button>
+      <button data-choice="1">Mostly Chaotic</button>
+      <button data-choice="2">Mixed</button>
+      <button data-choice="3">Mostly Disciplined</button>
+      <button data-choice="4">Disciplined Statement</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="3" data-fb="Right. Destroying private property crossed a real line, even if the act itself was orderly, which is exactly why Franklin objected on principle." data-hint="Did even Franklin, who saw it as orderly, fully approve of it?">
+    <div class="widget-row-prompt">3. Benjamin Franklin still thought the East India Company deserved compensation, since the tea was private property, not government property</div>
+    <div class="widget-options">
+      <button data-choice="0">Chaotic Riot</button>
+      <button data-choice="1">Mostly Chaotic</button>
+      <button data-choice="2">Mixed</button>
+      <button data-choice="3">Mostly Disciplined</button>
+      <button data-choice="4">Disciplined Statement</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="4" data-fb="Right. Disguising as Mohawk warriors, not to fool anyone but to signal acting as Americans, was a deliberate political statement, not mob violence." data-hint="Was the Mohawk disguise meant to hide identities, or to send a message?">
+    <div class="widget-row-prompt">4. Participants disguised themselves as Mohawk warriors, a symbolic signal that they were acting as Americans rather than as subjects of the king</div>
+    <div class="widget-options">
+      <button data-choice="0">Chaotic Riot</button>
+      <button data-choice="1">Mostly Chaotic</button>
+      <button data-choice="2">Mixed</button>
+      <button data-choice="3">Mostly Disciplined</button>
+      <button data-choice="4">Disciplined Statement</button>
+    </div>
+  </div>
+
+  <button class="widget-reset" id="reset-teadiscipline">Reset</button>
+</div>
+
 </div>
 
 <div class="oa-footer">
@@ -372,6 +471,32 @@ function oaPronounce(text) {
   u.rate = 0.85;
   window.speechSynthesis.speak(u);
 }
+</script>
+
+<script>
+(function () {
+  ['widget-teaports', 'widget-teadiscipline'].forEach(function (containerId) {
+    var container = document.getElementById(containerId);
+    container.querySelectorAll('.widget-row').forEach(function (row) {
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+          var right = btn.dataset.choice === correct;
+          btn.classList.add(right ? 'correct' : 'incorrect');
+          var text = right ? row.dataset.fb : row.dataset.hint;
+          var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+          rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+          rf.textContent = text;
+        });
+      });
+    });
+    container.querySelector('.widget-reset').addEventListener('click', function () {
+      container.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+      container.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+    });
+  });
+})();
 </script>
 
 </body>
