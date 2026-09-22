@@ -77,6 +77,20 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
 .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
 .widget-reset:hover { background: #FDF3E3; }
+
+/* ===== new widgets for this lesson: paine-dickinson-adams-match.html + independence-spectrum.html ===== */
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 13px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; min-width: 90px; text-align: center; font-size: 12px; }
 </style>
 </head>
 <body>
@@ -360,6 +374,74 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 1: Thomas Paine, <i>Common Sense.</i></b></div></div>
 </div>
 
+<div class="optima-widget" id="widget-paineadams">
+  <div class="widget-kicker">&#9889; TRY IT &middot; Match the Writer to the Argument</div>
+  <div class="widget-question">Dickinson, Paine, and Adams each argued differently about Britain and independence. Match each position to its writer.</div>
+
+  <div class="widget-row" data-correct="paine" data-fb="Right. Paine attacked hereditary monarchy itself, not just this king's policies, and wrote in plain language for ordinary readers." data-hint="Which writer argued against the whole idea of monarchy, not just one king's choices?">
+    <div class="widget-row-prompt">1. Argued against the whole idea of hereditary monarchy itself, in plain language any literate colonist could follow</div>
+    <div class="widget-options">
+      <button data-choice="adams">John Adams</button>
+      <button data-choice="dickinson">John Dickinson</button>
+      <button data-choice="paine">Thomas Paine</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="dickinson" data-fb="Right. Dickinson argued carefully, in a formal style, while still professing loyalty to the crown." data-hint="Which writer stayed loyal to the crown while still making a careful constitutional argument?">
+    <div class="widget-row-prompt">2. Argued carefully, in a formal style, against Parliament's specific taxes, while still professing loyalty to the crown</div>
+    <div class="widget-options">
+      <button data-choice="paine">Thomas Paine</button>
+      <button data-choice="dickinson">John Dickinson</button>
+      <button data-choice="adams">John Adams</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="adams" data-fb="Right. Adams agreed completely with Paine's call for independence, but strongly disliked his single-house legislature with no check on it." data-hint="Which writer agreed with Paine's conclusion but disliked his specific constitutional design?">
+    <div class="widget-row-prompt">3. Agreed completely with the case for independence, but strongly disliked a proposal for a single-house legislature with no separate executive to check it</div>
+    <div class="widget-options">
+      <button data-choice="dickinson">John Dickinson</button>
+      <button data-choice="paine">Thomas Paine</button>
+      <button data-choice="adams">John Adams</button>
+    </div>
+  </div>
+
+  <button class="widget-reset" id="reset-paineadams">Reset</button>
+</div>
+
+<div class="optima-widget ow-scale" id="widget-independence" style="margin-top:16px;">
+  <div class="widget-kicker">&#9889; Place It on the Spectrum</div>
+  <div class="widget-question">These documents, all written within about a year of each other, went very different distances toward independence. Place each one on the spectrum.</div>
+
+  <div class="widget-row" data-correct="0" data-fb="Right. This petition affirmed continued loyalty and asked the king to resolve the crisis himself." data-hint="Which document spoke directly to the king, asking for reconciliation?">
+    <div class="widget-row-prompt">1. The Olive Branch Petition (July 1775)</div>
+    <div class="widget-options">
+      <button data-choice="0">Reconciliation</button>
+      <button data-choice="1">Resistance, Not Yet Independence</button>
+      <button data-choice="2">Full Independence</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="1" data-fb="Right. This document explained why armed resistance was necessary, but stopped well short of calling for independence." data-hint="Did this document call for independence, or just explain why fighting had become necessary?">
+    <div class="widget-row-prompt">2. The Declaration of the Causes and Necessity of Taking Up Arms (July 1775)</div>
+    <div class="widget-options">
+      <button data-choice="0">Reconciliation</button>
+      <button data-choice="1">Resistance, Not Yet Independence</button>
+      <button data-choice="2">Full Independence</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="2" data-fb="Right. Paine made the case for full, immediate independence, attacking hereditary monarchy itself." data-hint="Which document argued against the whole idea of monarchy and called outright for independence?">
+    <div class="widget-row-prompt">3. Thomas Paine's <i>Common Sense</i> (January 1776)</div>
+    <div class="widget-options">
+      <button data-choice="0">Reconciliation</button>
+      <button data-choice="1">Resistance, Not Yet Independence</button>
+      <button data-choice="2">Full Independence</button>
+    </div>
+  </div>
+
+  <button class="widget-reset" id="reset-independence">Reset</button>
+</div>
+
 </div>
 
 <div class="oa-footer">
@@ -375,6 +457,32 @@ function oaPronounce(text) {
   u.rate = 0.85;
   window.speechSynthesis.speak(u);
 }
+</script>
+
+<script>
+(function () {
+  ['widget-paineadams', 'widget-independence'].forEach(function (containerId) {
+    var container = document.getElementById(containerId);
+    container.querySelectorAll('.widget-row').forEach(function (row) {
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+          var right = btn.dataset.choice === correct;
+          btn.classList.add(right ? 'correct' : 'incorrect');
+          var text = right ? row.dataset.fb : row.dataset.hint;
+          var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+          rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+          rf.textContent = text;
+        });
+      });
+    });
+    container.querySelector('.widget-reset').addEventListener('click', function () {
+      container.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+      container.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+    });
+  });
+})();
 </script>
 
 </body>
