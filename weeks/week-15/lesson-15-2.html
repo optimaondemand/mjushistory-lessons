@@ -77,6 +77,23 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
 .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
 .widget-reset:hover { background: #FDF3E3; }
+
+/* ===== new widgets for this lesson: southern-theater-match.html + galvez-campaign-flip.html ===== */
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 13px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; margin-bottom: 12px; }
+.ow-flip .ow-flip-front { font-size: 16px; color: #0E1C42; font-weight: bold; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; font-size: 15px; line-height: 1.55; margin-top: 8px; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-flip .hint { font-size: 11px; color: #9AA7C0; margin-top: 6px; }
 </style>
 </head>
 <body>
@@ -359,6 +376,65 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source Exercise</b> on the correspondence.</div></div>
 </div>
 
+<div class="optima-widget">
+  <div class="widget-kicker">&#9889; TRY IT &middot; Match the Actor to Their Role</div>
+  <div class="widget-question">The war in the South involved more than just Continental and British armies. Match each actor to their actual role.</div>
+
+  <div class="widget-row" data-correct="florida" data-fb="Right. Florida remained firmly loyal to the crown throughout the war, sheltering Loyalist refugees and British operations." data-hint="Which actor stayed loyal to Britain the entire war, unlike the thirteen rebelling colonies?">
+    <div class="widget-row-prompt">1. Remained firmly loyal to the British crown throughout the war, serving as a haven for Loyalist refugees</div>
+    <div class="widget-options">
+      <button data-choice="howe">General Howe</button>
+      <button data-choice="cornwallis">General Cornwallis</button>
+      <button data-choice="florida">Florida</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="howe" data-fb="Right. Howe won nearly every battle he fought against Washington, yet repeatedly paused instead of pursuing his weakened army." data-hint="Which commander won most of his battles but repeatedly failed to finish off Washington's army afterward?">
+    <div class="widget-row-prompt">2. Won nearly every battle fought against Washington in 1776 and 1777, yet repeatedly paused instead of pursuing his weakened army to finish it off</div>
+    <div class="widget-options">
+      <button data-choice="florida">Florida</button>
+      <button data-choice="cornwallis">General Cornwallis</button>
+      <button data-choice="howe">General Howe</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="cornwallis" data-fb="Right. Cornwallis's private letters this week show a skilled general genuinely wrestling with an enemy that would not stand and fight one final battle." data-hint="Which commander's private correspondence this week reveals real doubt about an unwinnable strategic problem?">
+    <div class="widget-row-prompt">3. His private correspondence this week reveals a skilled, experienced commander genuinely wrestling with an enemy that would not stand and fight one final, decisive battle</div>
+    <div class="widget-options">
+      <button data-choice="howe">General Howe</button>
+      <button data-choice="florida">Florida</button>
+      <button data-choice="cornwallis">General Cornwallis</button>
+    </div>
+  </div>
+
+  <button class="widget-reset" id="reset-southerntheater">Reset</button>
+</div>
+
+<div class="optima-widget" style="margin-top:16px;">
+  <div class="widget-kicker">&#9889; TAP TO REVEAL</div>
+  <div class="widget-question">Spain's Bernardo de G&aacute;lvez fought a war of his own along the Gulf Coast. Tap each site to see what happened there.</div>
+
+  <div class="ow-flip" tabindex="0">
+    <div class="ow-flip-front">Baton Rouge &mdash; what happened here?</div>
+    <div class="ow-flip-back">One of Gálvez's first captures as his campaign moved steadily south and west along the Gulf Coast.</div>
+    <div class="hint">Tap to reveal</div>
+  </div>
+
+  <div class="ow-flip" tabindex="0">
+    <div class="ow-flip-front">Mobile &mdash; what happened here?</div>
+    <div class="ow-flip-back">Captured next, as Gálvez continued tying down British resources that could not then be sent north to fight Washington.</div>
+    <div class="hint">Tap to reveal</div>
+  </div>
+
+  <div class="ow-flip" tabindex="0">
+    <div class="ow-flip-front">Pensacola &mdash; what happened here?</div>
+    <div class="ow-flip-back">Captured after a monthslong siege in 1781, restoring Spanish control over territory Spain had lost to Britain in the 1763 Treaty of Paris.</div>
+    <div class="hint">Tap to reveal</div>
+  </div>
+
+  <button class="widget-reset" id="reset-galvez">Reset</button>
+</div>
+
 </div>
 
 <div class="oa-footer">
@@ -374,6 +450,41 @@ function oaPronounce(text) {
   u.rate = 0.85;
   window.speechSynthesis.speak(u);
 }
+</script>
+
+<script>
+(function () {
+  document.querySelectorAll('.widget-row').forEach(function (row) {
+    var correct = row.dataset.correct;
+    row.querySelectorAll('.widget-options button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+        var right = btn.dataset.choice === correct;
+        btn.classList.add(right ? 'correct' : 'incorrect');
+        var text = right ? row.dataset.fb : row.dataset.hint;
+        var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+        rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+        rf.textContent = text;
+      });
+    });
+  });
+  document.getElementById('reset-southerntheater').addEventListener('click', function () {
+    document.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+    document.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+  });
+})();
+</script>
+
+<script>
+(function () {
+  document.querySelectorAll('.ow-flip').forEach(function (card) {
+    card.addEventListener('click', function () { card.classList.toggle('flipped'); });
+    card.addEventListener('keypress', function (e) { if (e.key === 'Enter' || e.key === ' ') card.classList.toggle('flipped'); });
+  });
+  document.getElementById('reset-galvez').addEventListener('click', function () {
+    document.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+  });
+})();
 </script>
 
 </body>
