@@ -77,6 +77,20 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
 .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
 .widget-reset:hover { background: #FDF3E3; }
+
+/* ===== new widgets for this lesson: burgoyne-plan-match.html + motives-spectrum.html ===== */
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 13px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; min-width: 90px; text-align: center; font-size: 12px; }
 </style>
 </head>
 <body>
@@ -359,6 +373,91 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 1: Lafayette's letters to Washington.</b></div></div>
 </div>
 
+<div class="optima-widget" id="widget-burgoyne">
+  <div class="widget-kicker">&#9889; TRY IT &middot; Why Did Burgoyne's Plan Fail?</div>
+  <div class="widget-question">Burgoyne's campaign depended on several things going right at once. Match each fact to the problem it caused.</div>
+
+  <div class="widget-row" data-correct="nocoord" data-fb="Right. Howe chose to campaign against Philadelphia instead of marching north to meet Burgoyne, so the two armies never actually coordinated." data-hint="What did General Howe choose to do instead of marching to meet Burgoyne?">
+    <div class="widget-row-prompt">1. General Howe chose to campaign against Philadelphia that summer instead of marching north to meet Burgoyne</div>
+    <div class="widget-options">
+      <button data-choice="overplayed">Overplayed confidence</button>
+      <button data-choice="nocoord">The two armies never coordinated</button>
+      <button data-choice="supply">Stretched, poor supply lines</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="supply" data-fb="Right. Left to press south alone, Burgoyne's army grew stretched thin and poorly supplied, harassed constantly by militia." data-hint="What condition did Burgoyne's army fall into once it was left to press south alone?">
+    <div class="widget-row-prompt">2. Left alone to press south, Burgoyne's army grew stretched thin, poorly supplied, and harassed constantly by militia</div>
+    <div class="widget-options">
+      <button data-choice="nocoord">The two armies never coordinated</button>
+      <button data-choice="overplayed">Overplayed confidence</button>
+      <button data-choice="supply">Stretched, poor supply lines</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="overplayed" data-fb="Right. Known in London as a playwright and socialite as much as a soldier, Burgoyne assumed cooperation and reinforcement that never actually arrived." data-hint="What kind of figure was 'Gentleman Johnny' known as in London, and what did his plan assume that never came true?">
+    <div class="widget-row-prompt">3. Known in London as a playwright and fashionable socialite as much as a soldier, he assumed reinforcement and cooperation that never arrived</div>
+    <div class="widget-options">
+      <button data-choice="supply">Stretched, poor supply lines</button>
+      <button data-choice="nocoord">The two armies never coordinated</button>
+      <button data-choice="overplayed">Overplayed confidence</button>
+    </div>
+  </div>
+
+  <button class="widget-reset" id="reset-burgoyne">Reset</button>
+</div>
+
+<div class="optima-widget ow-scale" id="widget-motives" style="margin-top:16px;">
+  <div class="widget-kicker">&#9889; Place It on the Spectrum</div>
+  <div class="widget-question">France's help was never purely one thing. Place each fact on the spectrum between cold strategic self-interest and genuine idealism.</div>
+
+  <div class="widget-row" data-correct="0" data-fb="Right. France wanted Britain, its chief global rival, weakened; that is cold calculation, not sympathy." data-hint="Was this decision about sympathy for Americans, or about hurting a rival power?">
+    <div class="widget-row-prompt">1. France's government wanted to weaken Britain, its chief global rival, after its own losses in the French and Indian War</div>
+    <div class="widget-options">
+      <button data-choice="0">Pure Self-Interest</button>
+      <button data-choice="1">Mostly Self-Interest</button>
+      <button data-choice="2">A Mix of Both</button>
+      <button data-choice="3">Mostly Idealism</button>
+      <button data-choice="4">Pure Idealism</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="4" data-fb="Right. Lafayette volunteered without pay, before the alliance even existed, out of genuine devotion to the cause and to Washington personally." data-hint="Did Lafayette wait for France's formal alliance before volunteering, or act on his own initiative first?">
+    <div class="widget-row-prompt">2. The Marquis de Lafayette volunteered to serve without pay, before the formal alliance even existed, and became genuinely devoted to Washington</div>
+    <div class="widget-options">
+      <button data-choice="0">Pure Self-Interest</button>
+      <button data-choice="1">Mostly Self-Interest</button>
+      <button data-choice="2">A Mix of Both</button>
+      <button data-choice="3">Mostly Idealism</button>
+      <button data-choice="4">Pure Idealism</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="4" data-fb="Right. Armistead spied at real personal risk while still enslaved himself, gaining freedom only after the war ended, not as his motive for serving." data-hint="Was Armistead already free and being paid when he took this risk?">
+    <div class="widget-row-prompt">3. James Armistead spied on British headquarters at real personal risk while still enslaved, gaining his freedom only after the war ended</div>
+    <div class="widget-options">
+      <button data-choice="0">Pure Self-Interest</button>
+      <button data-choice="1">Mostly Self-Interest</button>
+      <button data-choice="2">A Mix of Both</button>
+      <button data-choice="3">Mostly Idealism</button>
+      <button data-choice="4">Pure Idealism</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="2" data-fb="Right. The lesson argues both were true at once: genuine Enlightenment sympathy alongside a cold calculation about weakening Britain." data-hint="Does the lesson say France's motives were purely one thing, or a genuine combination?">
+    <div class="widget-row-prompt">4. France's overall decision to sign a formal treaty of alliance in 1778</div>
+    <div class="widget-options">
+      <button data-choice="0">Pure Self-Interest</button>
+      <button data-choice="1">Mostly Self-Interest</button>
+      <button data-choice="2">A Mix of Both</button>
+      <button data-choice="3">Mostly Idealism</button>
+      <button data-choice="4">Pure Idealism</button>
+    </div>
+  </div>
+
+  <button class="widget-reset" id="reset-motives">Reset</button>
+</div>
+
 </div>
 
 <div class="oa-footer">
@@ -374,6 +473,32 @@ function oaPronounce(text) {
   u.rate = 0.85;
   window.speechSynthesis.speak(u);
 }
+</script>
+
+<script>
+(function () {
+  ['widget-burgoyne', 'widget-motives'].forEach(function (containerId) {
+    var container = document.getElementById(containerId);
+    container.querySelectorAll('.widget-row').forEach(function (row) {
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+          var right = btn.dataset.choice === correct;
+          btn.classList.add(right ? 'correct' : 'incorrect');
+          var text = right ? row.dataset.fb : row.dataset.hint;
+          var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+          rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+          rf.textContent = text;
+        });
+      });
+    });
+    container.querySelector('.widget-reset').addEventListener('click', function () {
+      container.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+      container.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+    });
+  });
+})();
 </script>
 
 </body>
