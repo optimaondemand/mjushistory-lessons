@@ -77,6 +77,23 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .legend button.active { background: #0E1C42; color: #fff; border-color: #0E1C42; }
 .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
 .widget-reset:hover { background: #FDF3E3; }
+
+/* ===== new widgets for this lesson: freeman-or-town-meeting.html + banished-flip.html ===== */
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; margin-bottom: 12px; }
+.ow-flip .ow-flip-front { font-size: 16px; color: #0E1C42; font-weight: bold; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; font-size: 15px; line-height: 1.55; margin-top: 8px; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-flip .hint { font-size: 11px; color: #9AA7C0; margin-top: 6px; }
 </style>
 </head>
 <body>
@@ -355,6 +372,78 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">2</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Primary Source 1: Jonathan Edwards, <i>A Divine and Supernatural Light</i> (1734).</b></div></div>
 </div>
 
+<div class="optima-widget">
+  <div class="widget-kicker">&#9889; TRY IT &middot; Colony-Wide Vote or Town Meeting?</div>
+  <div class="widget-question">Massachusetts Bay ran two very different levels of political participation. For each statement, choose which one it describes.</div>
+
+  <div class="widget-row" data-correct="colony" data-fb="Right. Only examined, full church members could vote colony-wide." data-hint="Which level restricted voting to full church members?">
+    <div class="widget-row-prompt">1. This required giving a public account of your own conversion experience before the whole congregation.</div>
+    <div class="widget-options">
+      <button data-choice="town">Town Meeting</button>
+      <button data-choice="colony">Colony-Wide Vote</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="town" data-fb="Right. Town meetings did not check church membership at all." data-hint="Which level let any property-holding man take part, regardless of church status?">
+    <div class="widget-row-prompt">2. Any property-holding male resident could take part, regardless of whether he was a full church member.</div>
+    <div class="widget-options">
+      <button data-choice="town">Town Meeting</button>
+      <button data-choice="colony">Colony-Wide Vote</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="town" data-fb="Right. Tax rates, roads, and local business were exactly what town meetings decided." data-hint="Which level handled immediate, local, practical matters?">
+    <div class="widget-row-prompt">3. This decided matters like tax rates, roads, and other public works, right in your own town.</div>
+    <div class="widget-options">
+      <button data-choice="town">Town Meeting</button>
+      <button data-choice="colony">Colony-Wide Vote</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="colony" data-fb="Right. Electing the governor happened at the colony-wide level, restricted to freemen." data-hint="Which level chose the governor?">
+    <div class="widget-row-prompt">4. This determined who could vote for the colony's governor.</div>
+    <div class="widget-options">
+      <button data-choice="town">Town Meeting</button>
+      <button data-choice="colony">Colony-Wide Vote</button>
+    </div>
+  </div>
+
+  <div class="widget-row" data-correct="town" data-fb="Right. Even a man who could never vote for governor could still speak and vote at his own town meeting." data-hint="Which level reached colonists the church-membership rule excluded?">
+    <div class="widget-row-prompt">5. This gave ordinary colonists, including many who could never vote for governor, real experience governing themselves.</div>
+    <div class="widget-options">
+      <button data-choice="town">Town Meeting</button>
+      <button data-choice="colony">Colony-Wide Vote</button>
+    </div>
+  </div>
+
+  <button class="widget-reset" id="reset-freeman">Reset</button>
+</div>
+
+<div class="optima-widget" style="margin-top:16px;">
+  <div class="widget-kicker">&#9889; TAP TO REVEAL</div>
+  <div class="widget-question">Massachusetts Bay banished several of its own colonists in the 1630s. Tap each card to reveal exactly why.</div>
+
+  <div class="ow-flip" tabindex="0">
+    <div class="ow-flip-front">Anne Hutchinson &mdash; banished 1637. Why?</div>
+    <div class="ow-flip-back">She held unauthorized religious meetings in her home and directly challenged the clergy's teachings and authority.</div>
+    <div class="hint">Tap to reveal</div>
+  </div>
+
+  <div class="ow-flip" tabindex="0">
+    <div class="ow-flip-front">Roger Williams &mdash; banished 1636. Why?</div>
+    <div class="ow-flip-back">He argued for separating church and state and for fair dealing with Native peoples. He went on to found Rhode Island as a colony built on religious toleration.</div>
+    <div class="hint">Tap to reveal</div>
+  </div>
+
+  <div class="ow-flip" tabindex="0">
+    <div class="ow-flip-front">The Half-Way Covenant, 1662 &mdash; what problem was it solving?</div>
+    <div class="ow-flip-back">Many children of the founders could not give a full conversion testimony, so they could not become freemen or vote. The Half-Way Covenant let them become partial members so their own children could still be baptized, though they still could not vote or take full communion.</div>
+    <div class="hint">Tap to reveal</div>
+  </div>
+
+  <button class="widget-reset" id="reset-banished">Reset</button>
+</div>
+
 </div>
 
 <div class="oa-footer">
@@ -370,6 +459,41 @@ function oaPronounce(text) {
   u.rate = 0.85;
   window.speechSynthesis.speak(u);
 }
+</script>
+
+<script>
+(function () {
+  document.querySelectorAll('.widget-row').forEach(function (row) {
+    var correct = row.dataset.correct;
+    row.querySelectorAll('.widget-options button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+        var right = btn.dataset.choice === correct;
+        btn.classList.add(right ? 'correct' : 'incorrect');
+        var text = right ? row.dataset.fb : row.dataset.hint;
+        var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+        rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+        rf.textContent = text;
+      });
+    });
+  });
+  document.getElementById('reset-freeman').addEventListener('click', function () {
+    document.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+    document.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+  });
+})();
+</script>
+
+<script>
+(function () {
+  document.querySelectorAll('.ow-flip').forEach(function (card) {
+    card.addEventListener('click', function () { card.classList.toggle('flipped'); });
+    card.addEventListener('keypress', function (e) { if (e.key === 'Enter' || e.key === ' ') card.classList.toggle('flipped'); });
+  });
+  document.getElementById('reset-banished').addEventListener('click', function () {
+    document.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+  });
+})();
 </script>
 
 </body>
